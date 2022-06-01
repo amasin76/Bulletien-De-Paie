@@ -13,16 +13,13 @@ Public Class formEmployee
             MessageBox.Show(ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.None)
         End Try
         cnx.Close()
-
         cnx.Open()
-        cmd = New OleDb.OleDbCommand("SELECT * from Employe", cnx)
-        cmd.Connection = cnx
+
         Dim maxId As Object
         Dim strId As String
         Dim initId As Integer
 
-        'cmd.CommandText = "SELECT Max(Mat) as MaxId from Employe"
-        cmd.CommandText = "select Mat from Employe order by CDate(dateRec) desc"
+        cmd = New OleDb.OleDbCommand("select Mat from Employe order by CDate(dateRec) desc", cnx)
 
         maxId = cmd.ExecuteScalar
         If maxId Is DBNull.Value Then
@@ -92,11 +89,15 @@ Public Class formEmployee
         Dim dataAdapter As New OleDbDataAdapter("SELECT * from Employe", cnx)
         Dim ds As New DataSet()
         Dim dsView As New DataView
-        dataAdapter.Fill(ds, "Employe")
+        Try
+            dataAdapter.Fill(ds, "Employe")
+            dsView = ds.Tables(0).DefaultView
+            bs.DataSource = dsView
+            Me.DataGridView1.DataSource = bs
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
         cnx.Close()
-        dsView = ds.Tables(0).DefaultView
-        bs.DataSource = dsView
-        Me.DataGridView1.DataSource = bs
 
         LrowsCount.Text = DataGridView1.Rows.Count
     End Sub

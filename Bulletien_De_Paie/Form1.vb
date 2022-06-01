@@ -2,6 +2,7 @@
     Private currentBtn As Button
     Private leftBorderBtn As Panel
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+        Me.CenterToScreen()
         change_menu("Accueil")
     End Sub
 
@@ -113,5 +114,19 @@
 
     Private Sub Bmin_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Bmin.Click
         Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Dim mouse_move As System.Drawing.Point
+    Private Sub HeaderPanel_MouseDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HeaderPanel.MouseDown
+        mouse_move = New Point(-e.X, -e.Y)
+    End Sub
+
+    Private Sub HeaderPanel_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HeaderPanel.MouseMove
+        If (e.Button = Windows.Forms.MouseButtons.Left) Then
+            Dim mPosition As Point
+            mPosition = Control.MousePosition
+            mPosition.Offset(mouse_move.X, mouse_move.Y)
+            Me.Location = mPosition
+        End If
     End Sub
 End Class

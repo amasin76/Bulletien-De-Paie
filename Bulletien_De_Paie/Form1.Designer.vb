@@ -141,8 +141,7 @@ Partial Class Form1
         'PanelLogo
         '
         Me.PanelLogo.Controls.Add(Me.Label1)
-        Me.PanelLogo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelLogo.Location = New System.Drawing.Point(0, 0)
+        Me.PanelLogo.Location = New System.Drawing.Point(1, 20)
         Me.PanelLogo.Name = "PanelLogo"
         Me.PanelLogo.Size = New System.Drawing.Size(170, 60)
         Me.PanelLogo.TabIndex = 0
@@ -150,11 +149,11 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(21, 9)
+        Me.Label1.Location = New System.Drawing.Point(15, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(130, 37)
+        Me.Label1.Size = New System.Drawing.Size(138, 37)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "BIO TECH"
         '
@@ -174,7 +173,7 @@ Partial Class Form1
         '
         Me.Bmin.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Bmin.Image = Global.Bulletien_De_Paie.My.Resources.Resources.__
-        Me.Bmin.Location = New System.Drawing.Point(1028, 6)
+        Me.Bmin.Location = New System.Drawing.Point(1010, 6)
         Me.Bmin.Name = "Bmin"
         Me.Bmin.Size = New System.Drawing.Size(16, 16)
         Me.Bmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -185,7 +184,7 @@ Partial Class Form1
         '
         Me.Bmax.Anchor = System.Windows.Forms.AnchorStyles.Right
         Me.Bmax.Image = Global.Bulletien_De_Paie.My.Resources.Resources.window
-        Me.Bmax.Location = New System.Drawing.Point(1050, 6)
+        Me.Bmax.Location = New System.Drawing.Point(1041, 6)
         Me.Bmax.Name = "Bmax"
         Me.Bmax.Size = New System.Drawing.Size(16, 16)
         Me.Bmax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage

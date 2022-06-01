@@ -19,3 +19,11 @@ C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\bin\Debug
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\bin\Debug\Bulletien_De_Paie.exe.config
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formEmployee.resources
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formBulletien.resources
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formBulletienDetails.resources
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\bin\Debug\ar\Bulletien_De_Paie.resources.dll
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\bin\Debug\en\Bulletien_De_Paie.resources.dll
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formBulletienDetails.ar.resources
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formBulletienDetails.en.resources
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\ar\Bulletien_De_Paie.resources.dll
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\en\Bulletien_De_Paie.resources.dll
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formConge.resources
