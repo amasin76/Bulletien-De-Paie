@@ -31,23 +31,29 @@ Partial Class formConge
         Me.Label16 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.ZmCnss = New System.Windows.Forms.TextBox()
+        Me.Zseniority = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Znet = New System.Windows.Forms.TextBox()
-        Me.Zmr = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.ZrecCng = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Ztr = New System.Windows.Forms.TextBox()
+        Me.ZtotCng = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Lmonth = New System.Windows.Forms.ComboBox()
+        Me.LabelDescCounter = New System.Windows.Forms.Label()
+        Me.LabelDesc = New System.Windows.Forms.Label()
+        Me.Zdesc = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Ltype = New System.Windows.Forms.ComboBox()
         Me.zhsTotal = New System.Windows.Forms.TextBox()
         Me.Zhs100 = New System.Windows.Forms.TextBox()
         Me.Zhs50 = New System.Windows.Forms.TextBox()
-        Me.Zyear = New System.Windows.Forms.TextBox()
-        Me.Zhs25 = New System.Windows.Forms.TextBox()
+        Me.ZnJours = New System.Windows.Forms.TextBox()
+        Me.Zannee = New System.Windows.Forms.TextBox()
         Me.Zcode = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Lcredit = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -55,6 +61,8 @@ Partial Class formConge
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Code = New System.Windows.Forms.Label()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Zfn = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -94,13 +102,6 @@ Partial Class formConge
         Me.Zsearch = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.TabControl1.SuspendLayout()
         Me.TabSaisi.SuspendLayout()
         Me.PanelFooter.SuspendLayout()
@@ -167,7 +168,7 @@ Partial Class formConge
         Me.Bclear.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Bclear.Name = "Bclear"
         Me.Bclear.Size = New System.Drawing.Size(205, 61)
-        Me.Bclear.TabIndex = 0
+        Me.Bclear.TabIndex = 12
         Me.Bclear.Text = "Annuler"
         Me.Bclear.UseVisualStyleBackColor = True
         '
@@ -177,7 +178,7 @@ Partial Class formConge
         Me.Bsave.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Bsave.Name = "Bsave"
         Me.Bsave.Size = New System.Drawing.Size(205, 61)
-        Me.Bsave.TabIndex = 0
+        Me.Bsave.TabIndex = 11
         Me.Bsave.Text = "Enregistrer"
         Me.Bsave.UseVisualStyleBackColor = True
         '
@@ -206,13 +207,11 @@ Partial Class formConge
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.ZmCnss)
+        Me.GroupBox2.Controls.Add(Me.Zseniority)
         Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.Znet)
-        Me.GroupBox2.Controls.Add(Me.Zmr)
-        Me.GroupBox2.Controls.Add(Me.Label15)
+        Me.GroupBox2.Controls.Add(Me.ZrecCng)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.Ztr)
+        Me.GroupBox2.Controls.Add(Me.ZtotCng)
         Me.GroupBox2.Location = New System.Drawing.Point(6, 425)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.GroupBox2.Name = "GroupBox2"
@@ -224,101 +223,87 @@ Partial Class formConge
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(620, 28)
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(621, 53)
         Me.Label14.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(97, 17)
+        Me.Label14.Size = New System.Drawing.Size(93, 21)
         Me.Label14.TabIndex = 0
-        Me.Label14.Text = "Montant CNSS"
+        Me.Label14.Text = "Ancienneté"
         '
-        'ZmCnss
+        'Zseniority
         '
-        Me.ZmCnss.Enabled = False
-        Me.ZmCnss.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ZmCnss.Location = New System.Drawing.Point(724, 25)
-        Me.ZmCnss.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.ZmCnss.Name = "ZmCnss"
-        Me.ZmCnss.Size = New System.Drawing.Size(138, 25)
-        Me.ZmCnss.TabIndex = 1
+        Me.Zseniority.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zseniority.Location = New System.Drawing.Point(742, 53)
+        Me.Zseniority.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Zseniority.Name = "Zseniority"
+        Me.Zseniority.ReadOnly = True
+        Me.Zseniority.Size = New System.Drawing.Size(138, 25)
+        Me.Zseniority.TabIndex = 99
+        Me.Zseniority.TabStop = False
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(296, 28)
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(297, 53)
         Me.Label13.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(112, 17)
+        Me.Label13.Size = New System.Drawing.Size(122, 21)
         Me.Label13.TabIndex = 0
-        Me.Label13.Text = "Montant Retraite"
+        Me.Label13.Text = "Récente Congé"
         '
-        'Znet
+        'ZrecCng
         '
-        Me.Znet.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Znet.Location = New System.Drawing.Point(415, 76)
-        Me.Znet.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Znet.Name = "Znet"
-        Me.Znet.ReadOnly = True
-        Me.Znet.Size = New System.Drawing.Size(138, 29)
-        Me.Znet.TabIndex = 1
-        '
-        'Zmr
-        '
-        Me.Zmr.Enabled = False
-        Me.Zmr.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zmr.Location = New System.Drawing.Point(415, 25)
-        Me.Zmr.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Zmr.Name = "Zmr"
-        Me.Zmr.Size = New System.Drawing.Size(138, 25)
-        Me.Zmr.TabIndex = 1
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(296, 79)
-        Me.Label15.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(100, 21)
-        Me.Label15.TabIndex = 0
-        Me.Label15.Text = "Net A Payer"
+        Me.ZrecCng.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ZrecCng.Location = New System.Drawing.Point(436, 53)
+        Me.ZrecCng.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ZrecCng.Name = "ZrecCng"
+        Me.ZrecCng.ReadOnly = True
+        Me.ZrecCng.Size = New System.Drawing.Size(138, 25)
+        Me.ZrecCng.TabIndex = 99
+        Me.ZrecCng.TabStop = False
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(7, 28)
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(8, 53)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(87, 17)
+        Me.Label7.Size = New System.Drawing.Size(104, 21)
         Me.Label7.TabIndex = 0
-        Me.Label7.Text = "Taux Retraite"
+        Me.Label7.Text = "Total Congés"
         '
-        'Ztr
+        'ZtotCng
         '
-        Me.Ztr.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ztr.Location = New System.Drawing.Point(102, 25)
-        Me.Ztr.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Ztr.Name = "Ztr"
-        Me.Ztr.Size = New System.Drawing.Size(138, 25)
-        Me.Ztr.TabIndex = 1
+        Me.ZtotCng.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ZtotCng.Location = New System.Drawing.Point(116, 53)
+        Me.ZtotCng.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ZtotCng.Name = "ZtotCng"
+        Me.ZtotCng.ReadOnly = True
+        Me.ZtotCng.Size = New System.Drawing.Size(138, 25)
+        Me.ZtotCng.TabIndex = 99
+        Me.ZtotCng.TabStop = False
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.LabelDescCounter)
+        Me.GroupBox1.Controls.Add(Me.LabelDesc)
+        Me.GroupBox1.Controls.Add(Me.Zdesc)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker4)
         Me.GroupBox1.Controls.Add(Me.DateTimePicker3)
         Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.Lmonth)
+        Me.GroupBox1.Controls.Add(Me.Ltype)
         Me.GroupBox1.Controls.Add(Me.zhsTotal)
         Me.GroupBox1.Controls.Add(Me.Zhs100)
         Me.GroupBox1.Controls.Add(Me.Zhs50)
-        Me.GroupBox1.Controls.Add(Me.Zyear)
-        Me.GroupBox1.Controls.Add(Me.Zhs25)
+        Me.GroupBox1.Controls.Add(Me.ZnJours)
+        Me.GroupBox1.Controls.Add(Me.Zannee)
         Me.GroupBox1.Controls.Add(Me.Zcode)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Lcredit)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label10)
@@ -338,79 +323,156 @@ Partial Class formConge
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'Lmonth
+        'LabelDescCounter
         '
-        Me.Lmonth.DropDownWidth = 170
-        Me.Lmonth.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lmonth.FormattingEnabled = True
-        Me.Lmonth.Items.AddRange(New Object() {"Administratif", "Maladie", "Maternité", "Sans Solde", "Exceptionnels", "Accident De Travail", "Autorisation D'Allaitement"})
-        Me.Lmonth.Location = New System.Drawing.Point(541, 106)
-        Me.Lmonth.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Lmonth.Name = "Lmonth"
-        Me.Lmonth.Size = New System.Drawing.Size(138, 25)
-        Me.Lmonth.TabIndex = 2
+        Me.LabelDescCounter.AutoSize = True
+        Me.LabelDescCounter.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelDescCounter.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LabelDescCounter.Location = New System.Drawing.Point(641, 290)
+        Me.LabelDescCounter.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelDescCounter.Name = "LabelDescCounter"
+        Me.LabelDescCounter.Size = New System.Drawing.Size(39, 17)
+        Me.LabelDescCounter.TabIndex = 0
+        Me.LabelDescCounter.Text = "0/512"
+        '
+        'LabelDesc
+        '
+        Me.LabelDesc.AutoSize = True
+        Me.LabelDesc.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelDesc.Location = New System.Drawing.Point(8, 247)
+        Me.LabelDesc.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LabelDesc.Name = "LabelDesc"
+        Me.LabelDesc.Size = New System.Drawing.Size(94, 21)
+        Me.LabelDesc.TabIndex = 0
+        Me.LabelDesc.Text = "Description"
+        '
+        'Zdesc
+        '
+        Me.Zdesc.AcceptsReturn = True
+        Me.Zdesc.AcceptsTab = True
+        Me.Zdesc.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zdesc.Location = New System.Drawing.Point(169, 247)
+        Me.Zdesc.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Zdesc.MaxLength = 512
+        Me.Zdesc.Multiline = True
+        Me.Zdesc.Name = "Zdesc"
+        Me.Zdesc.Size = New System.Drawing.Size(507, 40)
+        Me.Zdesc.TabIndex = 10
+        '
+        'DateTimePicker4
+        '
+        Me.DateTimePicker4.Checked = False
+        Me.DateTimePicker4.CustomFormat = "  dd/MM/yyyy"
+        Me.DateTimePicker4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker4.Location = New System.Drawing.Point(169, 177)
+        Me.DateTimePicker4.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.DateTimePicker4.Name = "DateTimePicker4"
+        Me.DateTimePicker4.Size = New System.Drawing.Size(138, 29)
+        Me.DateTimePicker4.TabIndex = 5
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Checked = False
+        Me.DateTimePicker3.CustomFormat = "  dd/MM/yyyy"
+        Me.DateTimePicker3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker3.Location = New System.Drawing.Point(169, 142)
+        Me.DateTimePicker3.Margin = New System.Windows.Forms.Padding(0, 3, 2, 3)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(138, 29)
+        Me.DateTimePicker3.TabIndex = 4
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label12.Location = New System.Drawing.Point(762, 182)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(40, 17)
+        Me.Label12.TabIndex = 0
+        Me.Label12.Text = "Jours"
+        '
+        'Ltype
+        '
+        Me.Ltype.DropDownWidth = 170
+        Me.Ltype.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Ltype.FormattingEnabled = True
+        Me.Ltype.Items.AddRange(New Object() {"Administratif", "Maladie", "Maternité", "Sans Solde", "Exceptionnels", "Accident De Travail", "Autorisation D'Allaitement"})
+        Me.Ltype.Location = New System.Drawing.Point(538, 110)
+        Me.Ltype.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Ltype.Name = "Ltype"
+        Me.Ltype.Size = New System.Drawing.Size(138, 25)
+        Me.Ltype.TabIndex = 6
         '
         'zhsTotal
         '
-        Me.zhsTotal.Enabled = False
         Me.zhsTotal.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.zhsTotal.Location = New System.Drawing.Point(171, 230)
+        Me.zhsTotal.Location = New System.Drawing.Point(168, 212)
         Me.zhsTotal.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.zhsTotal.MaxLength = 60
         Me.zhsTotal.Name = "zhsTotal"
         Me.zhsTotal.Size = New System.Drawing.Size(508, 25)
-        Me.zhsTotal.TabIndex = 1
+        Me.zhsTotal.TabIndex = 9
         '
         'Zhs100
         '
-        Me.Zhs100.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zhs100.Location = New System.Drawing.Point(541, 199)
+        Me.Zhs100.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zhs100.Location = New System.Drawing.Point(538, 177)
         Me.Zhs100.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Zhs100.MaxLength = 30
         Me.Zhs100.Name = "Zhs100"
-        Me.Zhs100.Size = New System.Drawing.Size(138, 25)
-        Me.Zhs100.TabIndex = 1
+        Me.Zhs100.Size = New System.Drawing.Size(138, 29)
+        Me.Zhs100.TabIndex = 8
         '
         'Zhs50
         '
-        Me.Zhs50.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zhs50.Location = New System.Drawing.Point(541, 168)
+        Me.Zhs50.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zhs50.Location = New System.Drawing.Point(538, 142)
         Me.Zhs50.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Zhs50.MaxLength = 20
         Me.Zhs50.Name = "Zhs50"
-        Me.Zhs50.Size = New System.Drawing.Size(138, 25)
-        Me.Zhs50.TabIndex = 1
+        Me.Zhs50.Size = New System.Drawing.Size(138, 29)
+        Me.Zhs50.TabIndex = 7
         '
-        'Zyear
+        'ZnJours
         '
-        Me.Zyear.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zyear.Location = New System.Drawing.Point(171, 137)
-        Me.Zyear.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Zyear.Name = "Zyear"
-        Me.Zyear.Size = New System.Drawing.Size(138, 25)
-        Me.Zyear.TabIndex = 99
+        Me.ZnJours.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ZnJours.Location = New System.Drawing.Point(169, 107)
+        Me.ZnJours.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.ZnJours.Name = "ZnJours"
+        Me.ZnJours.Size = New System.Drawing.Size(137, 29)
+        Me.ZnJours.TabIndex = 3
         '
-        'Zhs25
+        'Zannee
         '
-        Me.Zhs25.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zhs25.Location = New System.Drawing.Point(541, 137)
-        Me.Zhs25.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Zhs25.Name = "Zhs25"
-        Me.Zhs25.Size = New System.Drawing.Size(138, 25)
-        Me.Zhs25.TabIndex = 1
+        Me.Zannee.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zannee.Location = New System.Drawing.Point(538, 72)
+        Me.Zannee.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Zannee.Name = "Zannee"
+        Me.Zannee.ReadOnly = True
+        Me.Zannee.Size = New System.Drawing.Size(138, 29)
+        Me.Zannee.TabIndex = 99
+        Me.Zannee.TabStop = False
         '
         'Zcode
         '
-        Me.Zcode.Enabled = False
-        Me.Zcode.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zcode.Location = New System.Drawing.Point(171, 106)
+        Me.Zcode.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Zcode.Location = New System.Drawing.Point(169, 72)
         Me.Zcode.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Zcode.Name = "Zcode"
-        Me.Zcode.Size = New System.Drawing.Size(138, 25)
+        Me.Zcode.ReadOnly = True
+        Me.Zcode.Size = New System.Drawing.Size(137, 29)
         Me.Zcode.TabIndex = 99
+        Me.Zcode.TabStop = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(7, 140)
+        Me.Label2.Location = New System.Drawing.Point(7, 112)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(137, 21)
@@ -421,18 +483,39 @@ Partial Class formConge
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(7, 230)
+        Me.Label11.Location = New System.Drawing.Point(6, 212)
         Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(144, 21)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Adresse de Congé"
         '
+        'Lcredit
+        '
+        Me.Lcredit.AutoSize = True
+        Me.Lcredit.Font = New System.Drawing.Font("Segoe UI", 56.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lcredit.Location = New System.Drawing.Point(743, 98)
+        Me.Lcredit.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Lcredit.Name = "Lcredit"
+        Me.Lcredit.Size = New System.Drawing.Size(0, 100)
+        Me.Lcredit.TabIndex = 0
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(753, 78)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(55, 21)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Crédit"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(360, 106)
+        Me.Label1.Location = New System.Drawing.Point(360, 113)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 21)
@@ -443,7 +526,7 @@ Partial Class formConge
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(360, 199)
+        Me.Label10.Location = New System.Drawing.Point(360, 180)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(117, 21)
@@ -454,7 +537,7 @@ Partial Class formConge
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(360, 168)
+        Me.Label9.Location = New System.Drawing.Point(360, 145)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(161, 21)
@@ -465,7 +548,7 @@ Partial Class formConge
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(7, 199)
+        Me.Label4.Location = New System.Drawing.Point(6, 180)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(122, 21)
@@ -476,7 +559,7 @@ Partial Class formConge
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(360, 137)
+        Me.Label8.Location = New System.Drawing.Point(360, 75)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(57, 21)
@@ -487,7 +570,7 @@ Partial Class formConge
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 168)
+        Me.Label3.Location = New System.Drawing.Point(7, 145)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 21)
@@ -498,12 +581,29 @@ Partial Class formConge
         '
         Me.Code.AutoSize = True
         Me.Code.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Code.Location = New System.Drawing.Point(7, 106)
+        Me.Code.Location = New System.Drawing.Point(7, 78)
         Me.Code.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Code.Name = "Code"
         Me.Code.Size = New System.Drawing.Size(49, 21)
         Me.Code.TabIndex = 0
         Me.Code.Text = "Code"
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(2, 23)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(906, 290)
+        Me.ShapeContainer1.TabIndex = 100
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BorderColor = System.Drawing.SystemColors.ControlLight
+        Me.RectangleShape1.Location = New System.Drawing.Point(719, 50)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(1, 187)
         '
         'Label20
         '
@@ -518,13 +618,14 @@ Partial Class formConge
         '
         'Zfn
         '
-        Me.Zfn.Enabled = False
         Me.Zfn.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Zfn.Location = New System.Drawing.Point(741, 69)
         Me.Zfn.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Zfn.Name = "Zfn"
+        Me.Zfn.ReadOnly = True
         Me.Zfn.Size = New System.Drawing.Size(138, 27)
-        Me.Zfn.TabIndex = 1
+        Me.Zfn.TabIndex = 99
+        Me.Zfn.TabStop = False
         '
         'Label19
         '
@@ -543,9 +644,10 @@ Partial Class formConge
         Me.Znpr.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Znpr.Location = New System.Drawing.Point(447, 69)
         Me.Znpr.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Znpr.MaxLength = 50
         Me.Znpr.Name = "Znpr"
         Me.Znpr.Size = New System.Drawing.Size(138, 27)
-        Me.Znpr.TabIndex = 1
+        Me.Znpr.TabIndex = 2
         '
         'Label18
         '
@@ -564,9 +666,10 @@ Partial Class formConge
         Me.Zmat.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Zmat.Location = New System.Drawing.Point(129, 69)
         Me.Zmat.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Zmat.MaxLength = 6
         Me.Zmat.Name = "Zmat"
         Me.Zmat.Size = New System.Drawing.Size(138, 27)
-        Me.Zmat.TabIndex = 1
+        Me.Zmat.TabIndex = 0
         '
         'TabConsulter
         '
@@ -939,80 +1042,6 @@ Partial Class formConge
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Consulter Bulletin De Paie"
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(755, 103)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 21)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Crédit"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 56.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(745, 123)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(128, 100)
-        Me.Label6.TabIndex = 0
-        Me.Label6.Text = "28"
-        '
-        'ShapeContainer1
-        '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(2, 23)
-        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(906, 290)
-        Me.ShapeContainer1.TabIndex = 100
-        Me.ShapeContainer1.TabStop = False
-        '
-        'RectangleShape1
-        '
-        Me.RectangleShape1.BorderColor = System.Drawing.SystemColors.ControlLight
-        Me.RectangleShape1.Location = New System.Drawing.Point(719, 80)
-        Me.RectangleShape1.Name = "RectangleShape1"
-        Me.RectangleShape1.Size = New System.Drawing.Size(1, 148)
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(790, 207)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(40, 17)
-        Me.Label12.TabIndex = 0
-        Me.Label12.Text = "Jours"
-        '
-        'DateTimePicker3
-        '
-        Me.DateTimePicker3.Checked = False
-        Me.DateTimePicker3.CustomFormat = "dd/MM/yyyy"
-        Me.DateTimePicker3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker3.Location = New System.Drawing.Point(171, 168)
-        Me.DateTimePicker3.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.DateTimePicker3.Name = "DateTimePicker3"
-        Me.DateTimePicker3.Size = New System.Drawing.Size(138, 25)
-        Me.DateTimePicker3.TabIndex = 101
-        '
-        'DateTimePicker4
-        '
-        Me.DateTimePicker4.Checked = False
-        Me.DateTimePicker4.CustomFormat = "dd/MM/yyyy"
-        Me.DateTimePicker4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker4.Location = New System.Drawing.Point(171, 199)
-        Me.DateTimePicker4.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.DateTimePicker4.Name = "DateTimePicker4"
-        Me.DateTimePicker4.Size = New System.Drawing.Size(138, 25)
-        Me.DateTimePicker4.TabIndex = 101
-        '
         'formConge
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1056,20 +1085,18 @@ Partial Class formConge
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents ZmCnss As System.Windows.Forms.TextBox
+    Friend WithEvents Zseniority As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Znet As System.Windows.Forms.TextBox
-    Friend WithEvents Zmr As System.Windows.Forms.TextBox
-    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents ZrecCng As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Ztr As System.Windows.Forms.TextBox
+    Friend WithEvents ZtotCng As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Lmonth As System.Windows.Forms.ComboBox
+    Friend WithEvents Ltype As System.Windows.Forms.ComboBox
     Friend WithEvents zhsTotal As System.Windows.Forms.TextBox
     Friend WithEvents Zhs100 As System.Windows.Forms.TextBox
     Friend WithEvents Zhs50 As System.Windows.Forms.TextBox
-    Friend WithEvents Zyear As System.Windows.Forms.TextBox
-    Friend WithEvents Zhs25 As System.Windows.Forms.TextBox
+    Friend WithEvents ZnJours As System.Windows.Forms.TextBox
+    Friend WithEvents Zannee As System.Windows.Forms.TextBox
     Friend WithEvents Zcode As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
@@ -1119,12 +1146,15 @@ Partial Class formConge
     Friend WithEvents Zsearch As System.Windows.Forms.TextBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Lcredit As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents RectangleShape1 As Microsoft.VisualBasic.PowerPacks.RectangleShape
     Friend WithEvents DateTimePicker4 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents LabelDesc As System.Windows.Forms.Label
+    Friend WithEvents Zdesc As System.Windows.Forms.TextBox
+    Friend WithEvents LabelDescCounter As System.Windows.Forms.Label
 
 End Class
