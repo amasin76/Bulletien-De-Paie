@@ -27,3 +27,4 @@ C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\D
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\ar\Bulletien_De_Paie.resources.dll
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\en\Bulletien_De_Paie.resources.dll
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formConge.resources
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.LoginForm.resources

@@ -36,6 +36,7 @@ Partial Class Form1
         Me.Bmax = New System.Windows.Forms.PictureBox()
         Me.Bclose = New System.Windows.Forms.PictureBox()
         Me.PanelContainer = New System.Windows.Forms.Panel()
+        Me.Luser = New System.Windows.Forms.Label()
         Me.SidePanel.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
@@ -160,6 +161,7 @@ Partial Class Form1
         'HeaderPanel
         '
         Me.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.HeaderPanel.Controls.Add(Me.Luser)
         Me.HeaderPanel.Controls.Add(Me.Bmin)
         Me.HeaderPanel.Controls.Add(Me.Bmax)
         Me.HeaderPanel.Controls.Add(Me.Bclose)
@@ -210,6 +212,16 @@ Partial Class Form1
         Me.PanelContainer.Size = New System.Drawing.Size(930, 672)
         Me.PanelContainer.TabIndex = 2
         '
+        'Luser
+        '
+        Me.Luser.AutoSize = True
+        Me.Luser.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Luser.ForeColor = System.Drawing.Color.White
+        Me.Luser.Location = New System.Drawing.Point(18, 4)
+        Me.Luser.Name = "Luser"
+        Me.Luser.Size = New System.Drawing.Size(0, 20)
+        Me.Luser.TabIndex = 1
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -226,6 +238,7 @@ Partial Class Form1
         Me.PanelLogo.ResumeLayout(False)
         Me.PanelLogo.PerformLayout()
         Me.HeaderPanel.ResumeLayout(False)
+        Me.HeaderPanel.PerformLayout()
         CType(Me.Bmin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bmax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bclose, System.ComponentModel.ISupportInitialize).EndInit()
@@ -247,4 +260,5 @@ Partial Class Form1
     Friend WithEvents Bclose As System.Windows.Forms.PictureBox
     Friend WithEvents Bmin As System.Windows.Forms.PictureBox
     Friend WithEvents Bmax As System.Windows.Forms.PictureBox
+    Friend WithEvents Luser As System.Windows.Forms.Label
 End Class

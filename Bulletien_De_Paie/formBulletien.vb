@@ -71,6 +71,7 @@ Public Class formBulletien
             Znpr.Text = dr("Nom_Prenom")
         Else
             Znpr.Clear()
+            Zfn.Clear()
         End If
         cnx.Close()
     End Sub

@@ -23,8 +23,10 @@ Partial Class formConge
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabSaisi = New System.Windows.Forms.TabPage()
         Me.PanelFooter = New System.Windows.Forms.Panel()
@@ -105,6 +107,9 @@ Partial Class formConge
         Me.Zsearch = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.CongeWithEmployeDetailsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
+        Me.CongeWithEmployeDetailsTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.CongeWithEmployeDetailsTableAdapter()
         Me.NCongeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClassDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -124,9 +129,6 @@ Partial Class formConge
         Me.AdrsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VilDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CongeWithEmployeDetailsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
-        Me.CongeWithEmployeDetailsTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.CongeWithEmployeDetailsTableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabSaisi.SuspendLayout()
         Me.PanelFooter.SuspendLayout()
@@ -875,22 +877,22 @@ Partial Class formConge
         Me.DataGridView1.AllowUserToOrderColumns = True
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NCongeDataGridViewTextBoxColumn, Me.NomPrenomDataGridViewTextBoxColumn, Me.ClassDataGridViewTextBoxColumn, Me.NbrJoursDataGridViewTextBoxColumn, Me.DSortieDataGridViewTextBoxColumn, Me.DRetourDataGridViewTextBoxColumn, Me.AnneeDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn, Me.MatDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.DateRecDataGridViewTextBoxColumn, Me.FonctionDataGridViewTextBoxColumn, Me.DEMDataGridViewTextBoxColumn, Me.TelephoneDataGridViewTextBoxColumn, Me.VilleDataGridViewTextBoxColumn, Me.AdresseDataGridViewTextBoxColumn, Me.AdrsDataGridViewTextBoxColumn, Me.VilDataGridViewTextBoxColumn, Me.TelDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.CongeWithEmployeDetailsBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(5, 19)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView1.Size = New System.Drawing.Size(906, 280)
         Me.DataGridView1.TabIndex = 3
         '
@@ -1082,122 +1084,6 @@ Partial Class formConge
         Me.Label17.TabIndex = 0
         Me.Label17.Text = "Consulter Bulletin De Paie"
         '
-        'NCongeDataGridViewTextBoxColumn
-        '
-        Me.NCongeDataGridViewTextBoxColumn.DataPropertyName = "N_Conge"
-        Me.NCongeDataGridViewTextBoxColumn.HeaderText = "N_Conge"
-        Me.NCongeDataGridViewTextBoxColumn.Name = "NCongeDataGridViewTextBoxColumn"
-        '
-        'NomPrenomDataGridViewTextBoxColumn
-        '
-        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "Nom_Prenom"
-        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "Nom_Prenom"
-        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
-        '
-        'ClassDataGridViewTextBoxColumn
-        '
-        Me.ClassDataGridViewTextBoxColumn.DataPropertyName = "Class"
-        Me.ClassDataGridViewTextBoxColumn.HeaderText = "Class"
-        Me.ClassDataGridViewTextBoxColumn.Name = "ClassDataGridViewTextBoxColumn"
-        Me.ClassDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NbrJoursDataGridViewTextBoxColumn
-        '
-        Me.NbrJoursDataGridViewTextBoxColumn.DataPropertyName = "Nbr_Jours"
-        Me.NbrJoursDataGridViewTextBoxColumn.HeaderText = "Jours"
-        Me.NbrJoursDataGridViewTextBoxColumn.Name = "NbrJoursDataGridViewTextBoxColumn"
-        '
-        'DSortieDataGridViewTextBoxColumn
-        '
-        Me.DSortieDataGridViewTextBoxColumn.DataPropertyName = "D_Sortie"
-        Me.DSortieDataGridViewTextBoxColumn.HeaderText = "D_Sortie"
-        Me.DSortieDataGridViewTextBoxColumn.Name = "DSortieDataGridViewTextBoxColumn"
-        '
-        'DRetourDataGridViewTextBoxColumn
-        '
-        Me.DRetourDataGridViewTextBoxColumn.DataPropertyName = "D_Retour"
-        Me.DRetourDataGridViewTextBoxColumn.HeaderText = "D_Retour"
-        Me.DRetourDataGridViewTextBoxColumn.Name = "DRetourDataGridViewTextBoxColumn"
-        '
-        'AnneeDataGridViewTextBoxColumn
-        '
-        Me.AnneeDataGridViewTextBoxColumn.DataPropertyName = "Annee"
-        Me.AnneeDataGridViewTextBoxColumn.HeaderText = "Annee"
-        Me.AnneeDataGridViewTextBoxColumn.Name = "AnneeDataGridViewTextBoxColumn"
-        '
-        'DescriptionDataGridViewTextBoxColumn
-        '
-        Me.DescriptionDataGridViewTextBoxColumn.DataPropertyName = "Description"
-        Me.DescriptionDataGridViewTextBoxColumn.HeaderText = "Description"
-        Me.DescriptionDataGridViewTextBoxColumn.Name = "DescriptionDataGridViewTextBoxColumn"
-        '
-        'MatDataGridViewTextBoxColumn
-        '
-        Me.MatDataGridViewTextBoxColumn.DataPropertyName = "Mat"
-        Me.MatDataGridViewTextBoxColumn.HeaderText = "Mat"
-        Me.MatDataGridViewTextBoxColumn.Name = "MatDataGridViewTextBoxColumn"
-        '
-        'TypeDataGridViewTextBoxColumn
-        '
-        Me.TypeDataGridViewTextBoxColumn.DataPropertyName = "Type"
-        Me.TypeDataGridViewTextBoxColumn.HeaderText = "Type"
-        Me.TypeDataGridViewTextBoxColumn.Name = "TypeDataGridViewTextBoxColumn"
-        Me.TypeDataGridViewTextBoxColumn.Visible = False
-        '
-        'DateRecDataGridViewTextBoxColumn
-        '
-        Me.DateRecDataGridViewTextBoxColumn.DataPropertyName = "dateRec"
-        Me.DateRecDataGridViewTextBoxColumn.HeaderText = "dateRec"
-        Me.DateRecDataGridViewTextBoxColumn.Name = "DateRecDataGridViewTextBoxColumn"
-        '
-        'FonctionDataGridViewTextBoxColumn
-        '
-        Me.FonctionDataGridViewTextBoxColumn.DataPropertyName = "Fonction"
-        Me.FonctionDataGridViewTextBoxColumn.HeaderText = "Fonction"
-        Me.FonctionDataGridViewTextBoxColumn.Name = "FonctionDataGridViewTextBoxColumn"
-        '
-        'DEMDataGridViewTextBoxColumn
-        '
-        Me.DEMDataGridViewTextBoxColumn.DataPropertyName = "DEM"
-        Me.DEMDataGridViewTextBoxColumn.HeaderText = "DEM"
-        Me.DEMDataGridViewTextBoxColumn.Name = "DEMDataGridViewTextBoxColumn"
-        '
-        'TelephoneDataGridViewTextBoxColumn
-        '
-        Me.TelephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone"
-        Me.TelephoneDataGridViewTextBoxColumn.HeaderText = "Telephone"
-        Me.TelephoneDataGridViewTextBoxColumn.Name = "TelephoneDataGridViewTextBoxColumn"
-        '
-        'VilleDataGridViewTextBoxColumn
-        '
-        Me.VilleDataGridViewTextBoxColumn.DataPropertyName = "Ville"
-        Me.VilleDataGridViewTextBoxColumn.HeaderText = "Ville"
-        Me.VilleDataGridViewTextBoxColumn.Name = "VilleDataGridViewTextBoxColumn"
-        '
-        'AdresseDataGridViewTextBoxColumn
-        '
-        Me.AdresseDataGridViewTextBoxColumn.DataPropertyName = "Adresse"
-        Me.AdresseDataGridViewTextBoxColumn.HeaderText = "Adresse"
-        Me.AdresseDataGridViewTextBoxColumn.Name = "AdresseDataGridViewTextBoxColumn"
-        '
-        'AdrsDataGridViewTextBoxColumn
-        '
-        Me.AdrsDataGridViewTextBoxColumn.DataPropertyName = "Adrs"
-        Me.AdrsDataGridViewTextBoxColumn.HeaderText = "Adrs"
-        Me.AdrsDataGridViewTextBoxColumn.Name = "AdrsDataGridViewTextBoxColumn"
-        '
-        'VilDataGridViewTextBoxColumn
-        '
-        Me.VilDataGridViewTextBoxColumn.DataPropertyName = "Vil"
-        Me.VilDataGridViewTextBoxColumn.HeaderText = "Vil"
-        Me.VilDataGridViewTextBoxColumn.Name = "VilDataGridViewTextBoxColumn"
-        '
-        'TelDataGridViewTextBoxColumn
-        '
-        Me.TelDataGridViewTextBoxColumn.DataPropertyName = "Tel"
-        Me.TelDataGridViewTextBoxColumn.HeaderText = "Tel"
-        Me.TelDataGridViewTextBoxColumn.Name = "TelDataGridViewTextBoxColumn"
-        '
         'CongeWithEmployeDetailsBindingSource
         '
         Me.CongeWithEmployeDetailsBindingSource.DataMember = "CongeWithEmployeDetails"
@@ -1211,6 +1097,142 @@ Partial Class formConge
         'CongeWithEmployeDetailsTableAdapter
         '
         Me.CongeWithEmployeDetailsTableAdapter.ClearBeforeFill = True
+        '
+        'NCongeDataGridViewTextBoxColumn
+        '
+        Me.NCongeDataGridViewTextBoxColumn.DataPropertyName = "N"
+        Me.NCongeDataGridViewTextBoxColumn.HeaderText = "N"
+        Me.NCongeDataGridViewTextBoxColumn.Name = "NCongeDataGridViewTextBoxColumn"
+        Me.NCongeDataGridViewTextBoxColumn.Width = 40
+        '
+        'NomPrenomDataGridViewTextBoxColumn
+        '
+        Me.NomPrenomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "Nom_Prenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "Nom_Prenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
+        '
+        'ClassDataGridViewTextBoxColumn
+        '
+        Me.ClassDataGridViewTextBoxColumn.DataPropertyName = "Class"
+        Me.ClassDataGridViewTextBoxColumn.HeaderText = "Class"
+        Me.ClassDataGridViewTextBoxColumn.Name = "ClassDataGridViewTextBoxColumn"
+        Me.ClassDataGridViewTextBoxColumn.ReadOnly = True
+        Me.ClassDataGridViewTextBoxColumn.Width = 60
+        '
+        'NbrJoursDataGridViewTextBoxColumn
+        '
+        Me.NbrJoursDataGridViewTextBoxColumn.DataPropertyName = "Nbr_Jours"
+        Me.NbrJoursDataGridViewTextBoxColumn.HeaderText = "Jours"
+        Me.NbrJoursDataGridViewTextBoxColumn.Name = "NbrJoursDataGridViewTextBoxColumn"
+        Me.NbrJoursDataGridViewTextBoxColumn.Width = 60
+        '
+        'DSortieDataGridViewTextBoxColumn
+        '
+        Me.DSortieDataGridViewTextBoxColumn.DataPropertyName = "D_Sortie"
+        DataGridViewCellStyle2.Format = "dd/MM/yyyy"
+        Me.DSortieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DSortieDataGridViewTextBoxColumn.HeaderText = "D_Sortie"
+        Me.DSortieDataGridViewTextBoxColumn.Name = "DSortieDataGridViewTextBoxColumn"
+        '
+        'DRetourDataGridViewTextBoxColumn
+        '
+        Me.DRetourDataGridViewTextBoxColumn.DataPropertyName = "D_Retour"
+        DataGridViewCellStyle3.Format = "dd/MM/yyyy"
+        Me.DRetourDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DRetourDataGridViewTextBoxColumn.HeaderText = "D_Retour"
+        Me.DRetourDataGridViewTextBoxColumn.Name = "DRetourDataGridViewTextBoxColumn"
+        '
+        'AnneeDataGridViewTextBoxColumn
+        '
+        Me.AnneeDataGridViewTextBoxColumn.DataPropertyName = "Annee"
+        Me.AnneeDataGridViewTextBoxColumn.HeaderText = "Annee"
+        Me.AnneeDataGridViewTextBoxColumn.Name = "AnneeDataGridViewTextBoxColumn"
+        Me.AnneeDataGridViewTextBoxColumn.Width = 70
+        '
+        'DescriptionDataGridViewTextBoxColumn
+        '
+        Me.DescriptionDataGridViewTextBoxColumn.DataPropertyName = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.HeaderText = "Description"
+        Me.DescriptionDataGridViewTextBoxColumn.Name = "DescriptionDataGridViewTextBoxColumn"
+        Me.DescriptionDataGridViewTextBoxColumn.Visible = False
+        '
+        'MatDataGridViewTextBoxColumn
+        '
+        Me.MatDataGridViewTextBoxColumn.DataPropertyName = "Mat"
+        Me.MatDataGridViewTextBoxColumn.HeaderText = "Mat"
+        Me.MatDataGridViewTextBoxColumn.Name = "MatDataGridViewTextBoxColumn"
+        Me.MatDataGridViewTextBoxColumn.Visible = False
+        '
+        'TypeDataGridViewTextBoxColumn
+        '
+        Me.TypeDataGridViewTextBoxColumn.DataPropertyName = "Type"
+        Me.TypeDataGridViewTextBoxColumn.HeaderText = "Type"
+        Me.TypeDataGridViewTextBoxColumn.Name = "TypeDataGridViewTextBoxColumn"
+        Me.TypeDataGridViewTextBoxColumn.Visible = False
+        '
+        'DateRecDataGridViewTextBoxColumn
+        '
+        Me.DateRecDataGridViewTextBoxColumn.DataPropertyName = "dateRec"
+        Me.DateRecDataGridViewTextBoxColumn.HeaderText = "dateRec"
+        Me.DateRecDataGridViewTextBoxColumn.Name = "DateRecDataGridViewTextBoxColumn"
+        Me.DateRecDataGridViewTextBoxColumn.Visible = False
+        '
+        'FonctionDataGridViewTextBoxColumn
+        '
+        Me.FonctionDataGridViewTextBoxColumn.DataPropertyName = "Fonction"
+        Me.FonctionDataGridViewTextBoxColumn.HeaderText = "Fonction"
+        Me.FonctionDataGridViewTextBoxColumn.Name = "FonctionDataGridViewTextBoxColumn"
+        Me.FonctionDataGridViewTextBoxColumn.Visible = False
+        '
+        'DEMDataGridViewTextBoxColumn
+        '
+        Me.DEMDataGridViewTextBoxColumn.DataPropertyName = "DEM"
+        Me.DEMDataGridViewTextBoxColumn.HeaderText = "DEM"
+        Me.DEMDataGridViewTextBoxColumn.Name = "DEMDataGridViewTextBoxColumn"
+        Me.DEMDataGridViewTextBoxColumn.Visible = False
+        '
+        'TelephoneDataGridViewTextBoxColumn
+        '
+        Me.TelephoneDataGridViewTextBoxColumn.DataPropertyName = "Telephone"
+        Me.TelephoneDataGridViewTextBoxColumn.HeaderText = "Telephone"
+        Me.TelephoneDataGridViewTextBoxColumn.Name = "TelephoneDataGridViewTextBoxColumn"
+        Me.TelephoneDataGridViewTextBoxColumn.Width = 110
+        '
+        'VilleDataGridViewTextBoxColumn
+        '
+        Me.VilleDataGridViewTextBoxColumn.DataPropertyName = "Ville"
+        Me.VilleDataGridViewTextBoxColumn.HeaderText = "Ville"
+        Me.VilleDataGridViewTextBoxColumn.Name = "VilleDataGridViewTextBoxColumn"
+        Me.VilleDataGridViewTextBoxColumn.Width = 110
+        '
+        'AdresseDataGridViewTextBoxColumn
+        '
+        Me.AdresseDataGridViewTextBoxColumn.DataPropertyName = "Adresse"
+        Me.AdresseDataGridViewTextBoxColumn.HeaderText = "Adresse"
+        Me.AdresseDataGridViewTextBoxColumn.Name = "AdresseDataGridViewTextBoxColumn"
+        Me.AdresseDataGridViewTextBoxColumn.Visible = False
+        '
+        'AdrsDataGridViewTextBoxColumn
+        '
+        Me.AdrsDataGridViewTextBoxColumn.DataPropertyName = "Adrs"
+        Me.AdrsDataGridViewTextBoxColumn.HeaderText = "Adrs"
+        Me.AdrsDataGridViewTextBoxColumn.Name = "AdrsDataGridViewTextBoxColumn"
+        Me.AdrsDataGridViewTextBoxColumn.Visible = False
+        '
+        'VilDataGridViewTextBoxColumn
+        '
+        Me.VilDataGridViewTextBoxColumn.DataPropertyName = "Vil"
+        Me.VilDataGridViewTextBoxColumn.HeaderText = "Vil"
+        Me.VilDataGridViewTextBoxColumn.Name = "VilDataGridViewTextBoxColumn"
+        Me.VilDataGridViewTextBoxColumn.Visible = False
+        '
+        'TelDataGridViewTextBoxColumn
+        '
+        Me.TelDataGridViewTextBoxColumn.DataPropertyName = "Tel"
+        Me.TelDataGridViewTextBoxColumn.HeaderText = "Tel"
+        Me.TelDataGridViewTextBoxColumn.Name = "TelDataGridViewTextBoxColumn"
+        Me.TelDataGridViewTextBoxColumn.Visible = False
         '
         'formConge
         '

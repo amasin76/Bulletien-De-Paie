@@ -18,6 +18,22 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.CongeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.CongeStatsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.CongeWithEmployeDetailsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.AccountDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:Bulletien_De_Paie.employee_dbDataSet.BulletienRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -30,6 +46,22 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.CongeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.CongeStatsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.CongeWithEmployeDetailsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.AccountRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:Bulletien_De_Paie.employee_dbDataSet.BulletienRowChangeEvent">
 	<summary>
 Row event argument class
@@ -39,6 +71,22 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:Bulletien_De_Paie.employee_dbDataSet.BulletienWithEmployeNameRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.CongeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.CongeStatsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.CongeWithEmployeDetailsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSet.AccountRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -55,6 +103,22 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:Bulletien_De_Paie.employee_dbDataSetTableAdapters.BulletienWithEmployeNameTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSetTableAdapters.CongeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSetTableAdapters.CongeStatsTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSetTableAdapters.CongeWithEmployeDetailsTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Bulletien_De_Paie.employee_dbDataSetTableAdapters.AccountTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -100,6 +164,14 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
   resource lookups using this strongly typed resource class.
 </summary>
 </member><member name="P:Bulletien_De_Paie.My.Resources.Resources.__">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Bulletien_De_Paie.My.Resources.Resources.eye">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Bulletien_De_Paie.My.Resources.Resources.hidden">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

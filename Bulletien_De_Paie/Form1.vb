@@ -4,6 +4,7 @@
     Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
         change_menu("Accueil")
+        Luser.Text = LoginForm.strBarUser
     End Sub
 
     Public Sub New()
