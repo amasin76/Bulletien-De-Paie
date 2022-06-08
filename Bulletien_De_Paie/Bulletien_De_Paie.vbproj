@@ -179,9 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -220,8 +220,17 @@
     <None Include="assets\window.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\top-shadow-purple1.png" />
+    <None Include="Resources\top-shadow-purple.png" />
+    <None Include="Resources\purple.png" />
     <None Include="assets\eye.png" />
     <None Include="assets\hidden.png" />
+    <None Include="assets\top-shadow-purple.png" />
+    <None Include="assets\purple.png" />
+    <None Include="assets\purple-abstract.png" />
+    <None Include="assets\purple-waves.png" />
+    <None Include="assets\settings.png" />
+    <None Include="assets\out.png" />
     <Content Include="employee_db.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -23,10 +23,9 @@ Partial Class formConge
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabSaisi = New System.Windows.Forms.TabPage()
         Me.PanelFooter = New System.Windows.Forms.Panel()
@@ -78,39 +77,19 @@ Partial Class formConge
         Me.PanelGrid = New System.Windows.Forms.Panel()
         Me.Gtotal = New System.Windows.Forms.GroupBox()
         Me.Label29 = New System.Windows.Forms.Label()
-        Me.Lnet = New System.Windows.Forms.Label()
-        Me.Lcnss = New System.Windows.Forms.Label()
-        Me.Lmr = New System.Windows.Forms.Label()
-        Me.Lprimes = New System.Windows.Forms.Label()
+        Me.LminJrs = New System.Windows.Forms.Label()
+        Me.LmaxJrs = New System.Windows.Forms.Label()
+        Me.LtotalJrs = New System.Windows.Forms.Label()
+        Me.LcngCount = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Bprint = New System.Windows.Forms.Button()
         Me.Bannuler_sr = New System.Windows.Forms.Button()
         Me.Brechercher = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.LrowsCount = New System.Windows.Forms.Label()
-        Me.BtableLast = New System.Windows.Forms.Button()
-        Me.BtableNext = New System.Windows.Forms.Button()
-        Me.BtableFirst = New System.Windows.Forms.Button()
-        Me.BtablePrev = New System.Windows.Forms.Button()
-        Me.PanelBoxes = New System.Windows.Forms.Panel()
-        Me.Lby = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Zsearch = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.CongeWithEmployeDetailsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
-        Me.CongeWithEmployeDetailsTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.CongeWithEmployeDetailsTableAdapter()
-        Me.NCongeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.N_Conge = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClassDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NbrJoursDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -129,6 +108,26 @@ Partial Class formConge
         Me.AdrsDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VilDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CongeWithEmployeDetailsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.LrowsCount = New System.Windows.Forms.Label()
+        Me.BtableLast = New System.Windows.Forms.Button()
+        Me.BtableNext = New System.Windows.Forms.Button()
+        Me.BtableFirst = New System.Windows.Forms.Button()
+        Me.BtablePrev = New System.Windows.Forms.Button()
+        Me.PanelBoxes = New System.Windows.Forms.Panel()
+        Me.Lby = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Zsearch = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.CongeWithEmployeDetailsTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.CongeWithEmployeDetailsTableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabSaisi.SuspendLayout()
         Me.PanelFooter.SuspendLayout()
@@ -140,10 +139,10 @@ Partial Class formConge
         Me.Gtotal.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.PanelBoxes.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         CType(Me.CongeWithEmployeDetailsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelBoxes.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -736,13 +735,13 @@ Partial Class formConge
         'Gtotal
         '
         Me.Gtotal.Controls.Add(Me.Label29)
-        Me.Gtotal.Controls.Add(Me.Lnet)
-        Me.Gtotal.Controls.Add(Me.Lcnss)
-        Me.Gtotal.Controls.Add(Me.Lmr)
-        Me.Gtotal.Controls.Add(Me.Lprimes)
+        Me.Gtotal.Controls.Add(Me.LminJrs)
+        Me.Gtotal.Controls.Add(Me.LmaxJrs)
+        Me.Gtotal.Controls.Add(Me.LtotalJrs)
+        Me.Gtotal.Controls.Add(Me.LcngCount)
         Me.Gtotal.Controls.Add(Me.Label28)
-        Me.Gtotal.Controls.Add(Me.Label27)
         Me.Gtotal.Controls.Add(Me.Label26)
+        Me.Gtotal.Controls.Add(Me.Label27)
         Me.Gtotal.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Gtotal.Location = New System.Drawing.Point(5, 343)
         Me.Gtotal.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -751,83 +750,83 @@ Partial Class formConge
         Me.Gtotal.Size = New System.Drawing.Size(905, 73)
         Me.Gtotal.TabIndex = 14
         Me.Gtotal.TabStop = False
-        Me.Gtotal.Text = "Total"
+        Me.Gtotal.Text = "Info"
         '
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(602, 35)
+        Me.Label29.Location = New System.Drawing.Point(704, 35)
         Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(108, 21)
+        Me.Label29.Size = New System.Drawing.Size(92, 21)
         Me.Label29.TabIndex = 0
-        Me.Label29.Text = "Net A Payer :"
+        Me.Label29.Text = "Min Jours :"
         '
-        'Lnet
+        'LminJrs
         '
-        Me.Lnet.AutoSize = True
-        Me.Lnet.Location = New System.Drawing.Point(704, 35)
-        Me.Lnet.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Lnet.Name = "Lnet"
-        Me.Lnet.Size = New System.Drawing.Size(0, 21)
-        Me.Lnet.TabIndex = 0
+        Me.LminJrs.AutoSize = True
+        Me.LminJrs.Location = New System.Drawing.Point(800, 35)
+        Me.LminJrs.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LminJrs.Name = "LminJrs"
+        Me.LminJrs.Size = New System.Drawing.Size(0, 21)
+        Me.LminJrs.TabIndex = 0
         '
-        'Lcnss
+        'LmaxJrs
         '
-        Me.Lcnss.AutoSize = True
-        Me.Lcnss.Location = New System.Drawing.Point(462, 35)
-        Me.Lcnss.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Lcnss.Name = "Lcnss"
-        Me.Lcnss.Size = New System.Drawing.Size(0, 21)
-        Me.Lcnss.TabIndex = 0
+        Me.LmaxJrs.AutoSize = True
+        Me.LmaxJrs.Location = New System.Drawing.Point(577, 35)
+        Me.LmaxJrs.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LmaxJrs.Name = "LmaxJrs"
+        Me.LmaxJrs.Size = New System.Drawing.Size(0, 21)
+        Me.LmaxJrs.TabIndex = 0
         '
-        'Lmr
+        'LtotalJrs
         '
-        Me.Lmr.AutoSize = True
-        Me.Lmr.Location = New System.Drawing.Point(259, 35)
-        Me.Lmr.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Lmr.Name = "Lmr"
-        Me.Lmr.Size = New System.Drawing.Size(0, 21)
-        Me.Lmr.TabIndex = 0
+        Me.LtotalJrs.AutoSize = True
+        Me.LtotalJrs.Location = New System.Drawing.Point(372, 35)
+        Me.LtotalJrs.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LtotalJrs.Name = "LtotalJrs"
+        Me.LtotalJrs.Size = New System.Drawing.Size(0, 21)
+        Me.LtotalJrs.TabIndex = 0
         '
-        'Lprimes
+        'LcngCount
         '
-        Me.Lprimes.AutoSize = True
-        Me.Lprimes.Location = New System.Drawing.Point(79, 35)
-        Me.Lprimes.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Lprimes.Name = "Lprimes"
-        Me.Lprimes.Size = New System.Drawing.Size(0, 21)
-        Me.Lprimes.TabIndex = 0
+        Me.LcngCount.AutoSize = True
+        Me.LcngCount.Location = New System.Drawing.Point(181, 35)
+        Me.LcngCount.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LcngCount.Name = "LcngCount"
+        Me.LcngCount.Size = New System.Drawing.Size(0, 21)
+        Me.LcngCount.TabIndex = 0
         '
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(6, 35)
+        Me.Label28.Location = New System.Drawing.Point(4, 35)
         Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(70, 21)
+        Me.Label28.Size = New System.Drawing.Size(171, 21)
         Me.Label28.TabIndex = 0
-        Me.Label28.Text = "Primes :"
-        '
-        'Label27
-        '
-        Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(185, 35)
-        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(78, 21)
-        Me.Label27.TabIndex = 0
-        Me.Label27.Text = "Retraite :"
+        Me.Label28.Text = "Nombre des Conges :"
         '
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(406, 35)
+        Me.Label26.Location = New System.Drawing.Point(477, 35)
         Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(59, 21)
+        Me.Label26.Size = New System.Drawing.Size(95, 21)
         Me.Label26.TabIndex = 0
-        Me.Label26.Text = "CNSS :"
+        Me.Label26.Text = "Max Jours :"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(268, 35)
+        Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(100, 21)
+        Me.Label27.TabIndex = 0
+        Me.Label27.Text = "Total Jours :"
         '
         'Panel2
         '
@@ -877,233 +876,23 @@ Partial Class formConge
         Me.DataGridView1.AllowUserToOrderColumns = True
         Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.NCongeDataGridViewTextBoxColumn, Me.NomPrenomDataGridViewTextBoxColumn, Me.ClassDataGridViewTextBoxColumn, Me.NbrJoursDataGridViewTextBoxColumn, Me.DSortieDataGridViewTextBoxColumn, Me.DRetourDataGridViewTextBoxColumn, Me.AnneeDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn, Me.MatDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.DateRecDataGridViewTextBoxColumn, Me.FonctionDataGridViewTextBoxColumn, Me.DEMDataGridViewTextBoxColumn, Me.TelephoneDataGridViewTextBoxColumn, Me.VilleDataGridViewTextBoxColumn, Me.AdresseDataGridViewTextBoxColumn, Me.AdrsDataGridViewTextBoxColumn, Me.VilDataGridViewTextBoxColumn, Me.TelDataGridViewTextBoxColumn})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.N_Conge, Me.NomPrenomDataGridViewTextBoxColumn, Me.ClassDataGridViewTextBoxColumn, Me.NbrJoursDataGridViewTextBoxColumn, Me.DSortieDataGridViewTextBoxColumn, Me.DRetourDataGridViewTextBoxColumn, Me.AnneeDataGridViewTextBoxColumn, Me.DescriptionDataGridViewTextBoxColumn, Me.MatDataGridViewTextBoxColumn, Me.TypeDataGridViewTextBoxColumn, Me.DateRecDataGridViewTextBoxColumn, Me.FonctionDataGridViewTextBoxColumn, Me.DEMDataGridViewTextBoxColumn, Me.TelephoneDataGridViewTextBoxColumn, Me.VilleDataGridViewTextBoxColumn, Me.AdresseDataGridViewTextBoxColumn, Me.AdrsDataGridViewTextBoxColumn, Me.VilDataGridViewTextBoxColumn, Me.TelDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.CongeWithEmployeDetailsBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(5, 19)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle18
         Me.DataGridView1.Size = New System.Drawing.Size(906, 280)
         Me.DataGridView1.TabIndex = 3
         '
-        'Label22
+        'N_Conge
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.Label22.Location = New System.Drawing.Point(767, 311)
-        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(80, 21)
-        Me.Label22.TabIndex = 2
-        Me.Label22.Text = "Result(s) :"
-        '
-        'LrowsCount
-        '
-        Me.LrowsCount.AutoSize = True
-        Me.LrowsCount.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LrowsCount.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.LrowsCount.Location = New System.Drawing.Point(860, 311)
-        Me.LrowsCount.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.LrowsCount.Name = "LrowsCount"
-        Me.LrowsCount.Size = New System.Drawing.Size(0, 21)
-        Me.LrowsCount.TabIndex = 2
-        '
-        'BtableLast
-        '
-        Me.BtableLast.Location = New System.Drawing.Point(204, 305)
-        Me.BtableLast.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.BtableLast.Name = "BtableLast"
-        Me.BtableLast.Size = New System.Drawing.Size(52, 32)
-        Me.BtableLast.TabIndex = 1
-        Me.BtableLast.Text = ">>"
-        Me.BtableLast.UseVisualStyleBackColor = True
-        '
-        'BtableNext
-        '
-        Me.BtableNext.Location = New System.Drawing.Point(146, 305)
-        Me.BtableNext.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.BtableNext.Name = "BtableNext"
-        Me.BtableNext.Size = New System.Drawing.Size(52, 32)
-        Me.BtableNext.TabIndex = 1
-        Me.BtableNext.Text = ">"
-        Me.BtableNext.UseVisualStyleBackColor = True
-        '
-        'BtableFirst
-        '
-        Me.BtableFirst.Location = New System.Drawing.Point(30, 305)
-        Me.BtableFirst.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.BtableFirst.Name = "BtableFirst"
-        Me.BtableFirst.Size = New System.Drawing.Size(52, 32)
-        Me.BtableFirst.TabIndex = 1
-        Me.BtableFirst.Text = "<<"
-        Me.BtableFirst.UseVisualStyleBackColor = True
-        '
-        'BtablePrev
-        '
-        Me.BtablePrev.Location = New System.Drawing.Point(88, 305)
-        Me.BtablePrev.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.BtablePrev.Name = "BtablePrev"
-        Me.BtablePrev.Size = New System.Drawing.Size(52, 32)
-        Me.BtablePrev.TabIndex = 1
-        Me.BtablePrev.Text = "<"
-        Me.BtablePrev.UseVisualStyleBackColor = True
-        '
-        'PanelBoxes
-        '
-        Me.PanelBoxes.Controls.Add(Me.Lby)
-        Me.PanelBoxes.Controls.Add(Me.DateTimePicker2)
-        Me.PanelBoxes.Controls.Add(Me.DateTimePicker1)
-        Me.PanelBoxes.Controls.Add(Me.Label24)
-        Me.PanelBoxes.Controls.Add(Me.Label23)
-        Me.PanelBoxes.Controls.Add(Me.Label25)
-        Me.PanelBoxes.Controls.Add(Me.Label21)
-        Me.PanelBoxes.Controls.Add(Me.Zsearch)
-        Me.PanelBoxes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelBoxes.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelBoxes.Location = New System.Drawing.Point(2, 52)
-        Me.PanelBoxes.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.PanelBoxes.Name = "PanelBoxes"
-        Me.PanelBoxes.Size = New System.Drawing.Size(918, 57)
-        Me.PanelBoxes.TabIndex = 12
-        '
-        'Lby
-        '
-        Me.Lby.FormattingEnabled = True
-        Me.Lby.Items.AddRange(New Object() {"Nom", "Fonction", "Matricule", "N_Bulletien"})
-        Me.Lby.Location = New System.Drawing.Point(398, 13)
-        Me.Lby.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Lby.Name = "Lby"
-        Me.Lby.Size = New System.Drawing.Size(116, 29)
-        Me.Lby.TabIndex = 4
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.CustomFormat = "MM/yyyy"
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(811, 10)
-        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(99, 29)
-        Me.DateTimePicker2.TabIndex = 3
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Checked = False
-        Me.DateTimePicker1.CustomFormat = "MM/yyyy"
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(650, 10)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(101, 29)
-        Me.DateTimePicker1.TabIndex = 3
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(767, 16)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(38, 21)
-        Me.Label24.TabIndex = 1
-        Me.Label24.Text = "Au :"
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(606, 16)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(38, 21)
-        Me.Label23.TabIndex = 1
-        Me.Label23.Text = "Du :"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(348, 16)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(45, 21)
-        Me.Label25.TabIndex = 1
-        Me.Label25.Text = "Par : "
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(8, 16)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(99, 21)
-        Me.Label21.TabIndex = 1
-        Me.Label21.Text = "Recherche : "
-        '
-        'Zsearch
-        '
-        Me.Zsearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.Zsearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList
-        Me.Zsearch.Location = New System.Drawing.Point(114, 13)
-        Me.Zsearch.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Zsearch.Name = "Zsearch"
-        Me.Zsearch.Size = New System.Drawing.Size(228, 29)
-        Me.Zsearch.TabIndex = 2
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Label17)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(2, 3)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(918, 49)
-        Me.Panel1.TabIndex = 11
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.Label17.Location = New System.Drawing.Point(8, 11)
-        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(267, 30)
-        Me.Label17.TabIndex = 0
-        Me.Label17.Text = "Consulter Bulletin De Paie"
-        '
-        'CongeWithEmployeDetailsBindingSource
-        '
-        Me.CongeWithEmployeDetailsBindingSource.DataMember = "CongeWithEmployeDetails"
-        Me.CongeWithEmployeDetailsBindingSource.DataSource = Me.Employee_dbDataSet
-        '
-        'Employee_dbDataSet
-        '
-        Me.Employee_dbDataSet.DataSetName = "employee_dbDataSet"
-        Me.Employee_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CongeWithEmployeDetailsTableAdapter
-        '
-        Me.CongeWithEmployeDetailsTableAdapter.ClearBeforeFill = True
-        '
-        'NCongeDataGridViewTextBoxColumn
-        '
-        Me.NCongeDataGridViewTextBoxColumn.DataPropertyName = "N"
-        Me.NCongeDataGridViewTextBoxColumn.HeaderText = "N"
-        Me.NCongeDataGridViewTextBoxColumn.Name = "NCongeDataGridViewTextBoxColumn"
-        Me.NCongeDataGridViewTextBoxColumn.Width = 40
+        Me.N_Conge.DataPropertyName = "N_Conge"
+        Me.N_Conge.HeaderText = "N"
+        Me.N_Conge.Name = "N_Conge"
+        Me.N_Conge.Width = 50
         '
         'NomPrenomDataGridViewTextBoxColumn
         '
@@ -1130,16 +919,16 @@ Partial Class formConge
         'DSortieDataGridViewTextBoxColumn
         '
         Me.DSortieDataGridViewTextBoxColumn.DataPropertyName = "D_Sortie"
-        DataGridViewCellStyle2.Format = "dd/MM/yyyy"
-        Me.DSortieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle16.Format = "dd/MM/yyyy"
+        Me.DSortieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle16
         Me.DSortieDataGridViewTextBoxColumn.HeaderText = "D_Sortie"
         Me.DSortieDataGridViewTextBoxColumn.Name = "DSortieDataGridViewTextBoxColumn"
         '
         'DRetourDataGridViewTextBoxColumn
         '
         Me.DRetourDataGridViewTextBoxColumn.DataPropertyName = "D_Retour"
-        DataGridViewCellStyle3.Format = "dd/MM/yyyy"
-        Me.DRetourDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle17.Format = "dd/MM/yyyy"
+        Me.DRetourDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle17
         Me.DRetourDataGridViewTextBoxColumn.HeaderText = "D_Retour"
         Me.DRetourDataGridViewTextBoxColumn.Name = "DRetourDataGridViewTextBoxColumn"
         '
@@ -1234,6 +1023,208 @@ Partial Class formConge
         Me.TelDataGridViewTextBoxColumn.Name = "TelDataGridViewTextBoxColumn"
         Me.TelDataGridViewTextBoxColumn.Visible = False
         '
+        'CongeWithEmployeDetailsBindingSource
+        '
+        Me.CongeWithEmployeDetailsBindingSource.DataMember = "CongeWithEmployeDetails"
+        Me.CongeWithEmployeDetailsBindingSource.DataSource = Me.Employee_dbDataSet
+        '
+        'Employee_dbDataSet
+        '
+        Me.Employee_dbDataSet.DataSetName = "employee_dbDataSet"
+        Me.Employee_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.Label22.Location = New System.Drawing.Point(767, 311)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(80, 21)
+        Me.Label22.TabIndex = 2
+        Me.Label22.Text = "Result(s) :"
+        '
+        'LrowsCount
+        '
+        Me.LrowsCount.AutoSize = True
+        Me.LrowsCount.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LrowsCount.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.LrowsCount.Location = New System.Drawing.Point(860, 311)
+        Me.LrowsCount.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LrowsCount.Name = "LrowsCount"
+        Me.LrowsCount.Size = New System.Drawing.Size(0, 21)
+        Me.LrowsCount.TabIndex = 2
+        '
+        'BtableLast
+        '
+        Me.BtableLast.Location = New System.Drawing.Point(204, 305)
+        Me.BtableLast.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.BtableLast.Name = "BtableLast"
+        Me.BtableLast.Size = New System.Drawing.Size(52, 32)
+        Me.BtableLast.TabIndex = 1
+        Me.BtableLast.Text = ">>"
+        Me.BtableLast.UseVisualStyleBackColor = True
+        '
+        'BtableNext
+        '
+        Me.BtableNext.Location = New System.Drawing.Point(146, 305)
+        Me.BtableNext.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.BtableNext.Name = "BtableNext"
+        Me.BtableNext.Size = New System.Drawing.Size(52, 32)
+        Me.BtableNext.TabIndex = 1
+        Me.BtableNext.Text = ">"
+        Me.BtableNext.UseVisualStyleBackColor = True
+        '
+        'BtableFirst
+        '
+        Me.BtableFirst.Location = New System.Drawing.Point(30, 305)
+        Me.BtableFirst.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.BtableFirst.Name = "BtableFirst"
+        Me.BtableFirst.Size = New System.Drawing.Size(52, 32)
+        Me.BtableFirst.TabIndex = 1
+        Me.BtableFirst.Text = "<<"
+        Me.BtableFirst.UseVisualStyleBackColor = True
+        '
+        'BtablePrev
+        '
+        Me.BtablePrev.Location = New System.Drawing.Point(88, 305)
+        Me.BtablePrev.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.BtablePrev.Name = "BtablePrev"
+        Me.BtablePrev.Size = New System.Drawing.Size(52, 32)
+        Me.BtablePrev.TabIndex = 1
+        Me.BtablePrev.Text = "<"
+        Me.BtablePrev.UseVisualStyleBackColor = True
+        '
+        'PanelBoxes
+        '
+        Me.PanelBoxes.Controls.Add(Me.Lby)
+        Me.PanelBoxes.Controls.Add(Me.DateTimePicker2)
+        Me.PanelBoxes.Controls.Add(Me.DateTimePicker1)
+        Me.PanelBoxes.Controls.Add(Me.Label24)
+        Me.PanelBoxes.Controls.Add(Me.Label23)
+        Me.PanelBoxes.Controls.Add(Me.Label25)
+        Me.PanelBoxes.Controls.Add(Me.Label21)
+        Me.PanelBoxes.Controls.Add(Me.Zsearch)
+        Me.PanelBoxes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelBoxes.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelBoxes.Location = New System.Drawing.Point(2, 52)
+        Me.PanelBoxes.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.PanelBoxes.Name = "PanelBoxes"
+        Me.PanelBoxes.Size = New System.Drawing.Size(918, 57)
+        Me.PanelBoxes.TabIndex = 12
+        '
+        'Lby
+        '
+        Me.Lby.FormattingEnabled = True
+        Me.Lby.Items.AddRange(New Object() {"Nom", "Fonction", "Matricule", "N_Conge"})
+        Me.Lby.Location = New System.Drawing.Point(398, 13)
+        Me.Lby.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Lby.Name = "Lby"
+        Me.Lby.Size = New System.Drawing.Size(116, 29)
+        Me.Lby.TabIndex = 4
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.CustomFormat = " dd/MM/yyyy"
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker2.Location = New System.Drawing.Point(803, 10)
+        Me.DateTimePicker2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(108, 29)
+        Me.DateTimePicker2.TabIndex = 3
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Checked = False
+        Me.DateTimePicker1.CustomFormat = " dd/MM/yyyy"
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(632, 10)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(108, 29)
+        Me.DateTimePicker1.TabIndex = 3
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(763, 14)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(38, 21)
+        Me.Label24.TabIndex = 1
+        Me.Label24.Text = "Au :"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(590, 16)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(38, 21)
+        Me.Label23.TabIndex = 1
+        Me.Label23.Text = "Du :"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(348, 16)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(45, 21)
+        Me.Label25.TabIndex = 1
+        Me.Label25.Text = "Par : "
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(8, 16)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(99, 21)
+        Me.Label21.TabIndex = 1
+        Me.Label21.Text = "Recherche : "
+        '
+        'Zsearch
+        '
+        Me.Zsearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.Zsearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList
+        Me.Zsearch.Location = New System.Drawing.Point(114, 13)
+        Me.Zsearch.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Zsearch.Name = "Zsearch"
+        Me.Zsearch.Size = New System.Drawing.Size(228, 29)
+        Me.Zsearch.TabIndex = 2
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label17)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(2, 3)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(918, 49)
+        Me.Panel1.TabIndex = 11
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.Label17.Location = New System.Drawing.Point(8, 11)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(267, 30)
+        Me.Label17.TabIndex = 0
+        Me.Label17.Text = "Consulter Bulletin De Paie"
+        '
+        'CongeWithEmployeDetailsTableAdapter
+        '
+        Me.CongeWithEmployeDetailsTableAdapter.ClearBeforeFill = True
+        '
         'formConge
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1261,12 +1252,12 @@ Partial Class formConge
         Me.Gtotal.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CongeWithEmployeDetailsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBoxes.ResumeLayout(False)
         Me.PanelBoxes.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.CongeWithEmployeDetailsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1311,10 +1302,10 @@ Partial Class formConge
     Friend WithEvents PanelGrid As System.Windows.Forms.Panel
     Friend WithEvents Gtotal As System.Windows.Forms.GroupBox
     Friend WithEvents Label29 As System.Windows.Forms.Label
-    Friend WithEvents Lnet As System.Windows.Forms.Label
-    Friend WithEvents Lcnss As System.Windows.Forms.Label
-    Friend WithEvents Lmr As System.Windows.Forms.Label
-    Friend WithEvents Lprimes As System.Windows.Forms.Label
+    Friend WithEvents LminJrs As System.Windows.Forms.Label
+    Friend WithEvents LmaxJrs As System.Windows.Forms.Label
+    Friend WithEvents LtotalJrs As System.Windows.Forms.Label
+    Friend WithEvents LcngCount As System.Windows.Forms.Label
     Friend WithEvents Label28 As System.Windows.Forms.Label
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents Label26 As System.Windows.Forms.Label
@@ -1354,6 +1345,7 @@ Partial Class formConge
     Friend WithEvents CongeWithEmployeDetailsBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents CongeWithEmployeDetailsTableAdapter As Bulletien_De_Paie.employee_dbDataSetTableAdapters.CongeWithEmployeDetailsTableAdapter
     Friend WithEvents NCongeDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents N_Conge As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NomPrenomDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ClassDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents NbrJoursDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn

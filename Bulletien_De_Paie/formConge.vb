@@ -329,15 +329,15 @@ Public Class formConge
     Private Sub Zsearch_DatePicker_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles Zsearch.TextChanged, DateTimePicker1.ValueChanged, DateTimePicker2.ValueChanged, Lby.SelectionChangeCommitted
         Try
             If Zsearch.Text = "" Then
-                bs.Filter = String.Format("DateMY >= #{0:MM/yyyy}# AND DateMY <= #{1:MM/yyyy}#", DateTimePicker1.Value, DateTimePicker2.Value)
+                bs.Filter = String.Format("D_Sortie >= #{0:MM/dd/yyyy}# AND D_Sortie <= #{1:MM/dd/yyyy}#", DateTimePicker1.Value, DateTimePicker2.Value)
             ElseIf Lby.SelectedIndex = 0 Then
-                bs.Filter = String.Format(" Nom_Prenom LIKE '%{0}%' AND DateMY >= #{1:MM/yyyy}# AND DateMY <= #{2:MM/yyyy}#", Zsearch.Text, DateTimePicker1.Value, DateTimePicker2.Value)
+                bs.Filter = String.Format(" Nom_Prenom LIKE '%{0}%' AND D_Sortie >= #{1:MM/dd/yyyy}# AND D_Sortie <= #{2:MM/dd/yyyy}#", Zsearch.Text, DateTimePicker1.Value, DateTimePicker2.Value)
             ElseIf Lby.SelectedIndex = 1 Then
-                bs.Filter = String.Format(" Fonction LIKE '%{0}%' AND DateMY >= #{1:MM/yyyy}# AND DateMY <= #{2:MM/yyyy}#", Zsearch.Text, DateTimePicker1.Value, DateTimePicker2.Value)
+                bs.Filter = String.Format(" Fonction LIKE '%{0}%' AND D_Sortie >= #{1:MM/dd/yyyy}# AND D_Sortie <= #{2:MM/dd/yyyy}#", Zsearch.Text, DateTimePicker1.Value, DateTimePicker2.Value)
             ElseIf Lby.SelectedIndex = 2 Then
-                bs.Filter = String.Format(" Mat LIKE '{0}' AND DateMY >= #{1:MM/yyyy}# AND DateMY <= #{2:MM/yyyy}#", Zsearch.Text, DateTimePicker1.Value, DateTimePicker2.Value)
+                bs.Filter = String.Format(" Mat LIKE '{0}' AND D_Sortie >= #{1:MM/dd/yyyy}# AND D_Sortie <= #{2:MM/dd/yyyy}#", Zsearch.Text, DateTimePicker1.Value, DateTimePicker2.Value)
             Else
-                bs.Filter = String.Format(" N_Bulletien LIKE '{0}' AND DateMY >= #{1:MM/yyyy}# AND DateMY <= #{2:MM/yyyy}#", Zsearch.Text, DateTimePicker1.Value, DateTimePicker2.Value)
+                bs.Filter = String.Format(" N_Conge LIKE '{0}' AND D_Sortie >= #{1:MM/dd/yyyy}# AND D_Sortie <= #{2:MM/dd/yyyy}#", Zsearch.Text, DateTimePicker1.Value, DateTimePicker2.Value)
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -346,29 +346,27 @@ Public Class formConge
         LrowsCount.Text = DataGridView1.Rows.Count
     End Sub
 
-    'Total Row
-    'Private Sub DataGridView1_DataSourceChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataGridView1.DataBindingComplete
-    '    Try
-    '        Dim sumOfPrimes, sumOfCnss, sumOfMr, sumOfNet As Single
-    '        For Each row As DataGridViewRow In DataGridView1.Rows
-    '            Dim primesColumn As Single = CSng(row.Cells("PrimesDataGridViewTextBoxColumn").Value)
-    '            Dim cnssColumn As Single = CSng(row.Cells("MCNSSDataGridViewTextBoxColumn").Value)
-    '            Dim mrColumn As Single = CSng(row.Cells("MRetraiteDataGridViewTextBoxColumn").Value)
-    '            Dim NetColumn As Single = CSng(row.Cells("NetPayerDataGridViewTextBoxColumn").Value)
+    'Info Calc
+    Private Sub DataGridView1_DataSourceChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataGridView1.DataBindingComplete
+        Try
+            Dim sumOfCng As Integer, sumOfJrs As Integer, maxValue As Integer, minValue As Integer
+            For Each row As DataGridViewRow In DataGridView1.Rows
+                Dim jrsColumn As Integer = CInt(row.Cells("NbrJoursDataGridViewTextBoxColumn").Value)
+                minValue = jrsColumn
 
-    '            sumOfPrimes += primesColumn
-    '            sumOfCnss += cnssColumn
-    '            sumOfMr += mrColumn
-    '            sumOfNet += NetColumn
-    '        Next
-    '        Lprimes.Text = sumOfPrimes.ToString("#,##0.00")
-    '        Lcnss.Text = sumOfCnss.ToString("#,##0.00")
-    '        Lmr.Text = sumOfMr.ToString("#,##0.00")
-    '        Lnet.Text = sumOfNet.ToString("#,##0.00")
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message)
-    '    End Try
-    'End Sub
+                sumOfCng += 1
+                sumOfJrs += jrsColumn
+                If jrsColumn > maxValue Then maxValue = jrsColumn
+                If jrsColumn < minValue Then minValue = jrsColumn
+            Next
+            LcngCount.Text = sumOfCng
+            LtotalJrs.Text = sumOfJrs
+            LmaxJrs.Text = maxValue
+            LminJrs.Text = minValue
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 
     ''Show employe details
     'Private Sub DataGridView1_CellMouseClick(ByVal sender As Object, ByVal e As DataGridViewCellMouseEventArgs) Handles DataGridView1.CellMouseClick
@@ -381,4 +379,5 @@ Public Class formConge
     '    End If
     'End Sub
     'Public Shared Property selectedrow As DataGridViewRow
+
 End Class

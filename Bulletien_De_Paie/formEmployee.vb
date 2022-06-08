@@ -133,10 +133,4 @@ Public Class formEmployee
         End If
     End Sub
     Public Shared Property selectedrow As DataGridViewRow
-
-    Private Sub formEmployee_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'TODO: This line of code loads data into the 'Employee_dbDataSet.Employe' table. You can move, or remove it, as needed.
-        Me.EmployeTableAdapter.Fill(Me.Employee_dbDataSet.Employe)
-
-    End Sub
 End Class

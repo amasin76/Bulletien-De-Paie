@@ -70,8 +70,9 @@ Module Helpers
     Optional ByVal numUpper As Integer = 1,
     Optional ByVal numLower As Integer = 1,
     Optional ByVal numNumbers As Integer = 1,
-    Optional ByVal numSpecial As Integer = 1) As Boolean
+    Optional ByVal numSpecial As Integer = 1) As Integer
 
+        Dim score As Integer = 0
         ' Replace [A-Z] with \p{Lu}, to allow for Unicode uppercase letters.
         Dim upper As New System.Text.RegularExpressions.Regex("[A-Z]")
         Dim lower As New System.Text.RegularExpressions.Regex("[a-z]")
@@ -80,15 +81,15 @@ Module Helpers
         Dim special As New System.Text.RegularExpressions.Regex("[^a-zA-Z0-9]")
 
         ' Check the length.
-        If Len(pwd) < minLength Then Return False
+        If Len(pwd) < minLength Then Return 0
         ' Check for minimum number of occurrences.
-        If upper.Matches(pwd).Count < numUpper Then Return False
-        If lower.Matches(pwd).Count < numLower Then Return False
-        If number.Matches(pwd).Count < numNumbers Then Return False
-        If special.Matches(pwd).Count < numSpecial Then Return False
+        If upper.Matches(pwd).Count >= numUpper Then score = score + 1
+        If lower.Matches(pwd).Count >= numLower Then score = score + 1
+        If number.Matches(pwd).Count >= numNumbers Then score = score + 1
+        If special.Matches(pwd).Count >= numSpecial Then score = score + 1
 
         ' Passed all checks.
-        Return True
+        Return score
     End Function
     Function MD5Hash(ByVal input As String) As String
         Dim MD5Hasher As MD5 = MD5.Create()

@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.SidePanel = New System.Windows.Forms.Panel()
         Me.PanelButtons = New System.Windows.Forms.Panel()
         Me.Bst = New System.Windows.Forms.Button()
@@ -32,15 +33,21 @@ Partial Class Form1
         Me.PanelLogo = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.HeaderPanel = New System.Windows.Forms.Panel()
+        Me.Luser = New System.Windows.Forms.Label()
+        Me.PanelContainer = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Bmin = New System.Windows.Forms.PictureBox()
         Me.Bmax = New System.Windows.Forms.PictureBox()
         Me.Bclose = New System.Windows.Forms.PictureBox()
-        Me.PanelContainer = New System.Windows.Forms.Panel()
-        Me.Luser = New System.Windows.Forms.Label()
         Me.SidePanel.SuspendLayout()
         Me.PanelButtons.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
         Me.HeaderPanel.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bmax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bclose, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,6 +56,7 @@ Partial Class Form1
         'SidePanel
         '
         Me.SidePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer), CType(CType(39, Byte), Integer))
+        Me.SidePanel.Controls.Add(Me.Panel1)
         Me.SidePanel.Controls.Add(Me.PanelButtons)
         Me.SidePanel.Controls.Add(Me.PanelLogo)
         Me.SidePanel.Dock = System.Windows.Forms.DockStyle.Left
@@ -171,10 +179,58 @@ Partial Class Form1
         Me.HeaderPanel.Size = New System.Drawing.Size(1100, 28)
         Me.HeaderPanel.TabIndex = 1
         '
+        'Luser
+        '
+        Me.Luser.AutoSize = True
+        Me.Luser.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Luser.ForeColor = System.Drawing.Color.White
+        Me.Luser.Location = New System.Drawing.Point(18, 4)
+        Me.Luser.Name = "Luser"
+        Me.Luser.Size = New System.Drawing.Size(0, 20)
+        Me.Luser.TabIndex = 1
+        '
+        'PanelContainer
+        '
+        Me.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelContainer.Location = New System.Drawing.Point(170, 28)
+        Me.PanelContainer.Name = "PanelContainer"
+        Me.PanelContainer.Size = New System.Drawing.Size(930, 672)
+        Me.PanelContainer.TabIndex = 2
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.PictureBox2)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 592)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(170, 80)
+        Me.Panel1.TabIndex = 2
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Bulletien_De_Paie.My.Resources.Resources.out
+        Me.PictureBox2.Location = New System.Drawing.Point(33, 19)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Bulletien_De_Paie.My.Resources.Resources.settings
+        Me.PictureBox1.Location = New System.Drawing.Point(102, 19)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
         'Bmin
         '
         Me.Bmin.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Bmin.Image = Global.Bulletien_De_Paie.My.Resources.Resources.__
+        Me.Bmin.Image = CType(resources.GetObject("Bmin.Image"), System.Drawing.Image)
         Me.Bmin.Location = New System.Drawing.Point(1010, 6)
         Me.Bmin.Name = "Bmin"
         Me.Bmin.Size = New System.Drawing.Size(16, 16)
@@ -204,24 +260,6 @@ Partial Class Form1
         Me.Bclose.TabIndex = 0
         Me.Bclose.TabStop = False
         '
-        'PanelContainer
-        '
-        Me.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelContainer.Location = New System.Drawing.Point(170, 28)
-        Me.PanelContainer.Name = "PanelContainer"
-        Me.PanelContainer.Size = New System.Drawing.Size(930, 672)
-        Me.PanelContainer.TabIndex = 2
-        '
-        'Luser
-        '
-        Me.Luser.AutoSize = True
-        Me.Luser.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Luser.ForeColor = System.Drawing.Color.White
-        Me.Luser.Location = New System.Drawing.Point(18, 4)
-        Me.Luser.Name = "Luser"
-        Me.Luser.Size = New System.Drawing.Size(0, 20)
-        Me.Luser.TabIndex = 1
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -239,6 +277,9 @@ Partial Class Form1
         Me.PanelLogo.PerformLayout()
         Me.HeaderPanel.ResumeLayout(False)
         Me.HeaderPanel.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bmin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bmax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bclose, System.ComponentModel.ISupportInitialize).EndInit()
@@ -261,4 +302,7 @@ Partial Class Form1
     Friend WithEvents Bmin As System.Windows.Forms.PictureBox
     Friend WithEvents Bmax As System.Windows.Forms.PictureBox
     Friend WithEvents Luser As System.Windows.Forms.Label
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class
