@@ -210,9 +210,9 @@ Partial Class Form1
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Bulletien_De_Paie.My.Resources.Resources.out
-        Me.PictureBox2.Location = New System.Drawing.Point(33, 19)
+        Me.PictureBox2.Location = New System.Drawing.Point(38, 23)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
@@ -220,9 +220,9 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Bulletien_De_Paie.My.Resources.Resources.settings
-        Me.PictureBox1.Location = New System.Drawing.Point(102, 19)
+        Me.PictureBox1.Location = New System.Drawing.Point(113, 23)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False

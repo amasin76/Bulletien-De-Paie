@@ -23,7 +23,6 @@ Partial Class formEmployeDetails
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Znen_dt = New System.Windows.Forms.TextBox()
-        Me.Zdem_dt = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Zemail_dt = New System.Windows.Forms.TextBox()
         Me.Ztel_dt = New System.Windows.Forms.TextBox()
@@ -40,38 +39,42 @@ Partial Class formEmployeDetails
         Me.Zmat_dt = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelAction = New System.Windows.Forms.Panel()
         Me.Bdelete = New System.Windows.Forms.Button()
         Me.Bsave = New System.Windows.Forms.Button()
         Me.Bedit = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Dnas = New System.Windows.Forms.DateTimePicker()
+        Me.Csexe = New System.Windows.Forms.ComboBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Pemploye = New System.Windows.Forms.PictureBox()
+        Me.Ddem_dt = New System.Windows.Forms.DateTimePicker()
+        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Bbrowse = New System.Windows.Forms.Button()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.PanelAction.SuspendLayout()
+        CType(Me.Pemploye, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Znen_dt
         '
-        Me.Znen_dt.Enabled = False
         Me.Znen_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Znen_dt.Location = New System.Drawing.Point(217, 338)
+        Me.Znen_dt.Location = New System.Drawing.Point(595, 91)
         Me.Znen_dt.Name = "Znen_dt"
+        Me.Znen_dt.ReadOnly = True
         Me.Znen_dt.Size = New System.Drawing.Size(183, 29)
         Me.Znen_dt.TabIndex = 20
-        '
-        'Zdem_dt
-        '
-        Me.Zdem_dt.Enabled = False
-        Me.Zdem_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zdem_dt.Location = New System.Drawing.Point(217, 303)
-        Me.Zdem_dt.Name = "Zdem_dt"
-        Me.Zdem_dt.Size = New System.Drawing.Size(183, 29)
-        Me.Zdem_dt.TabIndex = 18
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(45, 64)
+        Me.Label2.Location = New System.Drawing.Point(40, 59)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 21)
         Me.Label2.TabIndex = 4
@@ -79,19 +82,19 @@ Partial Class formEmployeDetails
         '
         'Zemail_dt
         '
-        Me.Zemail_dt.Enabled = False
         Me.Zemail_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zemail_dt.Location = New System.Drawing.Point(216, 232)
+        Me.Zemail_dt.Location = New System.Drawing.Point(203, 302)
         Me.Zemail_dt.Name = "Zemail_dt"
+        Me.Zemail_dt.ReadOnly = True
         Me.Zemail_dt.Size = New System.Drawing.Size(183, 29)
         Me.Zemail_dt.TabIndex = 17
         '
         'Ztel_dt
         '
-        Me.Ztel_dt.Enabled = False
         Me.Ztel_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ztel_dt.Location = New System.Drawing.Point(217, 268)
+        Me.Ztel_dt.Location = New System.Drawing.Point(204, 338)
         Me.Ztel_dt.Name = "Ztel_dt"
+        Me.Ztel_dt.ReadOnly = True
         Me.Ztel_dt.Size = New System.Drawing.Size(183, 29)
         Me.Ztel_dt.TabIndex = 16
         '
@@ -99,7 +102,7 @@ Partial Class formEmployeDetails
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(45, 99)
+        Me.Label3.Location = New System.Drawing.Point(40, 94)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 21)
         Me.Label3.TabIndex = 7
@@ -107,10 +110,10 @@ Partial Class formEmployeDetails
         '
         'Zvil_dt
         '
-        Me.Zvil_dt.Enabled = False
         Me.Zvil_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zvil_dt.Location = New System.Drawing.Point(217, 196)
+        Me.Zvil_dt.Location = New System.Drawing.Point(204, 266)
         Me.Zvil_dt.Name = "Zvil_dt"
+        Me.Zvil_dt.ReadOnly = True
         Me.Zvil_dt.Size = New System.Drawing.Size(183, 29)
         Me.Zvil_dt.TabIndex = 15
         '
@@ -118,7 +121,7 @@ Partial Class formEmployeDetails
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(45, 134)
+        Me.Label4.Location = New System.Drawing.Point(40, 129)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(78, 21)
         Me.Label4.TabIndex = 8
@@ -126,11 +129,11 @@ Partial Class formEmployeDetails
         '
         'Zadrs_dt
         '
-        Me.Zadrs_dt.Enabled = False
         Me.Zadrs_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zadrs_dt.Location = New System.Drawing.Point(217, 161)
+        Me.Zadrs_dt.Location = New System.Drawing.Point(204, 231)
         Me.Zadrs_dt.Multiline = True
         Me.Zadrs_dt.Name = "Zadrs_dt"
+        Me.Zadrs_dt.ReadOnly = True
         Me.Zadrs_dt.Size = New System.Drawing.Size(183, 29)
         Me.Zadrs_dt.TabIndex = 14
         '
@@ -138,7 +141,7 @@ Partial Class formEmployeDetails
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(45, 169)
+        Me.Label5.Location = New System.Drawing.Point(40, 234)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(73, 21)
         Me.Label5.TabIndex = 10
@@ -146,10 +149,10 @@ Partial Class formEmployeDetails
         '
         'Zfn_dt
         '
-        Me.Zfn_dt.Enabled = False
         Me.Zfn_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zfn_dt.Location = New System.Drawing.Point(217, 126)
+        Me.Zfn_dt.Location = New System.Drawing.Point(204, 126)
         Me.Zfn_dt.Name = "Zfn_dt"
+        Me.Zfn_dt.ReadOnly = True
         Me.Zfn_dt.Size = New System.Drawing.Size(183, 29)
         Me.Zfn_dt.TabIndex = 19
         '
@@ -157,7 +160,7 @@ Partial Class formEmployeDetails
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(45, 204)
+        Me.Label6.Location = New System.Drawing.Point(40, 269)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(45, 21)
         Me.Label6.TabIndex = 11
@@ -166,10 +169,10 @@ Partial Class formEmployeDetails
         'Znpr_dt
         '
         Me.Znpr_dt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.Znpr_dt.Enabled = False
         Me.Znpr_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Znpr_dt.Location = New System.Drawing.Point(217, 91)
+        Me.Znpr_dt.Location = New System.Drawing.Point(204, 91)
         Me.Znpr_dt.Name = "Znpr_dt"
+        Me.Znpr_dt.ReadOnly = True
         Me.Znpr_dt.Size = New System.Drawing.Size(183, 29)
         Me.Znpr_dt.TabIndex = 13
         '
@@ -177,7 +180,7 @@ Partial Class formEmployeDetails
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(44, 240)
+        Me.Label25.Location = New System.Drawing.Point(40, 305)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(48, 21)
         Me.Label25.TabIndex = 6
@@ -187,7 +190,7 @@ Partial Class formEmployeDetails
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(45, 276)
+        Me.Label7.Location = New System.Drawing.Point(40, 341)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(90, 21)
         Me.Label7.TabIndex = 5
@@ -195,10 +198,10 @@ Partial Class formEmployeDetails
         '
         'Zmat_dt
         '
-        Me.Zmat_dt.Enabled = False
         Me.Zmat_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zmat_dt.Location = New System.Drawing.Point(217, 56)
+        Me.Zmat_dt.Location = New System.Drawing.Point(204, 56)
         Me.Zmat_dt.Name = "Zmat_dt"
+        Me.Zmat_dt.ReadOnly = True
         Me.Zmat_dt.Size = New System.Drawing.Size(183, 29)
         Me.Zmat_dt.TabIndex = 12
         '
@@ -206,7 +209,7 @@ Partial Class formEmployeDetails
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(45, 311)
+        Me.Label8.Location = New System.Drawing.Point(427, 59)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(142, 21)
         Me.Label8.TabIndex = 9
@@ -216,19 +219,11 @@ Partial Class formEmployeDetails
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(45, 346)
+        Me.Label9.Location = New System.Drawing.Point(427, 94)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(140, 21)
         Me.Label9.TabIndex = 3
         Me.Label9.Text = "Nombre d'enfant "
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(636, 56)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(142, 134)
-        Me.PictureBox1.TabIndex = 21
-        Me.PictureBox1.TabStop = False
         '
         'PanelAction
         '
@@ -268,15 +263,166 @@ Partial Class formEmployeDetails
         Me.Bedit.Text = "Modifier"
         Me.Bedit.UseVisualStyleBackColor = True
         '
+        'Dnas
+        '
+        Me.Dnas.CustomFormat = " dd/MM/yyyy"
+        Me.Dnas.Enabled = False
+        Me.Dnas.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Dnas.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Dnas.Location = New System.Drawing.Point(204, 161)
+        Me.Dnas.Name = "Dnas"
+        Me.Dnas.Size = New System.Drawing.Size(184, 29)
+        Me.Dnas.TabIndex = 105
+        '
+        'Csexe
+        '
+        Me.Csexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Csexe.Enabled = False
+        Me.Csexe.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Csexe.FormattingEnabled = True
+        Me.Csexe.Items.AddRange(New Object() {"Masculine", "Féminin"})
+        Me.Csexe.Location = New System.Drawing.Point(204, 196)
+        Me.Csexe.Name = "Csexe"
+        Me.Csexe.Size = New System.Drawing.Size(183, 29)
+        Me.Csexe.TabIndex = 104
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(40, 167)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(144, 21)
+        Me.Label14.TabIndex = 102
+        Me.Label14.Text = "Date De Naissance"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(40, 199)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(45, 21)
+        Me.Label12.TabIndex = 103
+        Me.Label12.Text = "Sexe"
+        '
+        'Pemploye
+        '
+        Me.Pemploye.Enabled = False
+        Me.Pemploye.Location = New System.Drawing.Point(430, 197)
+        Me.Pemploye.Name = "Pemploye"
+        Me.Pemploye.Size = New System.Drawing.Size(170, 170)
+        Me.Pemploye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Pemploye.TabIndex = 21
+        Me.Pemploye.TabStop = False
+        '
+        'Ddem_dt
+        '
+        Me.Ddem_dt.CustomFormat = " dd/MM/yyyy"
+        Me.Ddem_dt.Enabled = False
+        Me.Ddem_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Ddem_dt.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Ddem_dt.Location = New System.Drawing.Point(595, 56)
+        Me.Ddem_dt.Name = "Ddem_dt"
+        Me.Ddem_dt.Size = New System.Drawing.Size(184, 29)
+        Me.Ddem_dt.TabIndex = 106
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Gainsboro
+        Me.RectangleShape2.Location = New System.Drawing.Point(430, 137)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(347, 1)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Gainsboro
+        Me.RectangleShape1.Location = New System.Drawing.Point(617, 211)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(1, 140)
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape1, Me.RectangleShape2})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(827, 541)
+        Me.ShapeContainer1.TabIndex = 107
+        Me.ShapeContainer1.TabStop = False
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(630, 155)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(30, 21)
+        Me.Label21.TabIndex = 109
+        Me.Label21.Text = "CV"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(427, 155)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(54, 21)
+        Me.Label20.TabIndex = 108
+        Me.Label20.Text = "Photo"
+        '
+        'Bbrowse
+        '
+        Me.Bbrowse.Enabled = False
+        Me.Bbrowse.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bbrowse.Location = New System.Drawing.Point(634, 246)
+        Me.Bbrowse.Name = "Bbrowse"
+        Me.Bbrowse.Size = New System.Drawing.Size(104, 33)
+        Me.Bbrowse.TabIndex = 110
+        Me.Bbrowse.Text = "Parccourir"
+        Me.Bbrowse.UseVisualStyleBackColor = True
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LinkLabel1.Location = New System.Drawing.Point(635, 309)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(61, 17)
+        Me.LinkLabel1.TabIndex = 112
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Ouvrir ➤"
+        '
+        'Label15
+        '
+        Me.Label15.AutoEllipsis = True
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(635, 285)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(0, 17)
+        Me.Label15.TabIndex = 111
+        '
         'formEmployeDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(827, 541)
+        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Bbrowse)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Ddem_dt)
+        Me.Controls.Add(Me.Dnas)
+        Me.Controls.Add(Me.Csexe)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.PanelAction)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Pemploye)
         Me.Controls.Add(Me.Znen_dt)
-        Me.Controls.Add(Me.Zdem_dt)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Zemail_dt)
         Me.Controls.Add(Me.Ztel_dt)
@@ -293,17 +439,17 @@ Partial Class formEmployeDetails
         Me.Controls.Add(Me.Zmat_dt)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.ShapeContainer1)
         Me.Name = "formEmployeDetails"
         Me.Text = "formEmployeDetails"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelAction.ResumeLayout(False)
+        CType(Me.Pemploye, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Znen_dt As TextBox
-    Friend WithEvents Zdem_dt As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Zemail_dt As TextBox
     Friend WithEvents Ztel_dt As TextBox
@@ -320,9 +466,22 @@ Partial Class formEmployeDetails
     Friend WithEvents Zmat_dt As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Pemploye As PictureBox
     Friend WithEvents PanelAction As Panel
     Friend WithEvents Bdelete As Button
     Friend WithEvents Bsave As Button
     Friend WithEvents Bedit As Button
+    Friend WithEvents Dnas As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Csexe As System.Windows.Forms.ComboBox
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Ddem_dt As System.Windows.Forms.DateTimePicker
+    Friend WithEvents RectangleShape2 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents RectangleShape1 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Bbrowse As System.Windows.Forms.Button
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class

@@ -1,7 +1,9 @@
 ﻿Imports System.Data.OleDb
 Public Class formEmployeDetails
+    Dim MyDocuments As String = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+
     Private Sub formEmployeDetails_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
-        Dim matSelected As String
+        Dim matSelected As String, imgName As String = "", cvName As String = "", pathImgString As String, pathCvString As String
         matSelected = formEmployee.selectedrow.Cells(0).Value.ToString()
 
         cnx.Open()
@@ -12,41 +14,54 @@ Public Class formEmployeDetails
         cmd.Parameters.AddWithValue("@Mat", OleDbType.VarChar).Value = matSelected
         'cmd.Parameters.AddWithValue("@Mat", matSelected)
         reader = cmd.ExecuteReader()
-        reader.Read()
+        If reader.Read() Then
+            Zmat_dt.Text = matSelected
+            Znpr_dt.Text = reader("Nom_Prenom")
+            Zfn_dt.Text = reader("Fonction")
+            Csexe.Text = reader("Sexe")
+            Dnas.Text = reader("Date_N")
+            Zadrs_dt.Text = reader("Adresse")
+            Zvil_dt.Text = reader("Ville")
+            Zemail_dt.Text = reader("Email")
+            Ztel_dt.Text = reader("Telephone")
+            Ddem_dt.Text = reader("DEM")
+            Znen_dt.Text = reader("Enfants")
+            If Not IsDBNull(reader("Photo")) Then imgName = reader("Photo")
+            If Not IsDBNull(reader("CV")) Then cvName = reader("CV") Else LinkLabel1.Enabled = False
+        End If
 
-        Zmat_dt.Text = matSelected
-        Znpr_dt.Text = reader("Nom_Prenom")
-        Zfn_dt.Text = reader("Fonction")
-        Zadrs_dt.Text = reader("Adresse")
-        Zvil_dt.Text = reader("Ville")
-        Zemail_dt.Text = reader("Email")
-        Ztel_dt.Text = reader("Telephone")
-        Zdem_dt.Text = reader("DEM")
-        Znen_dt.Text = reader("Enfants")
+        pathImgString = System.IO.Path.Combine(MyDocuments, "Bio Tech", "Employés", "Photos", imgName)
+        pathCvString = System.IO.Path.Combine(MyDocuments, "Bio Tech", "Employés", "CV", cvName)
 
-        Zmat_dt.Enabled = False
-        Znpr_dt.Enabled = False
-        Zfn_dt.Enabled = False
-        Zadrs_dt.Enabled = False
-        Zvil_dt.Enabled = False
-        Zemail_dt.Enabled = False
-        Ztel_dt.Enabled = False
-        Zdem_dt.Enabled = False
-        Znen_dt.Enabled = False
+        'Load Image
+        If System.IO.File.Exists(pathImgString) Then
+            Pemploye.Image = Image.FromFile(pathImgString)
+        Else
+            Pemploye.Image = My.Resources.x
+        End If
 
+        'Load CV
+        If System.IO.File.Exists(pathCvString) Then
+            Label15.Text = cvName
+        Else
+            Label15.Text = "Fichier introuvable"
+        End If
         cnx.Close()
     End Sub
 
     Private Sub Bedit_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Bedit.Click
-        Zmat_dt.Enabled = False
-        Znpr_dt.Enabled = True
-        Zfn_dt.Enabled = True
-        Zadrs_dt.Enabled = True
-        Zvil_dt.Enabled = True
-        Zemail_dt.Enabled = True
-        Ztel_dt.Enabled = True
-        Zdem_dt.Enabled = True
-        Znen_dt.Enabled = True
+        Znpr_dt.ReadOnly = False
+        Zfn_dt.ReadOnly = False
+        Csexe.Enabled = True
+        Dnas.Enabled = True
+        Zadrs_dt.ReadOnly = False
+        Zvil_dt.ReadOnly = False
+        Zemail_dt.ReadOnly = False
+        Ztel_dt.ReadOnly = False
+        Ddem_dt.Enabled = True
+        Znen_dt.ReadOnly = False
+        Pemploye.Enabled = True
+        Bbrowse.Enabled = True
     End Sub
 
     Private Sub Bsave_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Bsave.Click
@@ -60,7 +75,7 @@ Public Class formEmployeDetails
         cmd.Parameters.Add("@vil", OleDbType.VarChar).Value = Zvil_dt.Text
         cmd.Parameters.Add("@email", OleDbType.VarWChar).Value = Zemail_dt.Text
         cmd.Parameters.Add("@tel", OleDbType.VarChar).Value = Ztel_dt.Text
-        cmd.Parameters.Add("@dem", OleDbType.VarChar).Value = Zdem_dt.Text
+        cmd.Parameters.Add("@dem", OleDbType.VarChar).Value = Ddem_dt.Text
         cmd.Parameters.Add("@nen", OleDbType.VarChar).Value = Znen_dt.Text
 
         Try
@@ -95,4 +110,41 @@ Public Class formEmployeDetails
         End If
 
     End Sub
+
+    Private Sub LinkLabel1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LinkLabel1.Click
+        If Not Label15.Text = "Fichier introuvable" Then
+            LinkLabel1.Enabled = True
+            Dim pathCvString As String = System.IO.Path.Combine(MyDocuments, "Bio Tech", "Employés", "CV", Label15.Text)
+            Process.Start(pathCvString)
+        End If
+    End Sub
+
+    'Private Sub Pemploye_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Pemploye.Click
+    '    Using OpenFileDialog1 As OpenFileDialog = New OpenFileDialog()
+
+    '        Dim MyDocuments As String = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+    '        With OpenFileDialog1
+    '            .Filter = "choose image(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png"
+    '            .FileName = ""
+    '            .Title = "choose a picture..."
+    '            .AddExtension = True
+    '            .FilterIndex = 1
+    '            .Multiselect = False
+    '            .ValidateNames = True
+    '            If (.ShowDialog = DialogResult.OK) Then
+    '                If CInt(OpenFileDialog1.OpenFile.Length) > 256000 Then
+    '                    MsgBox("La taille de l'image sélectionnée " & FormatToHumanReadableFileSize(OpenFileDialog1.OpenFile.Length) & " dépasse le maximum: 256KB")
+    '                    Exit Sub
+    '                End If
+
+    '                imgName = Zmat.Text & Path.GetExtension(OpenFileDialog1.FileName).ToLower()
+    '                Pemploye.Image = Image.FromFile(OpenFileDialog1.FileName)
+    '                If Not System.IO.Directory.Exists(Path.Combine(MyDocuments, "Bio Tech", "Employés", "Photos")) Then
+    '                    System.IO.Directory.CreateDirectory(Path.Combine(MyDocuments, "Bio Tech", "Employés", "Photos"))
+    '                End If
+    '                pathImgString = Path.Combine(MyDocuments, "Bio Tech", "Employés", "Photos", imgName)
+    '            End If
+    '        End With
+    '    End Using
+    'End Sub
 End Class

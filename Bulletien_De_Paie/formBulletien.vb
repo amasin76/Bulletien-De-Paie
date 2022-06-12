@@ -22,8 +22,6 @@ Public Class formBulletien
     End Sub
 
     Private Sub formBulletien_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        cnx.Close()
-        cnx.Open()
         Call SearchEmploye()
         cnx.Close()
         'Load months list

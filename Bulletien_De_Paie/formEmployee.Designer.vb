@@ -23,9 +23,16 @@ Partial Class formEmployee
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabAjoute = New System.Windows.Forms.TabPage()
         Me.PanelMain = New System.Windows.Forms.Panel()
+        Me.Lplus = New System.Windows.Forms.Label()
+        Me.Pemploye = New System.Windows.Forms.PictureBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Bcv = New System.Windows.Forms.Button()
+        Me.Dnas = New System.Windows.Forms.DateTimePicker()
+        Me.Csexe = New System.Windows.Forms.ComboBox()
         Me.LcnxState = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -34,7 +41,6 @@ Partial Class formEmployee
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Znen = New System.Windows.Forms.TextBox()
-        Me.Zdem = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Zemail = New System.Windows.Forms.TextBox()
         Me.Ztel = New System.Windows.Forms.TextBox()
@@ -46,11 +52,16 @@ Partial Class formEmployee
         Me.Zfn = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Znpr = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Zmat = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
+        Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.PanelAction = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -63,21 +74,7 @@ Partial Class formEmployee
         Me.Bannuler_sr = New System.Windows.Forms.Button()
         Me.Brechercher = New System.Windows.Forms.Button()
         Me.PanelGrid = New System.Windows.Forms.Panel()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.LrowsCount = New System.Windows.Forms.Label()
-        Me.BtableLast = New System.Windows.Forms.Button()
-        Me.BtableNext = New System.Windows.Forms.Button()
-        Me.BtableFirst = New System.Windows.Forms.Button()
-        Me.BtablePrev = New System.Windows.Forms.Button()
-        Me.PanelBoxes = New System.Windows.Forms.Panel()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Zsearch = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
-        Me.EmployeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.EmployeTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.EmployeTableAdapter()
         Me.MatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FonctionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -90,19 +87,35 @@ Partial Class formEmployee
         Me.PhotoDataGridViewImageColumn = New System.Windows.Forms.DataGridViewImageColumn()
         Me.CVDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateRecDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EmployeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.LrowsCount = New System.Windows.Forms.Label()
+        Me.BtableLast = New System.Windows.Forms.Button()
+        Me.BtableNext = New System.Windows.Forms.Button()
+        Me.BtableFirst = New System.Windows.Forms.Button()
+        Me.BtablePrev = New System.Windows.Forms.Button()
+        Me.PanelBoxes = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Zsearch = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.EmployeTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.EmployeTableAdapter()
+        Me.Ddem = New System.Windows.Forms.DateTimePicker()
         Me.TabControl1.SuspendLayout()
         Me.TabAjoute.SuspendLayout()
         Me.PanelMain.SuspendLayout()
+        CType(Me.Pemploye, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelAction.SuspendLayout()
         Me.PanelTitle.SuspendLayout()
         Me.TabConsulter.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.PanelGrid.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelBoxes.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.EmployeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -114,7 +127,7 @@ Partial Class formEmployee
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(914, 633)
+        Me.TabControl1.Size = New System.Drawing.Size(930, 672)
         Me.TabControl1.TabIndex = 0
         '
         'TabAjoute
@@ -126,13 +139,20 @@ Partial Class formEmployee
         Me.TabAjoute.Location = New System.Drawing.Point(4, 30)
         Me.TabAjoute.Name = "TabAjoute"
         Me.TabAjoute.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabAjoute.Size = New System.Drawing.Size(906, 599)
+        Me.TabAjoute.Size = New System.Drawing.Size(922, 638)
         Me.TabAjoute.TabIndex = 0
         Me.TabAjoute.Text = "Ajouter"
         Me.TabAjoute.UseVisualStyleBackColor = True
         '
         'PanelMain
         '
+        Me.PanelMain.Controls.Add(Me.Ddem)
+        Me.PanelMain.Controls.Add(Me.Lplus)
+        Me.PanelMain.Controls.Add(Me.Pemploye)
+        Me.PanelMain.Controls.Add(Me.Label15)
+        Me.PanelMain.Controls.Add(Me.Bcv)
+        Me.PanelMain.Controls.Add(Me.Dnas)
+        Me.PanelMain.Controls.Add(Me.Csexe)
         Me.PanelMain.Controls.Add(Me.LcnxState)
         Me.PanelMain.Controls.Add(Me.Label24)
         Me.PanelMain.Controls.Add(Me.Label23)
@@ -141,7 +161,6 @@ Partial Class formEmployee
         Me.PanelMain.Controls.Add(Me.Label20)
         Me.PanelMain.Controls.Add(Me.Label19)
         Me.PanelMain.Controls.Add(Me.Znen)
-        Me.PanelMain.Controls.Add(Me.Zdem)
         Me.PanelMain.Controls.Add(Me.Label2)
         Me.PanelMain.Controls.Add(Me.Zemail)
         Me.PanelMain.Controls.Add(Me.Ztel)
@@ -153,16 +172,81 @@ Partial Class formEmployee
         Me.PanelMain.Controls.Add(Me.Zfn)
         Me.PanelMain.Controls.Add(Me.Label6)
         Me.PanelMain.Controls.Add(Me.Znpr)
+        Me.PanelMain.Controls.Add(Me.Label14)
+        Me.PanelMain.Controls.Add(Me.Label12)
         Me.PanelMain.Controls.Add(Me.Label25)
         Me.PanelMain.Controls.Add(Me.Label7)
         Me.PanelMain.Controls.Add(Me.Zmat)
         Me.PanelMain.Controls.Add(Me.Label8)
         Me.PanelMain.Controls.Add(Me.Label9)
+        Me.PanelMain.Controls.Add(Me.ShapeContainer1)
         Me.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelMain.Location = New System.Drawing.Point(3, 52)
         Me.PanelMain.Name = "PanelMain"
-        Me.PanelMain.Size = New System.Drawing.Size(900, 440)
+        Me.PanelMain.Size = New System.Drawing.Size(916, 479)
         Me.PanelMain.TabIndex = 8
+        '
+        'Lplus
+        '
+        Me.Lplus.AutoSize = True
+        Me.Lplus.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.Lplus.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Lplus.Font = New System.Drawing.Font("Segoe UI", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lplus.ForeColor = System.Drawing.Color.Gray
+        Me.Lplus.Location = New System.Drawing.Point(499, 285)
+        Me.Lplus.Name = "Lplus"
+        Me.Lplus.Size = New System.Drawing.Size(48, 50)
+        Me.Lplus.TabIndex = 106
+        Me.Lplus.Text = "+"
+        '
+        'Pemploye
+        '
+        Me.Pemploye.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
+        Me.Pemploye.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Pemploye.Location = New System.Drawing.Point(433, 228)
+        Me.Pemploye.Name = "Pemploye"
+        Me.Pemploye.Size = New System.Drawing.Size(170, 170)
+        Me.Pemploye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.Pemploye.TabIndex = 103
+        Me.Pemploye.TabStop = False
+        '
+        'Label15
+        '
+        Me.Label15.AutoEllipsis = True
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(637, 306)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(0, 17)
+        Me.Label15.TabIndex = 105
+        '
+        'Bcv
+        '
+        Me.Bcv.Location = New System.Drawing.Point(636, 267)
+        Me.Bcv.Name = "Bcv"
+        Me.Bcv.Size = New System.Drawing.Size(104, 33)
+        Me.Bcv.TabIndex = 104
+        Me.Bcv.Text = "Parccourir"
+        Me.Bcv.UseVisualStyleBackColor = True
+        '
+        'Dnas
+        '
+        Me.Dnas.CustomFormat = " dd/MM/yyyy"
+        Me.Dnas.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Dnas.Location = New System.Drawing.Point(181, 194)
+        Me.Dnas.Name = "Dnas"
+        Me.Dnas.Size = New System.Drawing.Size(184, 29)
+        Me.Dnas.TabIndex = 101
+        '
+        'Csexe
+        '
+        Me.Csexe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Csexe.FormattingEnabled = True
+        Me.Csexe.Items.AddRange(New Object() {"Masculine", "Féminin"})
+        Me.Csexe.Location = New System.Drawing.Point(181, 229)
+        Me.Csexe.Name = "Csexe"
+        Me.Csexe.Size = New System.Drawing.Size(183, 29)
+        Me.Csexe.TabIndex = 100
         '
         'LcnxState
         '
@@ -190,9 +274,9 @@ Partial Class formEmployee
         Me.Label23.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.Label23.Location = New System.Drawing.Point(10, 445)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(158, 13)
+        Me.Label23.Size = New System.Drawing.Size(188, 13)
         Me.Label23.TabIndex = 7
-        Me.Label23.Text = "[ ] : les conditions de champs"
+        Me.Label23.Text = "CV (optional) : pdf ou word format"
         '
         'Label22
         '
@@ -201,29 +285,29 @@ Partial Class formEmployee
         Me.Label22.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.Label22.Location = New System.Drawing.Point(10, 424)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(117, 13)
+        Me.Label22.Size = New System.Drawing.Size(193, 13)
         Me.Label22.TabIndex = 7
-        Me.Label22.Text = " *  :  champs optional"
+        Me.Label22.Text = "Photo (optional)  :  max taille 256kb"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(429, 379)
+        Me.Label21.Location = New System.Drawing.Point(632, 183)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(89, 21)
+        Me.Label21.Size = New System.Drawing.Size(30, 21)
         Me.Label21.TabIndex = 6
-        Me.Label21.Text = "CV * [ pdf ]"
+        Me.Label21.Text = "CV"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(429, 97)
+        Me.Label20.Location = New System.Drawing.Point(429, 183)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(174, 21)
+        Me.Label20.Size = New System.Drawing.Size(54, 21)
         Me.Label20.TabIndex = 5
-        Me.Label20.Text = "Photo * [ max : 256ko ]"
+        Me.Label20.Text = "Photo"
         '
         'Label19
         '
@@ -236,17 +320,10 @@ Partial Class formEmployee
         '
         'Znen
         '
-        Me.Znen.Location = New System.Drawing.Point(181, 371)
+        Me.Znen.Location = New System.Drawing.Point(615, 121)
         Me.Znen.Name = "Znen"
         Me.Znen.Size = New System.Drawing.Size(183, 29)
         Me.Znen.TabIndex = 2
-        '
-        'Zdem
-        '
-        Me.Zdem.Location = New System.Drawing.Point(181, 336)
-        Me.Zdem.Name = "Zdem"
-        Me.Zdem.Size = New System.Drawing.Size(183, 29)
-        Me.Zdem.TabIndex = 2
         '
         'Label2
         '
@@ -260,14 +337,14 @@ Partial Class formEmployee
         '
         'Zemail
         '
-        Me.Zemail.Location = New System.Drawing.Point(180, 265)
+        Me.Zemail.Location = New System.Drawing.Point(181, 334)
         Me.Zemail.Name = "Zemail"
         Me.Zemail.Size = New System.Drawing.Size(183, 29)
         Me.Zemail.TabIndex = 2
         '
         'Ztel
         '
-        Me.Ztel.Location = New System.Drawing.Point(181, 301)
+        Me.Ztel.Location = New System.Drawing.Point(181, 369)
         Me.Ztel.Name = "Ztel"
         Me.Ztel.Size = New System.Drawing.Size(183, 29)
         Me.Ztel.TabIndex = 2
@@ -284,7 +361,7 @@ Partial Class formEmployee
         '
         'Zvil
         '
-        Me.Zvil.Location = New System.Drawing.Point(181, 229)
+        Me.Zvil.Location = New System.Drawing.Point(181, 299)
         Me.Zvil.Name = "Zvil"
         Me.Zvil.Size = New System.Drawing.Size(183, 29)
         Me.Zvil.TabIndex = 2
@@ -301,7 +378,7 @@ Partial Class formEmployee
         '
         'Zadrs
         '
-        Me.Zadrs.Location = New System.Drawing.Point(181, 194)
+        Me.Zadrs.Location = New System.Drawing.Point(181, 264)
         Me.Zadrs.Multiline = True
         Me.Zadrs.Name = "Zadrs"
         Me.Zadrs.Size = New System.Drawing.Size(183, 29)
@@ -311,7 +388,7 @@ Partial Class formEmployee
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(9, 202)
+        Me.Label5.Location = New System.Drawing.Point(9, 267)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(73, 21)
         Me.Label5.TabIndex = 1
@@ -328,7 +405,7 @@ Partial Class formEmployee
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(9, 237)
+        Me.Label6.Location = New System.Drawing.Point(9, 302)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(45, 21)
         Me.Label6.TabIndex = 1
@@ -342,11 +419,31 @@ Partial Class formEmployee
         Me.Znpr.Size = New System.Drawing.Size(183, 29)
         Me.Znpr.TabIndex = 2
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(8, 202)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(144, 21)
+        Me.Label14.TabIndex = 1
+        Me.Label14.Text = "Date De Naissance"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(9, 232)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(45, 21)
+        Me.Label12.TabIndex = 1
+        Me.Label12.Text = "Sexe"
+        '
         'Label25
         '
         Me.Label25.AutoSize = True
         Me.Label25.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(8, 273)
+        Me.Label25.Location = New System.Drawing.Point(8, 337)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(48, 21)
         Me.Label25.TabIndex = 1
@@ -356,7 +453,7 @@ Partial Class formEmployee
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(9, 309)
+        Me.Label7.Location = New System.Drawing.Point(9, 372)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(90, 21)
         Me.Label7.TabIndex = 1
@@ -367,13 +464,13 @@ Partial Class formEmployee
         Me.Zmat.Location = New System.Drawing.Point(181, 89)
         Me.Zmat.Name = "Zmat"
         Me.Zmat.Size = New System.Drawing.Size(183, 29)
-        Me.Zmat.TabIndex = 2
+        Me.Zmat.TabIndex = 99
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(9, 344)
+        Me.Label8.Location = New System.Drawing.Point(429, 92)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(142, 21)
         Me.Label8.TabIndex = 1
@@ -383,11 +480,35 @@ Partial Class formEmployee
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(9, 379)
+        Me.Label9.Location = New System.Drawing.Point(429, 124)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(140, 21)
         Me.Label9.TabIndex = 1
         Me.Label9.Text = "Nombre d'enfant "
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.RectangleShape2, Me.RectangleShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(916, 479)
+        Me.ShapeContainer1.TabIndex = 102
+        Me.ShapeContainer1.TabStop = False
+        '
+        'RectangleShape2
+        '
+        Me.RectangleShape2.BorderColor = System.Drawing.Color.Gainsboro
+        Me.RectangleShape2.Location = New System.Drawing.Point(433, 166)
+        Me.RectangleShape2.Name = "RectangleShape2"
+        Me.RectangleShape2.Size = New System.Drawing.Size(363, 1)
+        '
+        'RectangleShape1
+        '
+        Me.RectangleShape1.BorderColor = System.Drawing.Color.Gainsboro
+        Me.RectangleShape1.Location = New System.Drawing.Point(620, 247)
+        Me.RectangleShape1.Name = "RectangleShape1"
+        Me.RectangleShape1.Size = New System.Drawing.Size(1, 130)
         '
         'PanelAction
         '
@@ -395,9 +516,9 @@ Partial Class formEmployee
         Me.PanelAction.Controls.Add(Me.Button2)
         Me.PanelAction.Controls.Add(Me.Bajoute)
         Me.PanelAction.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.PanelAction.Location = New System.Drawing.Point(3, 492)
+        Me.PanelAction.Location = New System.Drawing.Point(3, 531)
         Me.PanelAction.Name = "PanelAction"
-        Me.PanelAction.Size = New System.Drawing.Size(900, 104)
+        Me.PanelAction.Size = New System.Drawing.Size(916, 104)
         Me.PanelAction.TabIndex = 7
         '
         'Button3
@@ -433,7 +554,7 @@ Partial Class formEmployee
         Me.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTitle.Location = New System.Drawing.Point(3, 3)
         Me.PanelTitle.Name = "PanelTitle"
-        Me.PanelTitle.Size = New System.Drawing.Size(900, 49)
+        Me.PanelTitle.Size = New System.Drawing.Size(916, 49)
         Me.PanelTitle.TabIndex = 6
         '
         'Label1
@@ -457,7 +578,7 @@ Partial Class formEmployee
         Me.TabConsulter.Location = New System.Drawing.Point(4, 30)
         Me.TabConsulter.Name = "TabConsulter"
         Me.TabConsulter.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabConsulter.Size = New System.Drawing.Size(906, 599)
+        Me.TabConsulter.Size = New System.Drawing.Size(922, 638)
         Me.TabConsulter.TabIndex = 1
         Me.TabConsulter.Text = "Consulter"
         Me.TabConsulter.UseVisualStyleBackColor = True
@@ -468,9 +589,9 @@ Partial Class formEmployee
         Me.Panel2.Controls.Add(Me.Bannuler_sr)
         Me.Panel2.Controls.Add(Me.Brechercher)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(3, 492)
+        Me.Panel2.Location = New System.Drawing.Point(3, 531)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(900, 104)
+        Me.Panel2.Size = New System.Drawing.Size(916, 104)
         Me.Panel2.TabIndex = 12
         '
         'Button7
@@ -513,113 +634,8 @@ Partial Class formEmployee
         Me.PanelGrid.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelGrid.Location = New System.Drawing.Point(3, 109)
         Me.PanelGrid.Name = "PanelGrid"
-        Me.PanelGrid.Size = New System.Drawing.Size(900, 487)
+        Me.PanelGrid.Size = New System.Drawing.Size(916, 526)
         Me.PanelGrid.TabIndex = 11
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.Label13.Location = New System.Drawing.Point(767, 311)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(80, 21)
-        Me.Label13.TabIndex = 2
-        Me.Label13.Text = "Result(s) :"
-        '
-        'LrowsCount
-        '
-        Me.LrowsCount.AutoSize = True
-        Me.LrowsCount.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LrowsCount.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.LrowsCount.Location = New System.Drawing.Point(860, 311)
-        Me.LrowsCount.Name = "LrowsCount"
-        Me.LrowsCount.Size = New System.Drawing.Size(0, 21)
-        Me.LrowsCount.TabIndex = 2
-        '
-        'BtableLast
-        '
-        Me.BtableLast.Location = New System.Drawing.Point(204, 305)
-        Me.BtableLast.Name = "BtableLast"
-        Me.BtableLast.Size = New System.Drawing.Size(52, 32)
-        Me.BtableLast.TabIndex = 1
-        Me.BtableLast.Text = ">>"
-        Me.BtableLast.UseVisualStyleBackColor = True
-        '
-        'BtableNext
-        '
-        Me.BtableNext.Location = New System.Drawing.Point(146, 305)
-        Me.BtableNext.Name = "BtableNext"
-        Me.BtableNext.Size = New System.Drawing.Size(52, 32)
-        Me.BtableNext.TabIndex = 1
-        Me.BtableNext.Text = ">"
-        Me.BtableNext.UseVisualStyleBackColor = True
-        '
-        'BtableFirst
-        '
-        Me.BtableFirst.Location = New System.Drawing.Point(30, 305)
-        Me.BtableFirst.Name = "BtableFirst"
-        Me.BtableFirst.Size = New System.Drawing.Size(52, 32)
-        Me.BtableFirst.TabIndex = 1
-        Me.BtableFirst.Text = "<<"
-        Me.BtableFirst.UseVisualStyleBackColor = True
-        '
-        'BtablePrev
-        '
-        Me.BtablePrev.Location = New System.Drawing.Point(88, 305)
-        Me.BtablePrev.Name = "BtablePrev"
-        Me.BtablePrev.Size = New System.Drawing.Size(52, 32)
-        Me.BtablePrev.TabIndex = 1
-        Me.BtablePrev.Text = "<"
-        Me.BtablePrev.UseVisualStyleBackColor = True
-        '
-        'PanelBoxes
-        '
-        Me.PanelBoxes.Controls.Add(Me.Label10)
-        Me.PanelBoxes.Controls.Add(Me.Zsearch)
-        Me.PanelBoxes.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelBoxes.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PanelBoxes.Location = New System.Drawing.Point(3, 52)
-        Me.PanelBoxes.Name = "PanelBoxes"
-        Me.PanelBoxes.Size = New System.Drawing.Size(900, 57)
-        Me.PanelBoxes.TabIndex = 9
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(9, 21)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(59, 21)
-        Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Search"
-        '
-        'Zsearch
-        '
-        Me.Zsearch.Location = New System.Drawing.Point(74, 13)
-        Me.Zsearch.Name = "Zsearch"
-        Me.Zsearch.Size = New System.Drawing.Size(280, 29)
-        Me.Zsearch.TabIndex = 2
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Label11)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(3, 3)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(900, 49)
-        Me.Panel1.TabIndex = 10
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(8, 11)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(360, 30)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Afficher un ou plusieurs employees"
         '
         'DataGridView1
         '
@@ -630,22 +646,10 @@ Partial Class formEmployee
         Me.DataGridView1.DataSource = Me.EmployeBindingSource
         Me.DataGridView1.Location = New System.Drawing.Point(13, 19)
         Me.DataGridView1.Name = "DataGridView1"
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.Size = New System.Drawing.Size(882, 280)
         Me.DataGridView1.TabIndex = 3
-        '
-        'Employee_dbDataSet
-        '
-        Me.Employee_dbDataSet.DataSetName = "employee_dbDataSet"
-        Me.Employee_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'EmployeBindingSource
-        '
-        Me.EmployeBindingSource.DataMember = "Employe"
-        Me.EmployeBindingSource.DataSource = Me.Employee_dbDataSet
-        '
-        'EmployeTableAdapter
-        '
-        Me.EmployeTableAdapter.ClearBeforeFill = True
         '
         'MatDataGridViewTextBoxColumn
         '
@@ -729,11 +733,139 @@ Partial Class formEmployee
         Me.DateRecDataGridViewTextBoxColumn.Name = "DateRecDataGridViewTextBoxColumn"
         Me.DateRecDataGridViewTextBoxColumn.Visible = False
         '
+        'EmployeBindingSource
+        '
+        Me.EmployeBindingSource.DataMember = "Employe"
+        Me.EmployeBindingSource.DataSource = Me.Employee_dbDataSet
+        '
+        'Employee_dbDataSet
+        '
+        Me.Employee_dbDataSet.DataSetName = "employee_dbDataSet"
+        Me.Employee_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.Label13.Location = New System.Drawing.Point(767, 311)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(80, 21)
+        Me.Label13.TabIndex = 2
+        Me.Label13.Text = "Result(s) :"
+        '
+        'LrowsCount
+        '
+        Me.LrowsCount.AutoSize = True
+        Me.LrowsCount.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LrowsCount.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.LrowsCount.Location = New System.Drawing.Point(860, 311)
+        Me.LrowsCount.Name = "LrowsCount"
+        Me.LrowsCount.Size = New System.Drawing.Size(0, 21)
+        Me.LrowsCount.TabIndex = 2
+        '
+        'BtableLast
+        '
+        Me.BtableLast.Location = New System.Drawing.Point(204, 305)
+        Me.BtableLast.Name = "BtableLast"
+        Me.BtableLast.Size = New System.Drawing.Size(52, 32)
+        Me.BtableLast.TabIndex = 1
+        Me.BtableLast.Text = ">>"
+        Me.BtableLast.UseVisualStyleBackColor = True
+        '
+        'BtableNext
+        '
+        Me.BtableNext.Location = New System.Drawing.Point(146, 305)
+        Me.BtableNext.Name = "BtableNext"
+        Me.BtableNext.Size = New System.Drawing.Size(52, 32)
+        Me.BtableNext.TabIndex = 1
+        Me.BtableNext.Text = ">"
+        Me.BtableNext.UseVisualStyleBackColor = True
+        '
+        'BtableFirst
+        '
+        Me.BtableFirst.Location = New System.Drawing.Point(30, 305)
+        Me.BtableFirst.Name = "BtableFirst"
+        Me.BtableFirst.Size = New System.Drawing.Size(52, 32)
+        Me.BtableFirst.TabIndex = 1
+        Me.BtableFirst.Text = "<<"
+        Me.BtableFirst.UseVisualStyleBackColor = True
+        '
+        'BtablePrev
+        '
+        Me.BtablePrev.Location = New System.Drawing.Point(88, 305)
+        Me.BtablePrev.Name = "BtablePrev"
+        Me.BtablePrev.Size = New System.Drawing.Size(52, 32)
+        Me.BtablePrev.TabIndex = 1
+        Me.BtablePrev.Text = "<"
+        Me.BtablePrev.UseVisualStyleBackColor = True
+        '
+        'PanelBoxes
+        '
+        Me.PanelBoxes.Controls.Add(Me.Label10)
+        Me.PanelBoxes.Controls.Add(Me.Zsearch)
+        Me.PanelBoxes.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelBoxes.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PanelBoxes.Location = New System.Drawing.Point(3, 52)
+        Me.PanelBoxes.Name = "PanelBoxes"
+        Me.PanelBoxes.Size = New System.Drawing.Size(916, 57)
+        Me.PanelBoxes.TabIndex = 9
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(9, 21)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(59, 21)
+        Me.Label10.TabIndex = 1
+        Me.Label10.Text = "Search"
+        '
+        'Zsearch
+        '
+        Me.Zsearch.Location = New System.Drawing.Point(74, 13)
+        Me.Zsearch.Name = "Zsearch"
+        Me.Zsearch.Size = New System.Drawing.Size(280, 29)
+        Me.Zsearch.TabIndex = 2
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(916, 49)
+        Me.Panel1.TabIndex = 10
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(8, 11)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(360, 30)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Afficher un ou plusieurs employees"
+        '
+        'EmployeTableAdapter
+        '
+        Me.EmployeTableAdapter.ClearBeforeFill = True
+        '
+        'Ddem
+        '
+        Me.Ddem.CustomFormat = " dd/MM/yyyy"
+        Me.Ddem.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Ddem.Location = New System.Drawing.Point(614, 86)
+        Me.Ddem.Name = "Ddem"
+        Me.Ddem.Size = New System.Drawing.Size(184, 29)
+        Me.Ddem.TabIndex = 107
+        '
         'formEmployee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(914, 633)
+        Me.ClientSize = New System.Drawing.Size(930, 672)
         Me.Controls.Add(Me.TabControl1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "formEmployee"
@@ -742,6 +874,7 @@ Partial Class formEmployee
         Me.TabAjoute.ResumeLayout(False)
         Me.PanelMain.ResumeLayout(False)
         Me.PanelMain.PerformLayout()
+        CType(Me.Pemploye, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelAction.ResumeLayout(False)
         Me.PanelTitle.ResumeLayout(False)
         Me.PanelTitle.PerformLayout()
@@ -749,13 +882,13 @@ Partial Class formEmployee
         Me.Panel2.ResumeLayout(False)
         Me.PanelGrid.ResumeLayout(False)
         Me.PanelGrid.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBoxes.ResumeLayout(False)
         Me.PanelBoxes.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.EmployeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -772,7 +905,6 @@ Partial Class formEmployee
     Friend WithEvents Label20 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Znen As TextBox
-    Friend WithEvents Zdem As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Zemail As TextBox
     Friend WithEvents Ztel As TextBox
@@ -827,4 +959,16 @@ Partial Class formEmployee
     Friend WithEvents PhotoDataGridViewImageColumn As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents CVDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DateRecDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Csexe As System.Windows.Forms.ComboBox
+    Friend WithEvents Dnas As System.Windows.Forms.DateTimePicker
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents RectangleShape1 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents Pemploye As System.Windows.Forms.PictureBox
+    Friend WithEvents RectangleShape2 As Microsoft.VisualBasic.PowerPacks.RectangleShape
+    Friend WithEvents Bcv As System.Windows.Forms.Button
+    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Lplus As System.Windows.Forms.Label
+    Friend WithEvents Ddem As System.Windows.Forms.DateTimePicker
 End Class
