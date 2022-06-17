@@ -1,7 +1,8 @@
 ﻿Imports System.Data.OleDb
 Imports System.Globalization
+Imports Bulletien_De_Paie.classCongeDetails
 Public Class formConge
-    'Saisi Bulletien
+    'AutoComplete
     Dim qry As String
     Dim cmd As OleDbCommand
     Dim dr As OleDbDataReader
@@ -22,10 +23,11 @@ Public Class formConge
 
     Dim minDatePicker As Date
     Private Sub formConge_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        cnx.Close()
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then
+            cnx.Open()
+        End If
         Call SearchEmploye()
-        cnx.Close()
+        'cnx.Close()
         'Load months list
 
         'Load ID
@@ -34,7 +36,9 @@ Public Class formConge
         Dim strId As String
         Dim initId As Integer
 
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then
+            cnx.Open()
+        End If
         maxId = cmd.ExecuteScalar
         If maxId = "" Then 'Is DBNull.Value Then
             initId = 1
@@ -45,7 +49,7 @@ Public Class formConge
         End If
         Zcode.Text = "C" & initId.ToString()
         Znpr.Focus()
-        cnx.Close()
+        'cnx.Close()
 
         Ltype.SelectedIndex = 0
         Zannee.Text = Date.Now.Year
@@ -54,8 +58,9 @@ Public Class formConge
     End Sub
 
     Private Sub Znpr_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles Znpr.KeyUp
-        cnx.Close()
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then
+            cnx.Open()
+        End If
 
         qry = "SELECT Mat FROM Employe WHERE Nom_Prenom = @npr "
         cmd = New OleDbCommand(qry, cnx)
@@ -69,13 +74,14 @@ Public Class formConge
         Catch ex As Exception
         End Try
 
-        cnx.Close()
+        'cnx.Close()
     End Sub
 
     Dim nAnc As Integer
     Private Sub Zmat_KeyUp(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Zmat.TextChanged
-        cnx.Close()
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then
+            cnx.Open()
+        End If
         cmd = New OleDbCommand("select Nom_Prenom, Fonction, DEM from Employe WHERE Mat = @Mat", cnx)
         cmd.Parameters.Add("@Mat", OleDbType.VarChar).Value = Zmat.Text
         dr = cmd.ExecuteReader
@@ -90,7 +96,7 @@ Public Class formConge
             nAnc = 0
             Zseniority.Text = nAnc
         End If
-        cnx.Close()
+        'cnx.Close()
 
         ZnJours.Clear()
         DateTimePicker3.Value = Date.Now
@@ -99,8 +105,9 @@ Public Class formConge
 
     'Calc Total / Recent Conges
     Private Sub Zfn_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Zfn.TextChanged, Ltype.SelectedValueChanged
-        cnx.Close()
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then
+            cnx.Open()
+        End If
 
         Dim qry2 As String = " SELECT Tot_Conges, Rec_Conges, Anc FROM CongeStats WHERE Mat = @Mat AND Type = @Type "
         Dim pcmd As New OleDbCommand(qry2, cnx)
@@ -146,6 +153,7 @@ Public Class formConge
                 ZvilCng.ReadOnly = True
                 ZadrsCng.ReadOnly = True
                 Zdesc.ReadOnly = True
+                Bdemande.Enabled = False
             Else
                 Lcredit.Text = Credit
                 Lcredit.ForeColor = Color.Black
@@ -156,6 +164,7 @@ Public Class formConge
                 ZvilCng.ReadOnly = False
                 ZadrsCng.ReadOnly = False
                 Zdesc.ReadOnly = False
+                Bdemande.Enabled = True
             End If
         Else
             Lcredit.Text = "-"
@@ -269,7 +278,7 @@ Public Class formConge
     End Sub
 
     Private Sub Bsave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bsave.Click
-        cnx.Close()
+        'cnx.Close()
         Dim commad As String
         commad = "INSERT INTO Conge (`N_Conge`, `Type`, `Nbr_Jours`, `D_Sortie`, `D_Retour`, `Annee`, `Telephone`, `Ville`, `Adresse`, `Description`, `Mat`)" & _
                     "VALUES (@Code, @Type, @Nbr_Jours, @D_Sortie, @D_Retour, @Annee, @Telephone, @Ville, @Adresse, @Description, @Mat)"
@@ -288,7 +297,9 @@ Public Class formConge
         cmd.Parameters.Add("@Mat", OleDbType.VarChar).Value = Zmat.Text
 
         Try
-            cnx.Open()
+            If cnx.State = ConnectionState.Closed Then
+                cnx.Open()
+            End If
             cmd.ExecuteNonQuery()
             Dim ToolTip1 As New ToolTip
             ToolTip1.IsBalloon = True
@@ -302,15 +313,16 @@ Public Class formConge
     End Sub
 
 
-    Dim bs As New BindingSource()
+    Public bs As New BindingSource()
     Private Sub TabConsulter_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabConsulter.Enter
-        cnx.Close()
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then
+            cnx.Open()
+        End If
         Dim dataAdapter As New OleDbDataAdapter("SELECT * FROM CongeWithEmployeDetails", cnx)
         Dim ds As New DataSet()
         Dim dsView As New DataView
         dataAdapter.Fill(ds, "CongeWithEmployeDetails")
-        cnx.Close()
+        'cnx.Close()
         dsView = ds.Tables(0).DefaultView
         bs.DataSource = dsView
         Me.DataGridView1.DataSource = bs
@@ -380,4 +392,21 @@ Public Class formConge
     'End Sub
     'Public Shared Property selectedrow As DataGridViewRow
 
+    Private Sub Bdemande_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bdemande.Click
+        Try
+            nJours = ZnJours.Text
+            Dsortie = DateTimePicker3.Value.ToString("dd/MM/yyyy")
+            Dretour = DateTimePicker4.Value.ToString("dd/MM/yyyy")
+            type = Ltype.Text
+            matricule = Zmat.Text
+            nomPrenom = Znpr.Text
+            fonction = Zfn.Text
+        Catch ex As Exception
+            MsgBox("SVP Complir les donnees")
+            Exit Sub
+        End Try
+        
+
+        formCongeDemande.Show()
+    End Sub
 End Class

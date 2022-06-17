@@ -29,6 +29,7 @@ Partial Class LoginForm
         Me.Lincorrect = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.LrePwdStatus = New System.Windows.Forms.Label()
         Me.LcharMin = New System.Windows.Forms.Label()
         Me.LpwdStatus = New System.Windows.Forms.Label()
@@ -39,16 +40,23 @@ Partial Class LoginForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Caccepte = New System.Windows.Forms.CheckBox()
         Me.ZpwdNew = New System.Windows.Forms.TextBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,6 +118,8 @@ Partial Class LoginForm
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer), CType(CType(37, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.PictureBox7)
+        Me.Panel1.Controls.Add(Me.PictureBox6)
         Me.Panel1.Controls.Add(Me.LinkLabel1)
         Me.Panel1.Controls.Add(Me.Lincorrect)
         Me.Panel1.Controls.Add(Me.Crember)
@@ -125,6 +135,7 @@ Partial Class LoginForm
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.PictureBox5)
         Me.Panel3.Controls.Add(Me.LrePwdStatus)
         Me.Panel3.Controls.Add(Me.LcharMin)
         Me.Panel3.Controls.Add(Me.LpwdStatus)
@@ -135,11 +146,22 @@ Partial Class LoginForm
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Caccepte)
         Me.Panel3.Controls.Add(Me.ZpwdNew)
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Controls.Add(Me.PictureBox3)
+        Me.Panel3.Location = New System.Drawing.Point(0, 1)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(380, 466)
         Me.Panel3.TabIndex = 8
         Me.Panel3.Visible = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.Bulletien_De_Paie.My.Resources.Resources.purpleWavesA90
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(125, 96)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 12
+        Me.PictureBox5.TabStop = False
         '
         'LrePwdStatus
         '
@@ -242,6 +264,36 @@ Partial Class LoginForm
         Me.ZpwdNew.TabIndex = 1
         Me.ZpwdNew.Text = "Mot De Passe"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Bulletien_De_Paie.My.Resources.Resources.purpleWavesA
+        Me.PictureBox3.Location = New System.Drawing.Point(255, 370)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(125, 96)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 11
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.Bulletien_De_Paie.My.Resources.Resources.purpleWavesA90
+        Me.PictureBox7.Location = New System.Drawing.Point(0, 3)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(125, 96)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 8
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.Bulletien_De_Paie.My.Resources.Resources.purpleWavesA
+        Me.PictureBox6.Location = New System.Drawing.Point(255, 370)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(125, 96)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 7
+        Me.PictureBox6.TabStop = False
+        '
         'LinkLabel1
         '
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -277,16 +329,6 @@ Partial Class LoginForm
         Me.Panel2.Size = New System.Drawing.Size(380, 466)
         Me.Panel2.TabIndex = 7
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Bulletien_De_Paie.My.Resources.Resources.purple_waves
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 169)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(380, 317)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 8
-        Me.PictureBox2.TabStop = False
-        '
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -321,6 +363,16 @@ Partial Class LoginForm
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "BIO"
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Bulletien_De_Paie.My.Resources.Resources.purple_waves
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 169)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(388, 317)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 8
+        Me.PictureBox2.TabStop = False
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -337,7 +389,11 @@ Partial Class LoginForm
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -369,4 +425,8 @@ Partial Class LoginForm
     Friend WithEvents LcharMin As System.Windows.Forms.Label
     Friend WithEvents LrePwdStatus As System.Windows.Forms.Label
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
 End Class

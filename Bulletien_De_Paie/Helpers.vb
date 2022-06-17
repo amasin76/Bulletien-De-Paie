@@ -102,4 +102,21 @@ Module Helpers
 
         Return sBuilder.ToString
     End Function
+    Function FormatToHumanReadableFileSize(ByVal value As Object) As [String]
+        Try
+            Dim suffixNames As String() = {"bytes", "KB", "MB", "GB", "TB", "PB", _
+                "EB", "ZB", "YB"}
+            Dim counter = 0
+            Dim dValue As Decimal = 0
+            Decimal.TryParse(value.ToString(), dValue)
+            While Math.Round(dValue / 1024) >= 1
+                dValue /= 1024
+                counter += 1
+            End While
+
+            Return String.Format("{0:n1} {1}", dValue, suffixNames(counter))
+        Catch ex As Exception
+            Return String.Empty
+        End Try
+    End Function
 End Module

@@ -23,12 +23,13 @@ Partial Class formConge
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabSaisi = New System.Windows.Forms.TabPage()
         Me.PanelFooter = New System.Windows.Forms.Panel()
+        Me.Bdemande = New System.Windows.Forms.Button()
         Me.Bclear = New System.Windows.Forms.Button()
         Me.Bsave = New System.Windows.Forms.Button()
         Me.PanelTitle = New System.Windows.Forms.Panel()
@@ -181,6 +182,7 @@ Partial Class formConge
         '
         'PanelFooter
         '
+        Me.PanelFooter.Controls.Add(Me.Bdemande)
         Me.PanelFooter.Controls.Add(Me.Bclear)
         Me.PanelFooter.Controls.Add(Me.Bsave)
         Me.PanelFooter.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -190,9 +192,19 @@ Partial Class formConge
         Me.PanelFooter.Size = New System.Drawing.Size(918, 86)
         Me.PanelFooter.TabIndex = 5
         '
+        'Bdemande
+        '
+        Me.Bdemande.Location = New System.Drawing.Point(359, 13)
+        Me.Bdemande.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
+        Me.Bdemande.Name = "Bdemande"
+        Me.Bdemande.Size = New System.Drawing.Size(205, 61)
+        Me.Bdemande.TabIndex = 12
+        Me.Bdemande.Text = "Demande"
+        Me.Bdemande.UseVisualStyleBackColor = True
+        '
         'Bclear
         '
-        Me.Bclear.Location = New System.Drawing.Point(550, 13)
+        Me.Bclear.Location = New System.Drawing.Point(620, 13)
         Me.Bclear.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Bclear.Name = "Bclear"
         Me.Bclear.Size = New System.Drawing.Size(205, 61)
@@ -202,7 +214,7 @@ Partial Class formConge
         '
         'Bsave
         '
-        Me.Bsave.Location = New System.Drawing.Point(162, 13)
+        Me.Bsave.Location = New System.Drawing.Point(97, 13)
         Me.Bsave.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Bsave.Name = "Bsave"
         Me.Bsave.Size = New System.Drawing.Size(205, 61)
@@ -391,7 +403,7 @@ Partial Class formConge
         '
         Me.DateTimePicker4.Checked = False
         Me.DateTimePicker4.CustomFormat = "  dd/MM/yyyy "
-        Me.DateTimePicker4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker4.Location = New System.Drawing.Point(169, 177)
         Me.DateTimePicker4.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -403,7 +415,7 @@ Partial Class formConge
         '
         Me.DateTimePicker3.Checked = False
         Me.DateTimePicker3.CustomFormat = "  dd/MM/yyyy"
-        Me.DateTimePicker3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTimePicker3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker3.Location = New System.Drawing.Point(169, 142)
         Me.DateTimePicker3.Margin = New System.Windows.Forms.Padding(0, 3, 2, 3)
@@ -437,12 +449,12 @@ Partial Class formConge
         '
         'ZadrsCng
         '
-        Me.ZadrsCng.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ZadrsCng.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ZadrsCng.Location = New System.Drawing.Point(168, 212)
         Me.ZadrsCng.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.ZadrsCng.MaxLength = 60
         Me.ZadrsCng.Name = "ZadrsCng"
-        Me.ZadrsCng.Size = New System.Drawing.Size(508, 25)
+        Me.ZadrsCng.Size = New System.Drawing.Size(508, 29)
         Me.ZadrsCng.TabIndex = 9
         '
         'ZvilCng
@@ -747,7 +759,7 @@ Partial Class formConge
         Me.Gtotal.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Gtotal.Name = "Gtotal"
         Me.Gtotal.Padding = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Gtotal.Size = New System.Drawing.Size(905, 73)
+        Me.Gtotal.Size = New System.Drawing.Size(905, 91)
         Me.Gtotal.TabIndex = 14
         Me.Gtotal.TabStop = False
         Me.Gtotal.Text = "Info"
@@ -755,7 +767,7 @@ Partial Class formConge
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(704, 35)
+        Me.Label29.Location = New System.Drawing.Point(704, 41)
         Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(92, 21)
@@ -765,7 +777,7 @@ Partial Class formConge
         'LminJrs
         '
         Me.LminJrs.AutoSize = True
-        Me.LminJrs.Location = New System.Drawing.Point(800, 35)
+        Me.LminJrs.Location = New System.Drawing.Point(800, 41)
         Me.LminJrs.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LminJrs.Name = "LminJrs"
         Me.LminJrs.Size = New System.Drawing.Size(0, 21)
@@ -774,7 +786,7 @@ Partial Class formConge
         'LmaxJrs
         '
         Me.LmaxJrs.AutoSize = True
-        Me.LmaxJrs.Location = New System.Drawing.Point(577, 35)
+        Me.LmaxJrs.Location = New System.Drawing.Point(577, 41)
         Me.LmaxJrs.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LmaxJrs.Name = "LmaxJrs"
         Me.LmaxJrs.Size = New System.Drawing.Size(0, 21)
@@ -783,7 +795,7 @@ Partial Class formConge
         'LtotalJrs
         '
         Me.LtotalJrs.AutoSize = True
-        Me.LtotalJrs.Location = New System.Drawing.Point(372, 35)
+        Me.LtotalJrs.Location = New System.Drawing.Point(372, 41)
         Me.LtotalJrs.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LtotalJrs.Name = "LtotalJrs"
         Me.LtotalJrs.Size = New System.Drawing.Size(0, 21)
@@ -792,7 +804,7 @@ Partial Class formConge
         'LcngCount
         '
         Me.LcngCount.AutoSize = True
-        Me.LcngCount.Location = New System.Drawing.Point(181, 35)
+        Me.LcngCount.Location = New System.Drawing.Point(181, 41)
         Me.LcngCount.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LcngCount.Name = "LcngCount"
         Me.LcngCount.Size = New System.Drawing.Size(0, 21)
@@ -801,7 +813,7 @@ Partial Class formConge
         'Label28
         '
         Me.Label28.AutoSize = True
-        Me.Label28.Location = New System.Drawing.Point(4, 35)
+        Me.Label28.Location = New System.Drawing.Point(4, 41)
         Me.Label28.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(171, 21)
@@ -811,7 +823,7 @@ Partial Class formConge
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(477, 35)
+        Me.Label26.Location = New System.Drawing.Point(477, 41)
         Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(95, 21)
@@ -821,7 +833,7 @@ Partial Class formConge
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(268, 35)
+        Me.Label27.Location = New System.Drawing.Point(268, 41)
         Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(100, 21)
@@ -834,15 +846,15 @@ Partial Class formConge
         Me.Panel2.Controls.Add(Me.Bannuler_sr)
         Me.Panel2.Controls.Add(Me.Brechercher)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 422)
+        Me.Panel2.Location = New System.Drawing.Point(0, 440)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(918, 104)
+        Me.Panel2.Size = New System.Drawing.Size(918, 86)
         Me.Panel2.TabIndex = 13
         '
         'Bprint
         '
-        Me.Bprint.Location = New System.Drawing.Point(620, 22)
+        Me.Bprint.Location = New System.Drawing.Point(620, 13)
         Me.Bprint.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Bprint.Name = "Bprint"
         Me.Bprint.Size = New System.Drawing.Size(205, 61)
@@ -852,7 +864,7 @@ Partial Class formConge
         '
         'Bannuler_sr
         '
-        Me.Bannuler_sr.Location = New System.Drawing.Point(359, 22)
+        Me.Bannuler_sr.Location = New System.Drawing.Point(359, 13)
         Me.Bannuler_sr.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Bannuler_sr.Name = "Bannuler_sr"
         Me.Bannuler_sr.Size = New System.Drawing.Size(205, 61)
@@ -862,7 +874,7 @@ Partial Class formConge
         '
         'Brechercher
         '
-        Me.Brechercher.Location = New System.Drawing.Point(97, 22)
+        Me.Brechercher.Location = New System.Drawing.Point(97, 13)
         Me.Brechercher.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Brechercher.Name = "Brechercher"
         Me.Brechercher.Size = New System.Drawing.Size(205, 61)
@@ -882,8 +894,8 @@ Partial Class formConge
         Me.DataGridView1.Location = New System.Drawing.Point(5, 19)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.Size = New System.Drawing.Size(906, 280)
         Me.DataGridView1.TabIndex = 3
         '
@@ -919,16 +931,16 @@ Partial Class formConge
         'DSortieDataGridViewTextBoxColumn
         '
         Me.DSortieDataGridViewTextBoxColumn.DataPropertyName = "D_Sortie"
-        DataGridViewCellStyle16.Format = "dd/MM/yyyy"
-        Me.DSortieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle16
+        DataGridViewCellStyle1.Format = "dd/MM/yyyy"
+        Me.DSortieDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
         Me.DSortieDataGridViewTextBoxColumn.HeaderText = "D_Sortie"
         Me.DSortieDataGridViewTextBoxColumn.Name = "DSortieDataGridViewTextBoxColumn"
         '
         'DRetourDataGridViewTextBoxColumn
         '
         Me.DRetourDataGridViewTextBoxColumn.DataPropertyName = "D_Retour"
-        DataGridViewCellStyle17.Format = "dd/MM/yyyy"
-        Me.DRetourDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle2.Format = "dd/MM/yyyy"
+        Me.DRetourDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
         Me.DRetourDataGridViewTextBoxColumn.HeaderText = "D_Retour"
         Me.DRetourDataGridViewTextBoxColumn.Name = "DRetourDataGridViewTextBoxColumn"
         '
@@ -1280,7 +1292,6 @@ Partial Class formConge
     Friend WithEvents ZadrsCng As System.Windows.Forms.TextBox
     Friend WithEvents ZvilCng As System.Windows.Forms.TextBox
     Friend WithEvents ZtelCng As System.Windows.Forms.TextBox
-    Friend WithEvents ZnJours As System.Windows.Forms.TextBox
     Friend WithEvents Zannee As System.Windows.Forms.TextBox
     Friend WithEvents Zcode As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -1364,5 +1375,7 @@ Partial Class formConge
     Friend WithEvents AdrsDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents VilDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TelDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Bdemande As System.Windows.Forms.Button
+    Public WithEvents ZnJours As System.Windows.Forms.TextBox
 
 End Class
