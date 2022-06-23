@@ -27,6 +27,7 @@ Partial Class formEmployee
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabAjoute = New System.Windows.Forms.TabPage()
         Me.PanelMain = New System.Windows.Forms.Panel()
+        Me.Ddem = New System.Windows.Forms.DateTimePicker()
         Me.Lplus = New System.Windows.Forms.Label()
         Me.Pemploye = New System.Windows.Forms.PictureBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -101,7 +102,6 @@ Partial Class formEmployee
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.EmployeTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.EmployeTableAdapter()
-        Me.Ddem = New System.Windows.Forms.DateTimePicker()
         Me.TabControl1.SuspendLayout()
         Me.TabAjoute.SuspendLayout()
         Me.PanelMain.SuspendLayout()
@@ -186,6 +186,16 @@ Partial Class formEmployee
         Me.PanelMain.Size = New System.Drawing.Size(916, 479)
         Me.PanelMain.TabIndex = 8
         '
+        'Ddem
+        '
+        Me.Ddem.CustomFormat = " dd/MM/yyyy"
+        Me.Ddem.Font = New System.Drawing.Font("Calibri", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.Ddem.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.Ddem.Location = New System.Drawing.Point(614, 86)
+        Me.Ddem.Name = "Ddem"
+        Me.Ddem.Size = New System.Drawing.Size(183, 29)
+        Me.Ddem.TabIndex = 107
+        '
         'Lplus
         '
         Me.Lplus.AutoSize = True
@@ -232,10 +242,11 @@ Partial Class formEmployee
         'Dnas
         '
         Me.Dnas.CustomFormat = " dd/MM/yyyy"
+        Me.Dnas.Font = New System.Drawing.Font("Calibri", 13.0!, System.Drawing.FontStyle.Bold)
         Me.Dnas.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.Dnas.Location = New System.Drawing.Point(181, 194)
         Me.Dnas.Name = "Dnas"
-        Me.Dnas.Size = New System.Drawing.Size(184, 29)
+        Me.Dnas.Size = New System.Drawing.Size(183, 29)
         Me.Dnas.TabIndex = 101
         '
         'Csexe
@@ -851,15 +862,6 @@ Partial Class formEmployee
         'EmployeTableAdapter
         '
         Me.EmployeTableAdapter.ClearBeforeFill = True
-        '
-        'Ddem
-        '
-        Me.Ddem.CustomFormat = " dd/MM/yyyy"
-        Me.Ddem.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.Ddem.Location = New System.Drawing.Point(614, 86)
-        Me.Ddem.Name = "Ddem"
-        Me.Ddem.Size = New System.Drawing.Size(184, 29)
-        Me.Ddem.TabIndex = 107
         '
         'formEmployee
         '

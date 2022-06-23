@@ -124,10 +124,13 @@
 
     Private Sub HeaderPanel_MouseMove(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles HeaderPanel.MouseMove
         If (e.Button = Windows.Forms.MouseButtons.Left) Then
+            Me.Opacity = 0.8
             Dim mPosition As Point
             mPosition = Control.MousePosition
             mPosition.Offset(mouse_move.X, mouse_move.Y)
             Me.Location = mPosition
+        Else
+            Me.Opacity = 1
         End If
     End Sub
 End Class

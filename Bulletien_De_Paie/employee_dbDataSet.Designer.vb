@@ -9184,7 +9184,7 @@ Namespace employee_dbDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT N_Bulletien, Mois, Annee, N_HT, TH, S_Base, S_Brut, N_HS_25, N_HS_50, N_HS"& _ 
@@ -9192,6 +9192,14 @@ Namespace employee_dbDataSetTableAdapters
                 ", Net_Payer, Mat, dateRec, Nom_Prenom, Primes, Taxes, DateMY, Fonction FROM Bull"& _ 
                 "etienWithEmployeName"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        N_Bulletien, Mois, Annee, N_HT, TH, S_Base, S_Brut, N_HS_25, N_HS_5"& _ 
+                "0, N_HS_100, HS_Total,                      P_Anciennete, P_Annee, P_Enfants, T_"& _ 
+                "Retraite, M_Retraite, M_CNSS, Net_Payer, Mat, dateRec,                      Nom_"& _ 
+                "Prenom, Primes, Taxes, DateMY, Fonction"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM          BulletienWithEmployeName"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (N_Bulletien = ?)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("N_Bulletien", Global.System.Data.OleDb.OleDbType.WChar, 6, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "N_Bulletien", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -9213,6 +9221,40 @@ Namespace employee_dbDataSetTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
         Public Overloads Overridable Function GetData() As employee_dbDataSet.BulletienWithEmployeNameDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As employee_dbDataSet.BulletienWithEmployeNameDataTable = New employee_dbDataSet.BulletienWithEmployeNameDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, false)>  _
+        Public Overloads Overridable Function FillBy(ByVal dataTable As employee_dbDataSet.BulletienWithEmployeNameDataTable, ByVal N_Bulletien As String) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (N_Bulletien Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(N_Bulletien,String)
+            End If
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function NoDateGetDataBy(ByVal N_Bulletien As String) As employee_dbDataSet.BulletienWithEmployeNameDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(1)
+            If (N_Bulletien Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(0).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(0).Value = CType(N_Bulletien,String)
+            End If
             Dim dataTable As employee_dbDataSet.BulletienWithEmployeNameDataTable = New employee_dbDataSet.BulletienWithEmployeNameDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable

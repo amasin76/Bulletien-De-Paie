@@ -89,7 +89,7 @@ Partial Class LoginForm
         Me.Zpswd.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Zpswd.Name = "Zpswd"
         Me.Zpswd.Size = New System.Drawing.Size(260, 29)
-        Me.Zpswd.TabIndex = 1
+        Me.Zpswd.TabIndex = 2
         Me.Zpswd.Text = "Mot De Passe"
         '
         'Crember
@@ -377,6 +377,7 @@ Partial Class LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(760, 466)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)

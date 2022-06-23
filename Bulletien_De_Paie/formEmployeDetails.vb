@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports System.IO
 Public Class formEmployeDetails
     Dim MyDocuments As String = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
 
@@ -6,7 +7,9 @@ Public Class formEmployeDetails
         Dim matSelected As String, imgName As String = "", cvName As String = "", pathImgString As String, pathCvString As String
         matSelected = formEmployee.selectedrow.Cells(0).Value.ToString()
 
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then
+            cnx.Open()
+        End If
         Dim command As String
         Dim reader As OleDbDataReader
         command = "SELECT * FROM Employe where Mat = @Mat"
@@ -35,7 +38,9 @@ Public Class formEmployeDetails
 
         'Load Image
         If System.IO.File.Exists(pathImgString) Then
-            Pemploye.Image = Image.FromFile(pathImgString)
+            Using str As Stream = File.OpenRead(pathImgString)
+                Pemploye.Image = Image.FromStream(str)
+            End Using
         Else
             Pemploye.Image = My.Resources.x
         End If
@@ -47,6 +52,64 @@ Public Class formEmployeDetails
             Label15.Text = "Fichier introuvable"
         End If
         cnx.Close()
+    End Sub
+
+    'Browse Image
+    Dim imgName As String = "", pathImgString As String
+    Private Sub Pemploye_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Pemploye.Click, Lplus.Click
+        Using OpenFileDialog1 As OpenFileDialog = New OpenFileDialog()
+
+            Dim MyDocuments As String = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+            With OpenFileDialog1
+                .Filter = "choose image(*.jpg; *.jpeg; *.png)|*.jpg; *.jpeg; *.png"
+                .FileName = ""
+                .Title = "choose a picture..."
+                .AddExtension = True
+                .FilterIndex = 1
+                .Multiselect = False
+                .ValidateNames = True
+                If (.ShowDialog = DialogResult.OK) Then
+                    If CInt(OpenFileDialog1.OpenFile.Length) > 256000 Then
+                        MsgBox("La taille de l'image sélectionnée " & FormatToHumanReadableFileSize(OpenFileDialog1.OpenFile.Length) & " dépasse le maximum: 256KB")
+                        Exit Sub
+                    End If
+                    Lplus.Dispose()
+                    imgName = Zmat_dt.Text & Path.GetExtension(OpenFileDialog1.FileName).ToLower()
+                    Pemploye.Image = Image.FromFile(OpenFileDialog1.FileName)
+                    If Not System.IO.Directory.Exists(Path.Combine(MyDocuments, "Bio Tech", "Employés", "Photos")) Then
+                        System.IO.Directory.CreateDirectory(Path.Combine(MyDocuments, "Bio Tech", "Employés", "Photos"))
+                    End If
+                    pathImgString = Path.Combine(MyDocuments, "Bio Tech", "Employés", "Photos", imgName)
+                End If
+            End With
+        End Using
+    End Sub
+
+    'Browse CV
+    Dim cvName As String = "", pathCvString As String, pathSourceCvString As String
+    Private Sub Bcv_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bcv.Click
+        Using OpenFileDialog2 As OpenFileDialog = New OpenFileDialog()
+
+            Dim MyDocuments As String = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+            With OpenFileDialog2
+                .Filter = "choose file(*.pdf; *.doc; *.docx)|*.pdf; *.doc; *.docx"
+                .FileName = ""
+                .Title = "choose a pdf..."
+                .AddExtension = True
+                .FilterIndex = 1
+                .Multiselect = False
+                .ValidateNames = True
+                If (.ShowDialog = DialogResult.OK) Then
+                    pathSourceCvString = Path.GetFullPath(OpenFileDialog2.FileName)
+                    cvName = Zmat_dt.Text & Path.GetExtension(OpenFileDialog2.FileName).ToLower()
+                    Label15.Text = Path.GetFileName(OpenFileDialog2.FileName)
+                    If Not System.IO.Directory.Exists(Path.Combine(MyDocuments, "Bio Tech", "Employés", "CV")) Then
+                        System.IO.Directory.CreateDirectory(Path.Combine(MyDocuments, "Bio Tech", "Employés", "CV"))
+                    End If
+                    pathCvString = Path.Combine(MyDocuments, "Bio Tech", "Employés", "CV", cvName)
+                End If
+            End With
+        End Using
     End Sub
 
     Private Sub Bedit_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Bedit.Click
@@ -61,16 +124,19 @@ Public Class formEmployeDetails
         Ddem_dt.Enabled = True
         Znen_dt.ReadOnly = False
         Pemploye.Enabled = True
-        Bbrowse.Enabled = True
+        Bcv.Enabled = True
+        Lplus.Enabled = True
     End Sub
 
     Private Sub Bsave_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Bsave.Click
         Dim strsql As String
-        strsql = "UPDATE Employe SET Nom_Prenom = @npr, Fonction = @fn, Adresse = @adrs, Ville = @vil, Email = @email, Telephone = @tel, DEM = @dem, Enfants = @nen WHERE Mat = '" & Zmat_dt.Text & "'"
+        strsql = "UPDATE Employe SET Nom_Prenom = @npr, Fonction = @fn, Date_N = @date_n, sexe = @sexe, Adresse = @adrs, Ville = @vil, Email = @email, Telephone = @tel, DEM = @dem, Enfants = @nen WHERE Mat = '" & Zmat_dt.Text & "'"
 
         cmd = New OleDbCommand(strsql, cnx)
         cmd.Parameters.Add("@npr", OleDbType.VarWChar).Value = Znpr_dt.Text
         cmd.Parameters.Add("@fn", OleDbType.VarChar).Value = Zfn_dt.Text
+        cmd.Parameters.Add("date_n", OleDbType.Date).Value = Dnas.Value.Date
+        cmd.Parameters.Add("@sexe", OleDbType.VarChar).Value = Csexe.Text
         cmd.Parameters.Add("@adrs", OleDbType.VarChar).Value = Zadrs_dt.Text
         cmd.Parameters.Add("@vil", OleDbType.VarChar).Value = Zvil_dt.Text
         cmd.Parameters.Add("@email", OleDbType.VarWChar).Value = Zemail_dt.Text
@@ -79,8 +145,18 @@ Public Class formEmployeDetails
         cmd.Parameters.Add("@nen", OleDbType.VarChar).Value = Znen_dt.Text
 
         Try
-            cnx.Open()
+            If cnx.State = ConnectionState.Closed Then
+                cnx.Open()
+            End If
             cmd.ExecuteNonQuery()
+            Dim a As Image = Pemploye.Image
+            If (System.IO.File.Exists(pathImgString)) Then
+                MsgBox(1)
+                System.IO.File.Delete(pathImgString)
+                MsgBox(2)
+                a.Save(pathImgString)
+            End If
+            File.Copy(pathSourceCvString, pathCvString, True)
             cnx.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -99,7 +175,9 @@ Public Class formEmployeDetails
         response = MessageBox.Show("Are you sure want to delete this record?", "Delete Employe", MessageBoxButtons.YesNo, MessageBoxIcon.None)
         If response = vbYes Then
             Try
-                cnx.Open()
+                If cnx.State = ConnectionState.Closed Then
+                    cnx.Open()
+                End If
                 cmd.ExecuteNonQuery()
                 cnx.Close()
             Catch ex As Exception

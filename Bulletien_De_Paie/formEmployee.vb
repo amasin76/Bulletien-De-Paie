@@ -100,46 +100,57 @@ Public Class formEmployee
     End Sub
 
     Private Sub Bajoute_Click(ByVal sender As Object, ByVal e As EventArgs) Handles Bajoute.Click
-        Dim commad As String
-        commad = "INSERT INTO Employe (`Mat`, `Nom_Prenom`, `Fonction`, `Sexe`, `Date_N`, `Adresse`, `Ville`, `Email`, `Telephone`, `DEM`, `Enfants`, `Photo`, `CV`)" & _
-                    "VALUES (@Mat, @Nom_Prenom, @Fonction, @Sexe, @Date_N, @Adresse, @Ville, @Email, @Telephone, @DEM, @Enfants, @Picture, @CV)"
 
-        Dim cmd As OleDbCommand = New OleDbCommand(commad, cnx)
-        cmd.Parameters.Add("@Mat", OleDbType.VarChar).Value = Zmat.Text
-        cmd.Parameters.Add("@Nom_Prenom", OleDbType.VarWChar).Value = Znpr.Text
-        cmd.Parameters.Add("@Fonction", OleDbType.VarChar).Value = Zfn.Text
-        cmd.Parameters.Add("@Sexe", OleDbType.VarChar).Value = Csexe.Text
-        cmd.Parameters.Add("@Date_N", OleDbType.Date).Value = Dnas.Value.Date
-        cmd.Parameters.Add("@Adresse", OleDbType.VarChar).Value = Zadrs.Text
-        cmd.Parameters.Add("@Ville", OleDbType.VarChar).Value = Zvil.Text
-        cmd.Parameters.Add("@Email", OleDbType.VarChar).Value = Zemail.Text
-        cmd.Parameters.Add("@Telephone", OleDbType.VarChar).Value = Ztel.Text
-        cmd.Parameters.Add("@DEM", OleDbType.Date).Value = Ddem.Value.Date
-        cmd.Parameters.Add("@Enfants", OleDbType.Integer).Value = Znen.Text
-        cmd.Parameters.Add("@Picture", OleDbType.VarChar).Value = imgName
-        cmd.Parameters.Add("@CV", OleDbType.VarChar).Value = cvName
+        Dim emptyTextBoxes =
+        From txt In Me.Controls.OfType(Of TextBox)()
+        Where txt.Text.Length = 0
+        Select txt.Name
+        If emptyTextBoxes.Any Then
+            MessageBox.Show(String.Format("Please fill following textboxes: {0}",
+                            String.Join(",", emptyTextBoxes)))
+        Else
 
-        Dim nbrId As Integer
-        nbrId = Convert.ToInt32((Zmat.Text).Remove(0, 1)) + 1
+            Dim commad As String
+            commad = "INSERT INTO Employe (`Mat`, `Nom_Prenom`, `Fonction`, `Sexe`, `Date_N`, `Adresse`, `Ville`, `Email`, `Telephone`, `DEM`, `Enfants`, `Photo`, `CV`)" & _
+                        "VALUES (@Mat, @Nom_Prenom, @Fonction, @Sexe, @Date_N, @Adresse, @Ville, @Email, @Telephone, @DEM, @Enfants, @Picture, @CV)"
 
-        Try
-            If cnx.State = ConnectionState.Closed Then
-                cnx.Open()
-            End If
-            cmd.ExecuteNonQuery()
-            MsgBox("Record saved")
-            Zmat.Text = "E" & nbrId.ToString()
-            cmd.Dispose()
-            Dim a As Image = Pemploye.Image
-            a.Save(pathImgString)
-            File.Copy(pathSourceCvString, pathCvString)
-            Pemploye.Image = Nothing
-            Helpers.clearTextBox(Me)
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            cnx.Close()
-        End Try
+            Dim cmd As OleDbCommand = New OleDbCommand(commad, cnx)
+            cmd.Parameters.Add("@Mat", OleDbType.VarChar).Value = Zmat.Text
+            cmd.Parameters.Add("@Nom_Prenom", OleDbType.VarWChar).Value = Znpr.Text
+            cmd.Parameters.Add("@Fonction", OleDbType.VarChar).Value = Zfn.Text
+            cmd.Parameters.Add("@Sexe", OleDbType.VarChar).Value = Csexe.Text
+            cmd.Parameters.Add("@Date_N", OleDbType.Date).Value = Dnas.Value.Date
+            cmd.Parameters.Add("@Adresse", OleDbType.VarChar).Value = Zadrs.Text
+            cmd.Parameters.Add("@Ville", OleDbType.VarChar).Value = Zvil.Text
+            cmd.Parameters.Add("@Email", OleDbType.VarChar).Value = Zemail.Text
+            cmd.Parameters.Add("@Telephone", OleDbType.VarChar).Value = Ztel.Text
+            cmd.Parameters.Add("@DEM", OleDbType.Date).Value = Ddem.Value.Date
+            cmd.Parameters.Add("@Enfants", OleDbType.Integer).Value = Znen.Text
+            cmd.Parameters.Add("@Picture", OleDbType.VarChar).Value = imgName
+            cmd.Parameters.Add("@CV", OleDbType.VarChar).Value = cvName
+
+            Dim nbrId As Integer
+            nbrId = Convert.ToInt32((Zmat.Text).Remove(0, 1)) + 1
+
+            Try
+                If cnx.State = ConnectionState.Closed Then
+                    cnx.Open()
+                End If
+                cmd.ExecuteNonQuery()
+                MsgBox("Record saved")
+                Zmat.Text = "E" & nbrId.ToString()
+                cmd.Dispose()
+                Dim a As Image = Pemploye.Image
+                a.Save(pathImgString)
+                File.Copy(pathSourceCvString, pathCvString)
+                Pemploye.Image = Nothing
+                Helpers.clearTextBox(Me)
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            Finally
+                cnx.Close()
+            End Try
+        End If
     End Sub
 
 

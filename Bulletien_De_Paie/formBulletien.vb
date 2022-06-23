@@ -252,13 +252,7 @@ Public Class formBulletien
         Zmat.Enabled = True
     End Sub
 
-    Private Sub Bprint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bprint.Click
-        PrintPreviewDialog1.Document = PrintDocument1
-        PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
-        PrintPreviewDialog1.ShowDialog()
-    End Sub
-
-    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs)
         Dim imageBmp As New Bitmap(Me.DataGridView1.Width, Me.DataGridView1.Height)
         DataGridView1.DrawToBitmap(imageBmp, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView1.Height))
         e.Graphics.DrawImage(imageBmp, -40, 100)
@@ -275,4 +269,8 @@ Public Class formBulletien
         End If
     End Sub
     Public Shared Property selectedrow As DataGridViewRow
+
+    Private Sub Bprint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bprint.Click
+        formBulletienReport.ShowDialog()
+    End Sub
 End Class

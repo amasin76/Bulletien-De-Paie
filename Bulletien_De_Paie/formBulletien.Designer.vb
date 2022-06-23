@@ -24,7 +24,6 @@ Partial Class formBulletien
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formBulletien))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabSaisi = New System.Windows.Forms.TabPage()
         Me.PanelFooter = New System.Windows.Forms.Panel()
@@ -137,8 +136,6 @@ Partial Class formBulletien
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.BulletienWithEmployeNameTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.BulletienWithEmployeNameTableAdapter()
-        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.TabControl1.SuspendLayout()
         Me.TabSaisi.SuspendLayout()
         Me.PanelFooter.SuspendLayout()
@@ -1215,19 +1212,6 @@ Partial Class formBulletien
         '
         Me.BulletienWithEmployeNameTableAdapter.ClearBeforeFill = True
         '
-        'PrintPreviewDialog1
-        '
-        Me.PrintPreviewDialog1.AutoScrollMargin = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.AutoScrollMinSize = New System.Drawing.Size(0, 0)
-        Me.PrintPreviewDialog1.ClientSize = New System.Drawing.Size(400, 300)
-        Me.PrintPreviewDialog1.Enabled = True
-        Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
-        Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
-        Me.PrintPreviewDialog1.Visible = False
-        '
-        'PrintDocument1
-        '
-        '
         'formBulletien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -1342,8 +1326,6 @@ Partial Class formBulletien
     Friend WithEvents BulletienWithEmployeNameTableAdapter As Bulletien_De_Paie.employee_dbDataSetTableAdapters.BulletienWithEmployeNameTableAdapter
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents PrintPreviewDialog1 As System.Windows.Forms.PrintPreviewDialog
-    Friend WithEvents PrintDocument1 As System.Drawing.Printing.PrintDocument
     Friend WithEvents Lby As System.Windows.Forms.ComboBox
     Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents Gtotal As System.Windows.Forms.GroupBox

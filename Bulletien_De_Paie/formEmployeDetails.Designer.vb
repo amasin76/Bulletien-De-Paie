@@ -54,9 +54,10 @@ Partial Class formEmployeDetails
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Bbrowse = New System.Windows.Forms.Button()
+        Me.Bcv = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.Lplus = New System.Windows.Forms.Label()
         Me.PanelAction.SuspendLayout()
         CType(Me.Pemploye, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -267,11 +268,11 @@ Partial Class formEmployeDetails
         '
         Me.Dnas.CustomFormat = " dd/MM/yyyy"
         Me.Dnas.Enabled = False
-        Me.Dnas.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Dnas.Font = New System.Drawing.Font("Calibri", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Dnas.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.Dnas.Location = New System.Drawing.Point(204, 161)
         Me.Dnas.Name = "Dnas"
-        Me.Dnas.Size = New System.Drawing.Size(184, 29)
+        Me.Dnas.Size = New System.Drawing.Size(184, 28)
         Me.Dnas.TabIndex = 105
         '
         'Csexe
@@ -308,6 +309,7 @@ Partial Class formEmployeDetails
         '
         'Pemploye
         '
+        Me.Pemploye.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Pemploye.Enabled = False
         Me.Pemploye.Location = New System.Drawing.Point(430, 197)
         Me.Pemploye.Name = "Pemploye"
@@ -320,11 +322,11 @@ Partial Class formEmployeDetails
         '
         Me.Ddem_dt.CustomFormat = " dd/MM/yyyy"
         Me.Ddem_dt.Enabled = False
-        Me.Ddem_dt.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Ddem_dt.Font = New System.Drawing.Font("Calibri", 12.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Ddem_dt.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.Ddem_dt.Location = New System.Drawing.Point(595, 56)
         Me.Ddem_dt.Name = "Ddem_dt"
-        Me.Ddem_dt.Size = New System.Drawing.Size(184, 29)
+        Me.Ddem_dt.Size = New System.Drawing.Size(184, 28)
         Me.Ddem_dt.TabIndex = 106
         '
         'RectangleShape2
@@ -371,16 +373,16 @@ Partial Class formEmployeDetails
         Me.Label20.TabIndex = 108
         Me.Label20.Text = "Photo"
         '
-        'Bbrowse
+        'Bcv
         '
-        Me.Bbrowse.Enabled = False
-        Me.Bbrowse.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Bbrowse.Location = New System.Drawing.Point(634, 246)
-        Me.Bbrowse.Name = "Bbrowse"
-        Me.Bbrowse.Size = New System.Drawing.Size(104, 33)
-        Me.Bbrowse.TabIndex = 110
-        Me.Bbrowse.Text = "Parccourir"
-        Me.Bbrowse.UseVisualStyleBackColor = True
+        Me.Bcv.Enabled = False
+        Me.Bcv.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Bcv.Location = New System.Drawing.Point(634, 246)
+        Me.Bcv.Name = "Bcv"
+        Me.Bcv.Size = New System.Drawing.Size(104, 33)
+        Me.Bcv.TabIndex = 110
+        Me.Bcv.Text = "Parccourir"
+        Me.Bcv.UseVisualStyleBackColor = True
         '
         'LinkLabel1
         '
@@ -405,14 +407,28 @@ Partial Class formEmployeDetails
         Me.Label15.Size = New System.Drawing.Size(0, 17)
         Me.Label15.TabIndex = 111
         '
+        'Lplus
+        '
+        Me.Lplus.AutoSize = True
+        Me.Lplus.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Lplus.Enabled = False
+        Me.Lplus.Font = New System.Drawing.Font("Segoe UI", 27.75!, System.Drawing.FontStyle.Bold)
+        Me.Lplus.ForeColor = System.Drawing.Color.Gray
+        Me.Lplus.Location = New System.Drawing.Point(497, 252)
+        Me.Lplus.Name = "Lplus"
+        Me.Lplus.Size = New System.Drawing.Size(48, 50)
+        Me.Lplus.TabIndex = 113
+        Me.Lplus.Text = "+"
+        '
         'formEmployeDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(827, 541)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.Bbrowse)
+        Me.Controls.Add(Me.Bcv)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Ddem_dt)
@@ -439,6 +455,7 @@ Partial Class formEmployeDetails
         Me.Controls.Add(Me.Zmat_dt)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Lplus)
         Me.Controls.Add(Me.ShapeContainer1)
         Me.Name = "formEmployeDetails"
         Me.Text = "formEmployeDetails"
@@ -481,7 +498,8 @@ Partial Class formEmployeDetails
     Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Bbrowse As System.Windows.Forms.Button
+    Friend WithEvents Bcv As System.Windows.Forms.Button
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents Lplus As System.Windows.Forms.Label
 End Class
