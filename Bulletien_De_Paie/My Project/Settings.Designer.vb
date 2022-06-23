@@ -57,7 +57,9 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\employee_db.accdb")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\amasi\Desktop\PFE\VS 2010\"& _ 
+            "Bulletien_De_Paie\Bulletien_De_Paie\employee_db.accdb;User ID=Admin;Jet OLEDB:En"& _ 
+            "crypt Database=True;Jet OLEDB:Database Password=1234")>  _
         Public ReadOnly Property employee_dbConnectionString() As String
             Get
                 Return CType(Me("employee_dbConnectionString"),String)
