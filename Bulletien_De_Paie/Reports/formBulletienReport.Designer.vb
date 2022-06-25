@@ -51,7 +51,7 @@ Partial Class formBulletienReport
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "Bulletien_De_Paie.BulletiensAsGrid.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.Size = New System.Drawing.Size(936, 827)
+        Me.ReportViewer1.Size = New System.Drawing.Size(934, 821)
         Me.ReportViewer1.TabIndex = 0
         '
         'BulletienWithEmployeNameTableAdapter
@@ -62,7 +62,7 @@ Partial Class formBulletienReport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(936, 827)
+        Me.ClientSize = New System.Drawing.Size(934, 821)
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "formBulletienReport"
         Me.Text = "formBulletienReport"

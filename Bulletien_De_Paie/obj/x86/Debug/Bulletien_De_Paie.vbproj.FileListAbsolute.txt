@@ -30,9 +30,8 @@ C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\D
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.LoginForm.resources
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formStats.resources
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formEmployeDetails.resources
-C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.vbprojResolveAssemblyReference.cache
-C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formCongeReport.resources
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\RdlCompile.cache
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\RdlCompile.compiled
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formCongeDemande.resources
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formBulletienReport.resources
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formCongeReport.resources
