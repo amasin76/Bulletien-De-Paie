@@ -1,5 +1,6 @@
 ﻿Imports System.Data.OleDb
 Imports System.Globalization
+Imports Bulletien_De_Paie.classBulletienFilters
 Public Class formBulletien
     'Saisi Bulletien
     Dim qry As String
@@ -271,6 +272,10 @@ Public Class formBulletien
     Public Shared Property selectedrow As DataGridViewRow
 
     Private Sub Bprint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bprint.Click
+        search = Zsearch.Text
+        date1 = DateTimePicker1.Value
+        date2 = DateTimePicker2.Value
+        selectedIndex = Lby.SelectedIndex
         formBulletienReport.ShowDialog()
     End Sub
 End Class

@@ -83,16 +83,10 @@
   <ItemGroup>
     <Compile Include="classCongeDetails.vb" />
     <Compile Include="Cnxdb.vb" />
-    <Compile Include="formCongeDemande.Designer.vb">
+    <Compile Include="Reports\formCongeDemande.Designer.vb">
       <DependentUpon>formCongeDemande.vb</DependentUpon>
     </Compile>
-    <Compile Include="formCongeDemande.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formCongeReport.Designer.vb">
-      <DependentUpon>formCongeReport.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formCongeReport.vb">
+    <Compile Include="Reports\formCongeDemande.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="employee_dbDataSet.Designer.vb">
@@ -180,14 +174,18 @@
     <Compile Include="Reports\formBulletienReport.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\formCongeReport.Designer.vb">
+      <DependentUpon>formCongeReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\formCongeReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RgbColors.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="formCongeDemande.resx">
+    <EmbeddedResource Include="Reports\CongeAsGrid.rdlc" />
+    <EmbeddedResource Include="Reports\formCongeDemande.resx">
       <DependentUpon>formCongeDemande.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formCongeReport.resx">
-      <DependentUpon>formCongeReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -225,9 +223,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="reportCongeDemande.rdlc" />
-    <EmbeddedResource Include="Reports\BulletiensAsGrid.rdlc" />
+    <EmbeddedResource Include="Reports\formCongeReport.resx">
+      <DependentUpon>formCongeReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reportCongeDemande.rdlc" />
+    <EmbeddedResource Include="Reports\BulletiensAsGrid.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\formBulletienReport.resx">
       <DependentUpon>formBulletienReport.vb</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

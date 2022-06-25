@@ -23,6 +23,7 @@ Partial Class formBulletien
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabSaisi = New System.Windows.Forms.TabPage()
@@ -91,6 +92,26 @@ Partial Class formBulletien
         Me.Bannuler_sr = New System.Windows.Forms.Button()
         Me.Brechercher = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.BulletienWithEmployeNameBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.LrowsCount = New System.Windows.Forms.Label()
+        Me.BtableLast = New System.Windows.Forms.Button()
+        Me.BtableNext = New System.Windows.Forms.Button()
+        Me.BtableFirst = New System.Windows.Forms.Button()
+        Me.BtablePrev = New System.Windows.Forms.Button()
+        Me.PanelBoxes = New System.Windows.Forms.Panel()
+        Me.Lby = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Zsearch = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.BulletienWithEmployeNameTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.BulletienWithEmployeNameTableAdapter()
         Me.NBulletienDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateMYDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -116,26 +137,6 @@ Partial Class formBulletien
         Me.MCNSSDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateRecDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BulletienWithEmployeNameBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.LrowsCount = New System.Windows.Forms.Label()
-        Me.BtableLast = New System.Windows.Forms.Button()
-        Me.BtableNext = New System.Windows.Forms.Button()
-        Me.BtableFirst = New System.Windows.Forms.Button()
-        Me.BtablePrev = New System.Windows.Forms.Button()
-        Me.PanelBoxes = New System.Windows.Forms.Panel()
-        Me.Lby = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Zsearch = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.BulletienWithEmployeNameTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.BulletienWithEmployeNameTableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabSaisi.SuspendLayout()
         Me.PanelFooter.SuspendLayout()
@@ -848,185 +849,6 @@ Partial Class formBulletien
         Me.DataGridView1.Size = New System.Drawing.Size(906, 280)
         Me.DataGridView1.TabIndex = 3
         '
-        'NBulletienDataGridViewTextBoxColumn
-        '
-        Me.NBulletienDataGridViewTextBoxColumn.DataPropertyName = "N_Bulletien"
-        Me.NBulletienDataGridViewTextBoxColumn.HeaderText = "Code"
-        Me.NBulletienDataGridViewTextBoxColumn.Name = "NBulletienDataGridViewTextBoxColumn"
-        Me.NBulletienDataGridViewTextBoxColumn.Width = 70
-        '
-        'DateMYDataGridViewTextBoxColumn
-        '
-        Me.DateMYDataGridViewTextBoxColumn.DataPropertyName = "DateMY"
-        Me.DateMYDataGridViewTextBoxColumn.HeaderText = "Date"
-        Me.DateMYDataGridViewTextBoxColumn.Name = "DateMYDataGridViewTextBoxColumn"
-        Me.DateMYDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DateMYDataGridViewTextBoxColumn.Width = 90
-        '
-        'NomPrenomDataGridViewTextBoxColumn
-        '
-        Me.NomPrenomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "Nom_Prenom"
-        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "Nom Prenom"
-        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
-        '
-        'FonctionDataGridViewTextBoxColumn
-        '
-        Me.FonctionDataGridViewTextBoxColumn.DataPropertyName = "Fonction"
-        Me.FonctionDataGridViewTextBoxColumn.HeaderText = "Fonction"
-        Me.FonctionDataGridViewTextBoxColumn.Name = "FonctionDataGridViewTextBoxColumn"
-        '
-        'PrimesDataGridViewTextBoxColumn
-        '
-        Me.PrimesDataGridViewTextBoxColumn.DataPropertyName = "Primes"
-        Me.PrimesDataGridViewTextBoxColumn.HeaderText = "Primes"
-        Me.PrimesDataGridViewTextBoxColumn.Name = "PrimesDataGridViewTextBoxColumn"
-        Me.PrimesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SBrutDataGridViewTextBoxColumn
-        '
-        Me.SBrutDataGridViewTextBoxColumn.DataPropertyName = "S_Brut"
-        Me.SBrutDataGridViewTextBoxColumn.HeaderText = "S.Brut"
-        Me.SBrutDataGridViewTextBoxColumn.Name = "SBrutDataGridViewTextBoxColumn"
-        '
-        'TaxesDataGridViewTextBoxColumn
-        '
-        Me.TaxesDataGridViewTextBoxColumn.DataPropertyName = "Taxes"
-        Me.TaxesDataGridViewTextBoxColumn.HeaderText = "Taxes"
-        Me.TaxesDataGridViewTextBoxColumn.Name = "TaxesDataGridViewTextBoxColumn"
-        Me.TaxesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NetPayerDataGridViewTextBoxColumn
-        '
-        Me.NetPayerDataGridViewTextBoxColumn.DataPropertyName = "Net_Payer"
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.Format = "#,##0.00"
-        Me.NetPayerDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
-        Me.NetPayerDataGridViewTextBoxColumn.HeaderText = "Net"
-        Me.NetPayerDataGridViewTextBoxColumn.Name = "NetPayerDataGridViewTextBoxColumn"
-        '
-        'SBaseDataGridViewTextBoxColumn
-        '
-        Me.SBaseDataGridViewTextBoxColumn.DataPropertyName = "S_Base"
-        Me.SBaseDataGridViewTextBoxColumn.HeaderText = "S.Base"
-        Me.SBaseDataGridViewTextBoxColumn.Name = "SBaseDataGridViewTextBoxColumn"
-        Me.SBaseDataGridViewTextBoxColumn.Visible = False
-        '
-        'HSTotalDataGridViewTextBoxColumn
-        '
-        Me.HSTotalDataGridViewTextBoxColumn.DataPropertyName = "HS_Total"
-        Me.HSTotalDataGridViewTextBoxColumn.HeaderText = "HS"
-        Me.HSTotalDataGridViewTextBoxColumn.Name = "HSTotalDataGridViewTextBoxColumn"
-        Me.HSTotalDataGridViewTextBoxColumn.Visible = False
-        Me.HSTotalDataGridViewTextBoxColumn.Width = 70
-        '
-        'THDataGridViewTextBoxColumn
-        '
-        Me.THDataGridViewTextBoxColumn.DataPropertyName = "TH"
-        Me.THDataGridViewTextBoxColumn.HeaderText = "TH"
-        Me.THDataGridViewTextBoxColumn.Name = "THDataGridViewTextBoxColumn"
-        Me.THDataGridViewTextBoxColumn.Visible = False
-        Me.THDataGridViewTextBoxColumn.Width = 70
-        '
-        'NHTDataGridViewTextBoxColumn
-        '
-        Me.NHTDataGridViewTextBoxColumn.DataPropertyName = "N_HT"
-        Me.NHTDataGridViewTextBoxColumn.HeaderText = "HT"
-        Me.NHTDataGridViewTextBoxColumn.Name = "NHTDataGridViewTextBoxColumn"
-        Me.NHTDataGridViewTextBoxColumn.Visible = False
-        Me.NHTDataGridViewTextBoxColumn.Width = 70
-        '
-        'NHS25DataGridViewTextBoxColumn
-        '
-        Me.NHS25DataGridViewTextBoxColumn.DataPropertyName = "N_HS_25"
-        Me.NHS25DataGridViewTextBoxColumn.HeaderText = "N_HS_25"
-        Me.NHS25DataGridViewTextBoxColumn.Name = "NHS25DataGridViewTextBoxColumn"
-        Me.NHS25DataGridViewTextBoxColumn.Visible = False
-        '
-        'MoisDataGridViewTextBoxColumn
-        '
-        Me.MoisDataGridViewTextBoxColumn.DataPropertyName = "Mois"
-        Me.MoisDataGridViewTextBoxColumn.HeaderText = "Mois"
-        Me.MoisDataGridViewTextBoxColumn.Name = "MoisDataGridViewTextBoxColumn"
-        Me.MoisDataGridViewTextBoxColumn.Visible = False
-        '
-        'AnneeDataGridViewTextBoxColumn
-        '
-        Me.AnneeDataGridViewTextBoxColumn.DataPropertyName = "Annee"
-        Me.AnneeDataGridViewTextBoxColumn.HeaderText = "Annee"
-        Me.AnneeDataGridViewTextBoxColumn.Name = "AnneeDataGridViewTextBoxColumn"
-        Me.AnneeDataGridViewTextBoxColumn.Visible = False
-        '
-        'NHS50DataGridViewTextBoxColumn
-        '
-        Me.NHS50DataGridViewTextBoxColumn.DataPropertyName = "N_HS_50"
-        Me.NHS50DataGridViewTextBoxColumn.HeaderText = "N_HS_50"
-        Me.NHS50DataGridViewTextBoxColumn.Name = "NHS50DataGridViewTextBoxColumn"
-        Me.NHS50DataGridViewTextBoxColumn.Visible = False
-        '
-        'NHS100DataGridViewTextBoxColumn
-        '
-        Me.NHS100DataGridViewTextBoxColumn.DataPropertyName = "N_HS_100"
-        Me.NHS100DataGridViewTextBoxColumn.HeaderText = "N_HS_100"
-        Me.NHS100DataGridViewTextBoxColumn.Name = "NHS100DataGridViewTextBoxColumn"
-        Me.NHS100DataGridViewTextBoxColumn.Visible = False
-        '
-        'PAncienneteDataGridViewTextBoxColumn
-        '
-        Me.PAncienneteDataGridViewTextBoxColumn.DataPropertyName = "P_Anciennete"
-        Me.PAncienneteDataGridViewTextBoxColumn.HeaderText = "P_Anciennete"
-        Me.PAncienneteDataGridViewTextBoxColumn.Name = "PAncienneteDataGridViewTextBoxColumn"
-        Me.PAncienneteDataGridViewTextBoxColumn.Visible = False
-        '
-        'PAnneeDataGridViewTextBoxColumn
-        '
-        Me.PAnneeDataGridViewTextBoxColumn.DataPropertyName = "P_Annee"
-        Me.PAnneeDataGridViewTextBoxColumn.HeaderText = "P_Annee"
-        Me.PAnneeDataGridViewTextBoxColumn.Name = "PAnneeDataGridViewTextBoxColumn"
-        Me.PAnneeDataGridViewTextBoxColumn.Visible = False
-        '
-        'PEnfantsDataGridViewTextBoxColumn
-        '
-        Me.PEnfantsDataGridViewTextBoxColumn.DataPropertyName = "P_Enfants"
-        Me.PEnfantsDataGridViewTextBoxColumn.HeaderText = "P_Enfants"
-        Me.PEnfantsDataGridViewTextBoxColumn.Name = "PEnfantsDataGridViewTextBoxColumn"
-        Me.PEnfantsDataGridViewTextBoxColumn.Visible = False
-        '
-        'TRetraiteDataGridViewTextBoxColumn
-        '
-        Me.TRetraiteDataGridViewTextBoxColumn.DataPropertyName = "T_Retraite"
-        Me.TRetraiteDataGridViewTextBoxColumn.HeaderText = "T_Retraite"
-        Me.TRetraiteDataGridViewTextBoxColumn.Name = "TRetraiteDataGridViewTextBoxColumn"
-        Me.TRetraiteDataGridViewTextBoxColumn.Visible = False
-        '
-        'MRetraiteDataGridViewTextBoxColumn
-        '
-        Me.MRetraiteDataGridViewTextBoxColumn.DataPropertyName = "M_Retraite"
-        Me.MRetraiteDataGridViewTextBoxColumn.HeaderText = "M_Retraite"
-        Me.MRetraiteDataGridViewTextBoxColumn.Name = "MRetraiteDataGridViewTextBoxColumn"
-        Me.MRetraiteDataGridViewTextBoxColumn.Visible = False
-        '
-        'MCNSSDataGridViewTextBoxColumn
-        '
-        Me.MCNSSDataGridViewTextBoxColumn.DataPropertyName = "M_CNSS"
-        Me.MCNSSDataGridViewTextBoxColumn.HeaderText = "M_CNSS"
-        Me.MCNSSDataGridViewTextBoxColumn.Name = "MCNSSDataGridViewTextBoxColumn"
-        Me.MCNSSDataGridViewTextBoxColumn.Visible = False
-        '
-        'MatDataGridViewTextBoxColumn
-        '
-        Me.MatDataGridViewTextBoxColumn.DataPropertyName = "Mat"
-        Me.MatDataGridViewTextBoxColumn.HeaderText = "Mat"
-        Me.MatDataGridViewTextBoxColumn.Name = "MatDataGridViewTextBoxColumn"
-        Me.MatDataGridViewTextBoxColumn.Visible = False
-        '
-        'DateRecDataGridViewTextBoxColumn
-        '
-        Me.DateRecDataGridViewTextBoxColumn.DataPropertyName = "dateRec"
-        Me.DateRecDataGridViewTextBoxColumn.HeaderText = "dateRec"
-        Me.DateRecDataGridViewTextBoxColumn.Name = "DateRecDataGridViewTextBoxColumn"
-        Me.DateRecDataGridViewTextBoxColumn.Visible = False
-        '
         'BulletienWithEmployeNameBindingSource
         '
         Me.BulletienWithEmployeNameBindingSource.DataMember = "BulletienWithEmployeName"
@@ -1211,6 +1033,187 @@ Partial Class formBulletien
         'BulletienWithEmployeNameTableAdapter
         '
         Me.BulletienWithEmployeNameTableAdapter.ClearBeforeFill = True
+        '
+        'NBulletienDataGridViewTextBoxColumn
+        '
+        Me.NBulletienDataGridViewTextBoxColumn.DataPropertyName = "N_Bulletien"
+        Me.NBulletienDataGridViewTextBoxColumn.HeaderText = "Code"
+        Me.NBulletienDataGridViewTextBoxColumn.Name = "NBulletienDataGridViewTextBoxColumn"
+        Me.NBulletienDataGridViewTextBoxColumn.Width = 70
+        '
+        'DateMYDataGridViewTextBoxColumn
+        '
+        Me.DateMYDataGridViewTextBoxColumn.DataPropertyName = "DateMY"
+        DataGridViewCellStyle1.Format = "MM/yyyy"
+        Me.DateMYDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
+        Me.DateMYDataGridViewTextBoxColumn.HeaderText = "Date"
+        Me.DateMYDataGridViewTextBoxColumn.Name = "DateMYDataGridViewTextBoxColumn"
+        Me.DateMYDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DateMYDataGridViewTextBoxColumn.Width = 90
+        '
+        'NomPrenomDataGridViewTextBoxColumn
+        '
+        Me.NomPrenomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "Nom_Prenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "Nom Prenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
+        '
+        'FonctionDataGridViewTextBoxColumn
+        '
+        Me.FonctionDataGridViewTextBoxColumn.DataPropertyName = "Fonction"
+        Me.FonctionDataGridViewTextBoxColumn.HeaderText = "Fonction"
+        Me.FonctionDataGridViewTextBoxColumn.Name = "FonctionDataGridViewTextBoxColumn"
+        '
+        'PrimesDataGridViewTextBoxColumn
+        '
+        Me.PrimesDataGridViewTextBoxColumn.DataPropertyName = "Primes"
+        Me.PrimesDataGridViewTextBoxColumn.HeaderText = "Primes"
+        Me.PrimesDataGridViewTextBoxColumn.Name = "PrimesDataGridViewTextBoxColumn"
+        Me.PrimesDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SBrutDataGridViewTextBoxColumn
+        '
+        Me.SBrutDataGridViewTextBoxColumn.DataPropertyName = "S_Brut"
+        Me.SBrutDataGridViewTextBoxColumn.HeaderText = "S.Brut"
+        Me.SBrutDataGridViewTextBoxColumn.Name = "SBrutDataGridViewTextBoxColumn"
+        '
+        'TaxesDataGridViewTextBoxColumn
+        '
+        Me.TaxesDataGridViewTextBoxColumn.DataPropertyName = "Taxes"
+        Me.TaxesDataGridViewTextBoxColumn.HeaderText = "Taxes"
+        Me.TaxesDataGridViewTextBoxColumn.Name = "TaxesDataGridViewTextBoxColumn"
+        Me.TaxesDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NetPayerDataGridViewTextBoxColumn
+        '
+        Me.NetPayerDataGridViewTextBoxColumn.DataPropertyName = "Net_Payer"
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Format = "#,##0.00"
+        Me.NetPayerDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
+        Me.NetPayerDataGridViewTextBoxColumn.HeaderText = "Net"
+        Me.NetPayerDataGridViewTextBoxColumn.Name = "NetPayerDataGridViewTextBoxColumn"
+        '
+        'SBaseDataGridViewTextBoxColumn
+        '
+        Me.SBaseDataGridViewTextBoxColumn.DataPropertyName = "S_Base"
+        Me.SBaseDataGridViewTextBoxColumn.HeaderText = "S.Base"
+        Me.SBaseDataGridViewTextBoxColumn.Name = "SBaseDataGridViewTextBoxColumn"
+        Me.SBaseDataGridViewTextBoxColumn.Visible = False
+        '
+        'HSTotalDataGridViewTextBoxColumn
+        '
+        Me.HSTotalDataGridViewTextBoxColumn.DataPropertyName = "HS_Total"
+        Me.HSTotalDataGridViewTextBoxColumn.HeaderText = "HS"
+        Me.HSTotalDataGridViewTextBoxColumn.Name = "HSTotalDataGridViewTextBoxColumn"
+        Me.HSTotalDataGridViewTextBoxColumn.Visible = False
+        Me.HSTotalDataGridViewTextBoxColumn.Width = 70
+        '
+        'THDataGridViewTextBoxColumn
+        '
+        Me.THDataGridViewTextBoxColumn.DataPropertyName = "TH"
+        Me.THDataGridViewTextBoxColumn.HeaderText = "TH"
+        Me.THDataGridViewTextBoxColumn.Name = "THDataGridViewTextBoxColumn"
+        Me.THDataGridViewTextBoxColumn.Visible = False
+        Me.THDataGridViewTextBoxColumn.Width = 70
+        '
+        'NHTDataGridViewTextBoxColumn
+        '
+        Me.NHTDataGridViewTextBoxColumn.DataPropertyName = "N_HT"
+        Me.NHTDataGridViewTextBoxColumn.HeaderText = "HT"
+        Me.NHTDataGridViewTextBoxColumn.Name = "NHTDataGridViewTextBoxColumn"
+        Me.NHTDataGridViewTextBoxColumn.Visible = False
+        Me.NHTDataGridViewTextBoxColumn.Width = 70
+        '
+        'NHS25DataGridViewTextBoxColumn
+        '
+        Me.NHS25DataGridViewTextBoxColumn.DataPropertyName = "N_HS_25"
+        Me.NHS25DataGridViewTextBoxColumn.HeaderText = "N_HS_25"
+        Me.NHS25DataGridViewTextBoxColumn.Name = "NHS25DataGridViewTextBoxColumn"
+        Me.NHS25DataGridViewTextBoxColumn.Visible = False
+        '
+        'MoisDataGridViewTextBoxColumn
+        '
+        Me.MoisDataGridViewTextBoxColumn.DataPropertyName = "Mois"
+        Me.MoisDataGridViewTextBoxColumn.HeaderText = "Mois"
+        Me.MoisDataGridViewTextBoxColumn.Name = "MoisDataGridViewTextBoxColumn"
+        Me.MoisDataGridViewTextBoxColumn.Visible = False
+        '
+        'AnneeDataGridViewTextBoxColumn
+        '
+        Me.AnneeDataGridViewTextBoxColumn.DataPropertyName = "Annee"
+        Me.AnneeDataGridViewTextBoxColumn.HeaderText = "Annee"
+        Me.AnneeDataGridViewTextBoxColumn.Name = "AnneeDataGridViewTextBoxColumn"
+        Me.AnneeDataGridViewTextBoxColumn.Visible = False
+        '
+        'NHS50DataGridViewTextBoxColumn
+        '
+        Me.NHS50DataGridViewTextBoxColumn.DataPropertyName = "N_HS_50"
+        Me.NHS50DataGridViewTextBoxColumn.HeaderText = "N_HS_50"
+        Me.NHS50DataGridViewTextBoxColumn.Name = "NHS50DataGridViewTextBoxColumn"
+        Me.NHS50DataGridViewTextBoxColumn.Visible = False
+        '
+        'NHS100DataGridViewTextBoxColumn
+        '
+        Me.NHS100DataGridViewTextBoxColumn.DataPropertyName = "N_HS_100"
+        Me.NHS100DataGridViewTextBoxColumn.HeaderText = "N_HS_100"
+        Me.NHS100DataGridViewTextBoxColumn.Name = "NHS100DataGridViewTextBoxColumn"
+        Me.NHS100DataGridViewTextBoxColumn.Visible = False
+        '
+        'PAncienneteDataGridViewTextBoxColumn
+        '
+        Me.PAncienneteDataGridViewTextBoxColumn.DataPropertyName = "P_Anciennete"
+        Me.PAncienneteDataGridViewTextBoxColumn.HeaderText = "P_Anciennete"
+        Me.PAncienneteDataGridViewTextBoxColumn.Name = "PAncienneteDataGridViewTextBoxColumn"
+        Me.PAncienneteDataGridViewTextBoxColumn.Visible = False
+        '
+        'PAnneeDataGridViewTextBoxColumn
+        '
+        Me.PAnneeDataGridViewTextBoxColumn.DataPropertyName = "P_Annee"
+        Me.PAnneeDataGridViewTextBoxColumn.HeaderText = "P_Annee"
+        Me.PAnneeDataGridViewTextBoxColumn.Name = "PAnneeDataGridViewTextBoxColumn"
+        Me.PAnneeDataGridViewTextBoxColumn.Visible = False
+        '
+        'PEnfantsDataGridViewTextBoxColumn
+        '
+        Me.PEnfantsDataGridViewTextBoxColumn.DataPropertyName = "P_Enfants"
+        Me.PEnfantsDataGridViewTextBoxColumn.HeaderText = "P_Enfants"
+        Me.PEnfantsDataGridViewTextBoxColumn.Name = "PEnfantsDataGridViewTextBoxColumn"
+        Me.PEnfantsDataGridViewTextBoxColumn.Visible = False
+        '
+        'TRetraiteDataGridViewTextBoxColumn
+        '
+        Me.TRetraiteDataGridViewTextBoxColumn.DataPropertyName = "T_Retraite"
+        Me.TRetraiteDataGridViewTextBoxColumn.HeaderText = "T_Retraite"
+        Me.TRetraiteDataGridViewTextBoxColumn.Name = "TRetraiteDataGridViewTextBoxColumn"
+        Me.TRetraiteDataGridViewTextBoxColumn.Visible = False
+        '
+        'MRetraiteDataGridViewTextBoxColumn
+        '
+        Me.MRetraiteDataGridViewTextBoxColumn.DataPropertyName = "M_Retraite"
+        Me.MRetraiteDataGridViewTextBoxColumn.HeaderText = "M_Retraite"
+        Me.MRetraiteDataGridViewTextBoxColumn.Name = "MRetraiteDataGridViewTextBoxColumn"
+        Me.MRetraiteDataGridViewTextBoxColumn.Visible = False
+        '
+        'MCNSSDataGridViewTextBoxColumn
+        '
+        Me.MCNSSDataGridViewTextBoxColumn.DataPropertyName = "M_CNSS"
+        Me.MCNSSDataGridViewTextBoxColumn.HeaderText = "M_CNSS"
+        Me.MCNSSDataGridViewTextBoxColumn.Name = "MCNSSDataGridViewTextBoxColumn"
+        Me.MCNSSDataGridViewTextBoxColumn.Visible = False
+        '
+        'MatDataGridViewTextBoxColumn
+        '
+        Me.MatDataGridViewTextBoxColumn.DataPropertyName = "Mat"
+        Me.MatDataGridViewTextBoxColumn.HeaderText = "Mat"
+        Me.MatDataGridViewTextBoxColumn.Name = "MatDataGridViewTextBoxColumn"
+        Me.MatDataGridViewTextBoxColumn.Visible = False
+        '
+        'DateRecDataGridViewTextBoxColumn
+        '
+        Me.DateRecDataGridViewTextBoxColumn.DataPropertyName = "dateRec"
+        Me.DateRecDataGridViewTextBoxColumn.HeaderText = "dateRec"
+        Me.DateRecDataGridViewTextBoxColumn.Name = "DateRecDataGridViewTextBoxColumn"
+        Me.DateRecDataGridViewTextBoxColumn.Visible = False
         '
         'formBulletien
         '

@@ -7,3 +7,17 @@
     Public Shared nomPrenom As String
     Public Shared fonction As String
 End Class
+
+Public Class classBulletienFilters
+    Public Shared search As String
+    Public Shared date1 As Date
+    Public Shared date2 As Date
+    Public Shared selectedIndex As Integer
+End Class
+
+Public Class classCongeFilters
+    Public Shared search As String
+    Public Shared date1 As Date
+    Public Shared date2 As Date
+    Public Shared selectedIndex As Integer
+End Class

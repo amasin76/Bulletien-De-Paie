@@ -1,6 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports System.Globalization
 Imports Bulletien_De_Paie.classCongeDetails
+Imports Bulletien_De_Paie.classCongeFilters
 Public Class formConge
     'AutoComplete
     Dim qry As String
@@ -358,6 +359,22 @@ Public Class formConge
         LrowsCount.Text = DataGridView1.Rows.Count
     End Sub
 
+    Private Sub BtableNext_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtableNext.Click
+        bs.MoveNext()
+    End Sub
+
+    Private Sub BtableLast_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtableLast.Click
+        bs.MoveLast()
+    End Sub
+
+    Private Sub BtablePrev_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtablePrev.Click
+        bs.MovePrevious()
+    End Sub
+
+    Private Sub BtableFirst_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtableFirst.Click
+        bs.MoveFirst()
+    End Sub
+
     'Info Calc
     Private Sub DataGridView1_DataSourceChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataGridView1.DataBindingComplete
         Try
@@ -408,5 +425,13 @@ Public Class formConge
         
 
         formCongeDemande.Show()
+    End Sub
+
+    Private Sub Bprint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bprint.Click
+        search = Zsearch.Text
+        date1 = DateTimePicker1.Value
+        date2 = DateTimePicker2.Value
+        selectedIndex = Lby.SelectedIndex
+        formCongeReport.ShowDialog()
     End Sub
 End Class
