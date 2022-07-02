@@ -23,8 +23,8 @@ Partial Class formBulletien
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabSaisi = New System.Windows.Forms.TabPage()
         Me.PanelFooter = New System.Windows.Forms.Panel()
@@ -92,26 +92,6 @@ Partial Class formBulletien
         Me.Bannuler_sr = New System.Windows.Forms.Button()
         Me.Brechercher = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BulletienWithEmployeNameBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.LrowsCount = New System.Windows.Forms.Label()
-        Me.BtableLast = New System.Windows.Forms.Button()
-        Me.BtableNext = New System.Windows.Forms.Button()
-        Me.BtableFirst = New System.Windows.Forms.Button()
-        Me.BtablePrev = New System.Windows.Forms.Button()
-        Me.PanelBoxes = New System.Windows.Forms.Panel()
-        Me.Lby = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Zsearch = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.BulletienWithEmployeNameTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.BulletienWithEmployeNameTableAdapter()
         Me.NBulletienDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateMYDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -137,6 +117,26 @@ Partial Class formBulletien
         Me.MCNSSDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateRecDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BulletienWithEmployeNameBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.LrowsCount = New System.Windows.Forms.Label()
+        Me.BtableLast = New System.Windows.Forms.Button()
+        Me.BtableNext = New System.Windows.Forms.Button()
+        Me.BtableFirst = New System.Windows.Forms.Button()
+        Me.BtablePrev = New System.Windows.Forms.Button()
+        Me.PanelBoxes = New System.Windows.Forms.Panel()
+        Me.Lby = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Zsearch = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.BulletienWithEmployeNameTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.BulletienWithEmployeNameTableAdapter()
         Me.TabControl1.SuspendLayout()
         Me.TabSaisi.SuspendLayout()
         Me.PanelFooter.SuspendLayout()
@@ -167,6 +167,7 @@ Partial Class formBulletien
         '
         'TabSaisi
         '
+        Me.TabSaisi.BackColor = System.Drawing.Color.WhiteSmoke
         Me.TabSaisi.Controls.Add(Me.PanelFooter)
         Me.TabSaisi.Controls.Add(Me.PanelTitle)
         Me.TabSaisi.Controls.Add(Me.GroupBox2)
@@ -183,7 +184,6 @@ Partial Class formBulletien
         Me.TabSaisi.Size = New System.Drawing.Size(922, 638)
         Me.TabSaisi.TabIndex = 0
         Me.TabSaisi.Text = "Saisi"
-        Me.TabSaisi.UseVisualStyleBackColor = True
         '
         'PanelFooter
         '
@@ -252,29 +252,29 @@ Partial Class formBulletien
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(621, 28)
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(615, 25)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(97, 17)
+        Me.Label14.Size = New System.Drawing.Size(117, 21)
         Me.Label14.TabIndex = 0
         Me.Label14.Text = "Montant CNSS"
         '
         'ZmCnss
         '
-        Me.ZmCnss.Enabled = False
         Me.ZmCnss.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ZmCnss.Location = New System.Drawing.Point(724, 25)
+        Me.ZmCnss.Location = New System.Drawing.Point(738, 25)
         Me.ZmCnss.Name = "ZmCnss"
+        Me.ZmCnss.ReadOnly = True
         Me.ZmCnss.Size = New System.Drawing.Size(138, 25)
         Me.ZmCnss.TabIndex = 1
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(297, 28)
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(291, 25)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(112, 17)
+        Me.Label13.Size = New System.Drawing.Size(135, 21)
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Montant Retraite"
         '
@@ -289,37 +289,37 @@ Partial Class formBulletien
         '
         'Zmr
         '
-        Me.Zmr.Enabled = False
         Me.Zmr.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zmr.Location = New System.Drawing.Point(415, 25)
+        Me.Zmr.Location = New System.Drawing.Point(429, 25)
         Me.Zmr.Name = "Zmr"
+        Me.Zmr.ReadOnly = True
         Me.Zmr.Size = New System.Drawing.Size(138, 25)
         Me.Zmr.TabIndex = 1
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(296, 79)
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(289, 76)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(100, 21)
+        Me.Label15.Size = New System.Drawing.Size(117, 25)
         Me.Label15.TabIndex = 0
         Me.Label15.Text = "Net A Payer"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(7, 28)
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(6, 25)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(87, 17)
+        Me.Label7.Size = New System.Drawing.Size(104, 21)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Taux Retraite"
         '
         'Ztr
         '
         Me.Ztr.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Ztr.Location = New System.Drawing.Point(102, 25)
+        Me.Ztr.Location = New System.Drawing.Point(116, 25)
         Me.Ztr.Name = "Ztr"
         Me.Ztr.Size = New System.Drawing.Size(138, 25)
         Me.Ztr.TabIndex = 1
@@ -364,89 +364,90 @@ Partial Class formBulletien
         '
         'Lmonth
         '
+        Me.Lmonth.Enabled = False
         Me.Lmonth.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lmonth.FormattingEnabled = True
-        Me.Lmonth.Location = New System.Drawing.Point(136, 84)
+        Me.Lmonth.Location = New System.Drawing.Point(144, 84)
         Me.Lmonth.Name = "Lmonth"
         Me.Lmonth.Size = New System.Drawing.Size(138, 25)
         Me.Lmonth.TabIndex = 2
         '
         'Zsbr
         '
-        Me.Zsbr.Enabled = False
         Me.Zsbr.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zsbr.Location = New System.Drawing.Point(136, 239)
+        Me.Zsbr.Location = New System.Drawing.Point(144, 239)
         Me.Zsbr.Name = "Zsbr"
+        Me.Zsbr.ReadOnly = True
         Me.Zsbr.Size = New System.Drawing.Size(138, 25)
         Me.Zsbr.TabIndex = 1
         '
         'zhsTotal
         '
-        Me.zhsTotal.Enabled = False
         Me.zhsTotal.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.zhsTotal.Location = New System.Drawing.Point(557, 146)
+        Me.zhsTotal.Location = New System.Drawing.Point(583, 146)
         Me.zhsTotal.Name = "zhsTotal"
+        Me.zhsTotal.ReadOnly = True
         Me.zhsTotal.Size = New System.Drawing.Size(138, 25)
         Me.zhsTotal.TabIndex = 1
         '
         'ZpAnne
         '
-        Me.ZpAnne.Enabled = False
         Me.ZpAnne.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ZpAnne.Location = New System.Drawing.Point(557, 239)
+        Me.ZpAnne.Location = New System.Drawing.Point(583, 239)
         Me.ZpAnne.Name = "ZpAnne"
+        Me.ZpAnne.ReadOnly = True
         Me.ZpAnne.Size = New System.Drawing.Size(138, 25)
         Me.ZpAnne.TabIndex = 1
         '
         'Znen
         '
-        Me.Znen.Enabled = False
         Me.Znen.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Znen.Location = New System.Drawing.Point(557, 208)
+        Me.Znen.Location = New System.Drawing.Point(583, 208)
         Me.Znen.Name = "Znen"
+        Me.Znen.ReadOnly = True
         Me.Znen.Size = New System.Drawing.Size(138, 25)
         Me.Znen.TabIndex = 1
         '
         'Lseniority
         '
         Me.Lseniority.AutoSize = True
-        Me.Lseniority.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lseniority.Location = New System.Drawing.Point(396, 180)
+        Me.Lseniority.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lseniority.Location = New System.Drawing.Point(389, 177)
         Me.Lseniority.Name = "Lseniority"
-        Me.Lseniority.Size = New System.Drawing.Size(115, 17)
+        Me.Lseniority.Size = New System.Drawing.Size(139, 21)
         Me.Lseniority.TabIndex = 0
         Me.Lseniority.Text = "Prime Ancienneté"
         '
         'Zseniority
         '
-        Me.Zseniority.Enabled = False
         Me.Zseniority.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zseniority.Location = New System.Drawing.Point(557, 177)
+        Me.Zseniority.Location = New System.Drawing.Point(583, 177)
         Me.Zseniority.Name = "Zseniority"
+        Me.Zseniority.ReadOnly = True
         Me.Zseniority.Size = New System.Drawing.Size(138, 25)
         Me.Zseniority.TabIndex = 1
         '
         'Zhs100
         '
         Me.Zhs100.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zhs100.Location = New System.Drawing.Point(557, 115)
+        Me.Zhs100.Location = New System.Drawing.Point(583, 115)
         Me.Zhs100.Name = "Zhs100"
         Me.Zhs100.Size = New System.Drawing.Size(138, 25)
         Me.Zhs100.TabIndex = 1
         '
         'Zsba
         '
-        Me.Zsba.Enabled = False
         Me.Zsba.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zsba.Location = New System.Drawing.Point(136, 208)
+        Me.Zsba.Location = New System.Drawing.Point(144, 208)
         Me.Zsba.Name = "Zsba"
+        Me.Zsba.ReadOnly = True
         Me.Zsba.Size = New System.Drawing.Size(138, 25)
         Me.Zsba.TabIndex = 1
         '
         'Zhs50
         '
         Me.Zhs50.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zhs50.Location = New System.Drawing.Point(557, 84)
+        Me.Zhs50.Location = New System.Drawing.Point(583, 84)
         Me.Zhs50.Name = "Zhs50"
         Me.Zhs50.Size = New System.Drawing.Size(138, 25)
         Me.Zhs50.TabIndex = 1
@@ -454,7 +455,7 @@ Partial Class formBulletien
         'Zth
         '
         Me.Zth.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zth.Location = New System.Drawing.Point(136, 177)
+        Me.Zth.Location = New System.Drawing.Point(144, 177)
         Me.Zth.MaxLength = 10
         Me.Zth.Name = "Zth"
         Me.Zth.Size = New System.Drawing.Size(138, 25)
@@ -463,15 +464,16 @@ Partial Class formBulletien
         'Zyear
         '
         Me.Zyear.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zyear.Location = New System.Drawing.Point(136, 115)
+        Me.Zyear.Location = New System.Drawing.Point(144, 115)
         Me.Zyear.Name = "Zyear"
+        Me.Zyear.ReadOnly = True
         Me.Zyear.Size = New System.Drawing.Size(138, 25)
         Me.Zyear.TabIndex = 99
         '
         'Zhs25
         '
         Me.Zhs25.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zhs25.Location = New System.Drawing.Point(557, 53)
+        Me.Zhs25.Location = New System.Drawing.Point(583, 53)
         Me.Zhs25.Name = "Zhs25"
         Me.Zhs25.Size = New System.Drawing.Size(138, 25)
         Me.Zhs25.TabIndex = 1
@@ -479,176 +481,176 @@ Partial Class formBulletien
         'Zht
         '
         Me.Zht.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zht.Location = New System.Drawing.Point(136, 146)
+        Me.Zht.Location = New System.Drawing.Point(144, 146)
         Me.Zht.Name = "Zht"
         Me.Zht.Size = New System.Drawing.Size(138, 25)
         Me.Zht.TabIndex = 1
         '
         'Zcode
         '
-        Me.Zcode.Enabled = False
         Me.Zcode.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zcode.Location = New System.Drawing.Point(136, 53)
+        Me.Zcode.Location = New System.Drawing.Point(144, 53)
         Me.Zcode.Name = "Zcode"
+        Me.Zcode.ReadOnly = True
         Me.Zcode.Size = New System.Drawing.Size(138, 25)
         Me.Zcode.TabIndex = 99
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(12, 242)
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(5, 239)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(77, 17)
+        Me.Label12.Size = New System.Drawing.Size(93, 21)
         Me.Label12.TabIndex = 0
         Me.Label12.Text = "Salaire Brut"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(13, 121)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 118)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 17)
+        Me.Label2.Size = New System.Drawing.Size(57, 21)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Année"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(396, 242)
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(389, 239)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(86, 17)
+        Me.Label6.Size = New System.Drawing.Size(103, 21)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Prime Année"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(396, 149)
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(389, 146)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(135, 17)
+        Me.Label11.Size = New System.Drawing.Size(161, 21)
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Montant Total H.SUP"
         '
         'Lnen
         '
         Me.Lnen.AutoSize = True
-        Me.Lnen.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Lnen.Location = New System.Drawing.Point(396, 211)
+        Me.Lnen.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lnen.Location = New System.Drawing.Point(389, 208)
         Me.Lnen.Name = "Lnen"
-        Me.Lnen.Size = New System.Drawing.Size(92, 17)
+        Me.Lnen.Size = New System.Drawing.Size(109, 21)
         Me.Lnen.TabIndex = 0
         Me.Lnen.Text = "Prime Enfants"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(13, 90)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(6, 87)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(37, 17)
+        Me.Label1.Size = New System.Drawing.Size(46, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Mois"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(396, 118)
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(389, 115)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(145, 17)
+        Me.Label10.Size = New System.Drawing.Size(176, 21)
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "Nombre D'H.SUP 100%"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(13, 211)
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(6, 208)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(98, 17)
+        Me.Label5.Size = New System.Drawing.Size(119, 21)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Salaire de base"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(396, 87)
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(389, 84)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(140, 17)
+        Me.Label9.Size = New System.Drawing.Size(170, 21)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Nombre D'H.SUP 50%"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(13, 180)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(6, 177)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 17)
+        Me.Label4.Size = New System.Drawing.Size(101, 21)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Taux Horaire"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(396, 56)
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(389, 53)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(140, 17)
+        Me.Label8.Size = New System.Drawing.Size(170, 21)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Nombre D'H.SUP 25%"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(13, 149)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(6, 146)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(94, 17)
+        Me.Label3.Size = New System.Drawing.Size(115, 21)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Nombre D'H.T"
         '
         'Code
         '
         Me.Code.AutoSize = True
-        Me.Code.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Code.Location = New System.Drawing.Point(13, 56)
+        Me.Code.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Code.Location = New System.Drawing.Point(6, 53)
         Me.Code.Name = "Code"
-        Me.Code.Size = New System.Drawing.Size(39, 17)
+        Me.Code.Size = New System.Drawing.Size(49, 21)
         Me.Code.TabIndex = 0
         Me.Code.Text = "Code"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(620, 71)
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(638, 67)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(69, 20)
+        Me.Label20.Size = New System.Drawing.Size(87, 25)
         Me.Label20.TabIndex = 0
         Me.Label20.Text = "Fonction"
         '
         'Zfn
         '
-        Me.Zfn.Enabled = False
         Me.Zfn.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Zfn.Location = New System.Drawing.Point(744, 68)
         Me.Zfn.Name = "Zfn"
+        Me.Zfn.ReadOnly = True
         Me.Zfn.Size = New System.Drawing.Size(138, 27)
         Me.Zfn.TabIndex = 1
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(296, 71)
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(295, 67)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(101, 20)
+        Me.Label19.Size = New System.Drawing.Size(127, 25)
         Me.Label19.TabIndex = 0
         Me.Label19.Text = "Nom Prenom"
         '
@@ -656,7 +658,7 @@ Partial Class formBulletien
         '
         Me.Znpr.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Znpr.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Znpr.Location = New System.Drawing.Point(420, 68)
+        Me.Znpr.Location = New System.Drawing.Point(435, 68)
         Me.Znpr.Name = "Znpr"
         Me.Znpr.Size = New System.Drawing.Size(138, 27)
         Me.Znpr.TabIndex = 1
@@ -664,10 +666,10 @@ Partial Class formBulletien
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(12, 71)
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI Semibold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(11, 67)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(74, 20)
+        Me.Label18.Size = New System.Drawing.Size(94, 25)
         Me.Label18.TabIndex = 0
         Me.Label18.Text = "Matricule"
         '
@@ -675,7 +677,7 @@ Partial Class formBulletien
         '
         Me.Zmat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.Zmat.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Zmat.Location = New System.Drawing.Point(136, 68)
+        Me.Zmat.Location = New System.Drawing.Point(130, 68)
         Me.Zmat.Name = "Zmat"
         Me.Zmat.Size = New System.Drawing.Size(138, 27)
         Me.Zmat.TabIndex = 1
@@ -848,6 +850,187 @@ Partial Class formBulletien
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(906, 280)
         Me.DataGridView1.TabIndex = 3
+        '
+        'NBulletienDataGridViewTextBoxColumn
+        '
+        Me.NBulletienDataGridViewTextBoxColumn.DataPropertyName = "N_Bulletien"
+        Me.NBulletienDataGridViewTextBoxColumn.HeaderText = "Code"
+        Me.NBulletienDataGridViewTextBoxColumn.Name = "NBulletienDataGridViewTextBoxColumn"
+        Me.NBulletienDataGridViewTextBoxColumn.Width = 70
+        '
+        'DateMYDataGridViewTextBoxColumn
+        '
+        Me.DateMYDataGridViewTextBoxColumn.DataPropertyName = "DateMY"
+        DataGridViewCellStyle3.Format = "MM/yyyy"
+        Me.DateMYDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
+        Me.DateMYDataGridViewTextBoxColumn.HeaderText = "Date"
+        Me.DateMYDataGridViewTextBoxColumn.Name = "DateMYDataGridViewTextBoxColumn"
+        Me.DateMYDataGridViewTextBoxColumn.ReadOnly = True
+        Me.DateMYDataGridViewTextBoxColumn.Width = 90
+        '
+        'NomPrenomDataGridViewTextBoxColumn
+        '
+        Me.NomPrenomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "Nom_Prenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "Nom Prenom"
+        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
+        '
+        'FonctionDataGridViewTextBoxColumn
+        '
+        Me.FonctionDataGridViewTextBoxColumn.DataPropertyName = "Fonction"
+        Me.FonctionDataGridViewTextBoxColumn.HeaderText = "Fonction"
+        Me.FonctionDataGridViewTextBoxColumn.Name = "FonctionDataGridViewTextBoxColumn"
+        '
+        'PrimesDataGridViewTextBoxColumn
+        '
+        Me.PrimesDataGridViewTextBoxColumn.DataPropertyName = "Primes"
+        Me.PrimesDataGridViewTextBoxColumn.HeaderText = "Primes"
+        Me.PrimesDataGridViewTextBoxColumn.Name = "PrimesDataGridViewTextBoxColumn"
+        Me.PrimesDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'SBrutDataGridViewTextBoxColumn
+        '
+        Me.SBrutDataGridViewTextBoxColumn.DataPropertyName = "S_Brut"
+        Me.SBrutDataGridViewTextBoxColumn.HeaderText = "S.Brut"
+        Me.SBrutDataGridViewTextBoxColumn.Name = "SBrutDataGridViewTextBoxColumn"
+        '
+        'TaxesDataGridViewTextBoxColumn
+        '
+        Me.TaxesDataGridViewTextBoxColumn.DataPropertyName = "Taxes"
+        Me.TaxesDataGridViewTextBoxColumn.HeaderText = "Taxes"
+        Me.TaxesDataGridViewTextBoxColumn.Name = "TaxesDataGridViewTextBoxColumn"
+        Me.TaxesDataGridViewTextBoxColumn.ReadOnly = True
+        '
+        'NetPayerDataGridViewTextBoxColumn
+        '
+        Me.NetPayerDataGridViewTextBoxColumn.DataPropertyName = "Net_Payer"
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.Format = "#,##0.00"
+        Me.NetPayerDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
+        Me.NetPayerDataGridViewTextBoxColumn.HeaderText = "Net"
+        Me.NetPayerDataGridViewTextBoxColumn.Name = "NetPayerDataGridViewTextBoxColumn"
+        '
+        'SBaseDataGridViewTextBoxColumn
+        '
+        Me.SBaseDataGridViewTextBoxColumn.DataPropertyName = "S_Base"
+        Me.SBaseDataGridViewTextBoxColumn.HeaderText = "S.Base"
+        Me.SBaseDataGridViewTextBoxColumn.Name = "SBaseDataGridViewTextBoxColumn"
+        Me.SBaseDataGridViewTextBoxColumn.Visible = False
+        '
+        'HSTotalDataGridViewTextBoxColumn
+        '
+        Me.HSTotalDataGridViewTextBoxColumn.DataPropertyName = "HS_Total"
+        Me.HSTotalDataGridViewTextBoxColumn.HeaderText = "HS"
+        Me.HSTotalDataGridViewTextBoxColumn.Name = "HSTotalDataGridViewTextBoxColumn"
+        Me.HSTotalDataGridViewTextBoxColumn.Visible = False
+        Me.HSTotalDataGridViewTextBoxColumn.Width = 70
+        '
+        'THDataGridViewTextBoxColumn
+        '
+        Me.THDataGridViewTextBoxColumn.DataPropertyName = "TH"
+        Me.THDataGridViewTextBoxColumn.HeaderText = "TH"
+        Me.THDataGridViewTextBoxColumn.Name = "THDataGridViewTextBoxColumn"
+        Me.THDataGridViewTextBoxColumn.Visible = False
+        Me.THDataGridViewTextBoxColumn.Width = 70
+        '
+        'NHTDataGridViewTextBoxColumn
+        '
+        Me.NHTDataGridViewTextBoxColumn.DataPropertyName = "N_HT"
+        Me.NHTDataGridViewTextBoxColumn.HeaderText = "HT"
+        Me.NHTDataGridViewTextBoxColumn.Name = "NHTDataGridViewTextBoxColumn"
+        Me.NHTDataGridViewTextBoxColumn.Visible = False
+        Me.NHTDataGridViewTextBoxColumn.Width = 70
+        '
+        'NHS25DataGridViewTextBoxColumn
+        '
+        Me.NHS25DataGridViewTextBoxColumn.DataPropertyName = "N_HS_25"
+        Me.NHS25DataGridViewTextBoxColumn.HeaderText = "N_HS_25"
+        Me.NHS25DataGridViewTextBoxColumn.Name = "NHS25DataGridViewTextBoxColumn"
+        Me.NHS25DataGridViewTextBoxColumn.Visible = False
+        '
+        'MoisDataGridViewTextBoxColumn
+        '
+        Me.MoisDataGridViewTextBoxColumn.DataPropertyName = "Mois"
+        Me.MoisDataGridViewTextBoxColumn.HeaderText = "Mois"
+        Me.MoisDataGridViewTextBoxColumn.Name = "MoisDataGridViewTextBoxColumn"
+        Me.MoisDataGridViewTextBoxColumn.Visible = False
+        '
+        'AnneeDataGridViewTextBoxColumn
+        '
+        Me.AnneeDataGridViewTextBoxColumn.DataPropertyName = "Annee"
+        Me.AnneeDataGridViewTextBoxColumn.HeaderText = "Annee"
+        Me.AnneeDataGridViewTextBoxColumn.Name = "AnneeDataGridViewTextBoxColumn"
+        Me.AnneeDataGridViewTextBoxColumn.Visible = False
+        '
+        'NHS50DataGridViewTextBoxColumn
+        '
+        Me.NHS50DataGridViewTextBoxColumn.DataPropertyName = "N_HS_50"
+        Me.NHS50DataGridViewTextBoxColumn.HeaderText = "N_HS_50"
+        Me.NHS50DataGridViewTextBoxColumn.Name = "NHS50DataGridViewTextBoxColumn"
+        Me.NHS50DataGridViewTextBoxColumn.Visible = False
+        '
+        'NHS100DataGridViewTextBoxColumn
+        '
+        Me.NHS100DataGridViewTextBoxColumn.DataPropertyName = "N_HS_100"
+        Me.NHS100DataGridViewTextBoxColumn.HeaderText = "N_HS_100"
+        Me.NHS100DataGridViewTextBoxColumn.Name = "NHS100DataGridViewTextBoxColumn"
+        Me.NHS100DataGridViewTextBoxColumn.Visible = False
+        '
+        'PAncienneteDataGridViewTextBoxColumn
+        '
+        Me.PAncienneteDataGridViewTextBoxColumn.DataPropertyName = "P_Anciennete"
+        Me.PAncienneteDataGridViewTextBoxColumn.HeaderText = "P_Anciennete"
+        Me.PAncienneteDataGridViewTextBoxColumn.Name = "PAncienneteDataGridViewTextBoxColumn"
+        Me.PAncienneteDataGridViewTextBoxColumn.Visible = False
+        '
+        'PAnneeDataGridViewTextBoxColumn
+        '
+        Me.PAnneeDataGridViewTextBoxColumn.DataPropertyName = "P_Annee"
+        Me.PAnneeDataGridViewTextBoxColumn.HeaderText = "P_Annee"
+        Me.PAnneeDataGridViewTextBoxColumn.Name = "PAnneeDataGridViewTextBoxColumn"
+        Me.PAnneeDataGridViewTextBoxColumn.Visible = False
+        '
+        'PEnfantsDataGridViewTextBoxColumn
+        '
+        Me.PEnfantsDataGridViewTextBoxColumn.DataPropertyName = "P_Enfants"
+        Me.PEnfantsDataGridViewTextBoxColumn.HeaderText = "P_Enfants"
+        Me.PEnfantsDataGridViewTextBoxColumn.Name = "PEnfantsDataGridViewTextBoxColumn"
+        Me.PEnfantsDataGridViewTextBoxColumn.Visible = False
+        '
+        'TRetraiteDataGridViewTextBoxColumn
+        '
+        Me.TRetraiteDataGridViewTextBoxColumn.DataPropertyName = "T_Retraite"
+        Me.TRetraiteDataGridViewTextBoxColumn.HeaderText = "T_Retraite"
+        Me.TRetraiteDataGridViewTextBoxColumn.Name = "TRetraiteDataGridViewTextBoxColumn"
+        Me.TRetraiteDataGridViewTextBoxColumn.Visible = False
+        '
+        'MRetraiteDataGridViewTextBoxColumn
+        '
+        Me.MRetraiteDataGridViewTextBoxColumn.DataPropertyName = "M_Retraite"
+        Me.MRetraiteDataGridViewTextBoxColumn.HeaderText = "M_Retraite"
+        Me.MRetraiteDataGridViewTextBoxColumn.Name = "MRetraiteDataGridViewTextBoxColumn"
+        Me.MRetraiteDataGridViewTextBoxColumn.Visible = False
+        '
+        'MCNSSDataGridViewTextBoxColumn
+        '
+        Me.MCNSSDataGridViewTextBoxColumn.DataPropertyName = "M_CNSS"
+        Me.MCNSSDataGridViewTextBoxColumn.HeaderText = "M_CNSS"
+        Me.MCNSSDataGridViewTextBoxColumn.Name = "MCNSSDataGridViewTextBoxColumn"
+        Me.MCNSSDataGridViewTextBoxColumn.Visible = False
+        '
+        'MatDataGridViewTextBoxColumn
+        '
+        Me.MatDataGridViewTextBoxColumn.DataPropertyName = "Mat"
+        Me.MatDataGridViewTextBoxColumn.HeaderText = "Mat"
+        Me.MatDataGridViewTextBoxColumn.Name = "MatDataGridViewTextBoxColumn"
+        Me.MatDataGridViewTextBoxColumn.Visible = False
+        '
+        'DateRecDataGridViewTextBoxColumn
+        '
+        Me.DateRecDataGridViewTextBoxColumn.DataPropertyName = "dateRec"
+        Me.DateRecDataGridViewTextBoxColumn.HeaderText = "dateRec"
+        Me.DateRecDataGridViewTextBoxColumn.Name = "DateRecDataGridViewTextBoxColumn"
+        Me.DateRecDataGridViewTextBoxColumn.Visible = False
         '
         'BulletienWithEmployeNameBindingSource
         '
@@ -1033,187 +1216,6 @@ Partial Class formBulletien
         'BulletienWithEmployeNameTableAdapter
         '
         Me.BulletienWithEmployeNameTableAdapter.ClearBeforeFill = True
-        '
-        'NBulletienDataGridViewTextBoxColumn
-        '
-        Me.NBulletienDataGridViewTextBoxColumn.DataPropertyName = "N_Bulletien"
-        Me.NBulletienDataGridViewTextBoxColumn.HeaderText = "Code"
-        Me.NBulletienDataGridViewTextBoxColumn.Name = "NBulletienDataGridViewTextBoxColumn"
-        Me.NBulletienDataGridViewTextBoxColumn.Width = 70
-        '
-        'DateMYDataGridViewTextBoxColumn
-        '
-        Me.DateMYDataGridViewTextBoxColumn.DataPropertyName = "DateMY"
-        DataGridViewCellStyle1.Format = "MM/yyyy"
-        Me.DateMYDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle1
-        Me.DateMYDataGridViewTextBoxColumn.HeaderText = "Date"
-        Me.DateMYDataGridViewTextBoxColumn.Name = "DateMYDataGridViewTextBoxColumn"
-        Me.DateMYDataGridViewTextBoxColumn.ReadOnly = True
-        Me.DateMYDataGridViewTextBoxColumn.Width = 90
-        '
-        'NomPrenomDataGridViewTextBoxColumn
-        '
-        Me.NomPrenomDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.NomPrenomDataGridViewTextBoxColumn.DataPropertyName = "Nom_Prenom"
-        Me.NomPrenomDataGridViewTextBoxColumn.HeaderText = "Nom Prenom"
-        Me.NomPrenomDataGridViewTextBoxColumn.Name = "NomPrenomDataGridViewTextBoxColumn"
-        '
-        'FonctionDataGridViewTextBoxColumn
-        '
-        Me.FonctionDataGridViewTextBoxColumn.DataPropertyName = "Fonction"
-        Me.FonctionDataGridViewTextBoxColumn.HeaderText = "Fonction"
-        Me.FonctionDataGridViewTextBoxColumn.Name = "FonctionDataGridViewTextBoxColumn"
-        '
-        'PrimesDataGridViewTextBoxColumn
-        '
-        Me.PrimesDataGridViewTextBoxColumn.DataPropertyName = "Primes"
-        Me.PrimesDataGridViewTextBoxColumn.HeaderText = "Primes"
-        Me.PrimesDataGridViewTextBoxColumn.Name = "PrimesDataGridViewTextBoxColumn"
-        Me.PrimesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SBrutDataGridViewTextBoxColumn
-        '
-        Me.SBrutDataGridViewTextBoxColumn.DataPropertyName = "S_Brut"
-        Me.SBrutDataGridViewTextBoxColumn.HeaderText = "S.Brut"
-        Me.SBrutDataGridViewTextBoxColumn.Name = "SBrutDataGridViewTextBoxColumn"
-        '
-        'TaxesDataGridViewTextBoxColumn
-        '
-        Me.TaxesDataGridViewTextBoxColumn.DataPropertyName = "Taxes"
-        Me.TaxesDataGridViewTextBoxColumn.HeaderText = "Taxes"
-        Me.TaxesDataGridViewTextBoxColumn.Name = "TaxesDataGridViewTextBoxColumn"
-        Me.TaxesDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'NetPayerDataGridViewTextBoxColumn
-        '
-        Me.NetPayerDataGridViewTextBoxColumn.DataPropertyName = "Net_Payer"
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.Format = "#,##0.00"
-        Me.NetPayerDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle2
-        Me.NetPayerDataGridViewTextBoxColumn.HeaderText = "Net"
-        Me.NetPayerDataGridViewTextBoxColumn.Name = "NetPayerDataGridViewTextBoxColumn"
-        '
-        'SBaseDataGridViewTextBoxColumn
-        '
-        Me.SBaseDataGridViewTextBoxColumn.DataPropertyName = "S_Base"
-        Me.SBaseDataGridViewTextBoxColumn.HeaderText = "S.Base"
-        Me.SBaseDataGridViewTextBoxColumn.Name = "SBaseDataGridViewTextBoxColumn"
-        Me.SBaseDataGridViewTextBoxColumn.Visible = False
-        '
-        'HSTotalDataGridViewTextBoxColumn
-        '
-        Me.HSTotalDataGridViewTextBoxColumn.DataPropertyName = "HS_Total"
-        Me.HSTotalDataGridViewTextBoxColumn.HeaderText = "HS"
-        Me.HSTotalDataGridViewTextBoxColumn.Name = "HSTotalDataGridViewTextBoxColumn"
-        Me.HSTotalDataGridViewTextBoxColumn.Visible = False
-        Me.HSTotalDataGridViewTextBoxColumn.Width = 70
-        '
-        'THDataGridViewTextBoxColumn
-        '
-        Me.THDataGridViewTextBoxColumn.DataPropertyName = "TH"
-        Me.THDataGridViewTextBoxColumn.HeaderText = "TH"
-        Me.THDataGridViewTextBoxColumn.Name = "THDataGridViewTextBoxColumn"
-        Me.THDataGridViewTextBoxColumn.Visible = False
-        Me.THDataGridViewTextBoxColumn.Width = 70
-        '
-        'NHTDataGridViewTextBoxColumn
-        '
-        Me.NHTDataGridViewTextBoxColumn.DataPropertyName = "N_HT"
-        Me.NHTDataGridViewTextBoxColumn.HeaderText = "HT"
-        Me.NHTDataGridViewTextBoxColumn.Name = "NHTDataGridViewTextBoxColumn"
-        Me.NHTDataGridViewTextBoxColumn.Visible = False
-        Me.NHTDataGridViewTextBoxColumn.Width = 70
-        '
-        'NHS25DataGridViewTextBoxColumn
-        '
-        Me.NHS25DataGridViewTextBoxColumn.DataPropertyName = "N_HS_25"
-        Me.NHS25DataGridViewTextBoxColumn.HeaderText = "N_HS_25"
-        Me.NHS25DataGridViewTextBoxColumn.Name = "NHS25DataGridViewTextBoxColumn"
-        Me.NHS25DataGridViewTextBoxColumn.Visible = False
-        '
-        'MoisDataGridViewTextBoxColumn
-        '
-        Me.MoisDataGridViewTextBoxColumn.DataPropertyName = "Mois"
-        Me.MoisDataGridViewTextBoxColumn.HeaderText = "Mois"
-        Me.MoisDataGridViewTextBoxColumn.Name = "MoisDataGridViewTextBoxColumn"
-        Me.MoisDataGridViewTextBoxColumn.Visible = False
-        '
-        'AnneeDataGridViewTextBoxColumn
-        '
-        Me.AnneeDataGridViewTextBoxColumn.DataPropertyName = "Annee"
-        Me.AnneeDataGridViewTextBoxColumn.HeaderText = "Annee"
-        Me.AnneeDataGridViewTextBoxColumn.Name = "AnneeDataGridViewTextBoxColumn"
-        Me.AnneeDataGridViewTextBoxColumn.Visible = False
-        '
-        'NHS50DataGridViewTextBoxColumn
-        '
-        Me.NHS50DataGridViewTextBoxColumn.DataPropertyName = "N_HS_50"
-        Me.NHS50DataGridViewTextBoxColumn.HeaderText = "N_HS_50"
-        Me.NHS50DataGridViewTextBoxColumn.Name = "NHS50DataGridViewTextBoxColumn"
-        Me.NHS50DataGridViewTextBoxColumn.Visible = False
-        '
-        'NHS100DataGridViewTextBoxColumn
-        '
-        Me.NHS100DataGridViewTextBoxColumn.DataPropertyName = "N_HS_100"
-        Me.NHS100DataGridViewTextBoxColumn.HeaderText = "N_HS_100"
-        Me.NHS100DataGridViewTextBoxColumn.Name = "NHS100DataGridViewTextBoxColumn"
-        Me.NHS100DataGridViewTextBoxColumn.Visible = False
-        '
-        'PAncienneteDataGridViewTextBoxColumn
-        '
-        Me.PAncienneteDataGridViewTextBoxColumn.DataPropertyName = "P_Anciennete"
-        Me.PAncienneteDataGridViewTextBoxColumn.HeaderText = "P_Anciennete"
-        Me.PAncienneteDataGridViewTextBoxColumn.Name = "PAncienneteDataGridViewTextBoxColumn"
-        Me.PAncienneteDataGridViewTextBoxColumn.Visible = False
-        '
-        'PAnneeDataGridViewTextBoxColumn
-        '
-        Me.PAnneeDataGridViewTextBoxColumn.DataPropertyName = "P_Annee"
-        Me.PAnneeDataGridViewTextBoxColumn.HeaderText = "P_Annee"
-        Me.PAnneeDataGridViewTextBoxColumn.Name = "PAnneeDataGridViewTextBoxColumn"
-        Me.PAnneeDataGridViewTextBoxColumn.Visible = False
-        '
-        'PEnfantsDataGridViewTextBoxColumn
-        '
-        Me.PEnfantsDataGridViewTextBoxColumn.DataPropertyName = "P_Enfants"
-        Me.PEnfantsDataGridViewTextBoxColumn.HeaderText = "P_Enfants"
-        Me.PEnfantsDataGridViewTextBoxColumn.Name = "PEnfantsDataGridViewTextBoxColumn"
-        Me.PEnfantsDataGridViewTextBoxColumn.Visible = False
-        '
-        'TRetraiteDataGridViewTextBoxColumn
-        '
-        Me.TRetraiteDataGridViewTextBoxColumn.DataPropertyName = "T_Retraite"
-        Me.TRetraiteDataGridViewTextBoxColumn.HeaderText = "T_Retraite"
-        Me.TRetraiteDataGridViewTextBoxColumn.Name = "TRetraiteDataGridViewTextBoxColumn"
-        Me.TRetraiteDataGridViewTextBoxColumn.Visible = False
-        '
-        'MRetraiteDataGridViewTextBoxColumn
-        '
-        Me.MRetraiteDataGridViewTextBoxColumn.DataPropertyName = "M_Retraite"
-        Me.MRetraiteDataGridViewTextBoxColumn.HeaderText = "M_Retraite"
-        Me.MRetraiteDataGridViewTextBoxColumn.Name = "MRetraiteDataGridViewTextBoxColumn"
-        Me.MRetraiteDataGridViewTextBoxColumn.Visible = False
-        '
-        'MCNSSDataGridViewTextBoxColumn
-        '
-        Me.MCNSSDataGridViewTextBoxColumn.DataPropertyName = "M_CNSS"
-        Me.MCNSSDataGridViewTextBoxColumn.HeaderText = "M_CNSS"
-        Me.MCNSSDataGridViewTextBoxColumn.Name = "MCNSSDataGridViewTextBoxColumn"
-        Me.MCNSSDataGridViewTextBoxColumn.Visible = False
-        '
-        'MatDataGridViewTextBoxColumn
-        '
-        Me.MatDataGridViewTextBoxColumn.DataPropertyName = "Mat"
-        Me.MatDataGridViewTextBoxColumn.HeaderText = "Mat"
-        Me.MatDataGridViewTextBoxColumn.Name = "MatDataGridViewTextBoxColumn"
-        Me.MatDataGridViewTextBoxColumn.Visible = False
-        '
-        'DateRecDataGridViewTextBoxColumn
-        '
-        Me.DateRecDataGridViewTextBoxColumn.DataPropertyName = "dateRec"
-        Me.DateRecDataGridViewTextBoxColumn.HeaderText = "dateRec"
-        Me.DateRecDataGridViewTextBoxColumn.Name = "DateRecDataGridViewTextBoxColumn"
-        Me.DateRecDataGridViewTextBoxColumn.Visible = False
         '
         'formBulletien
         '

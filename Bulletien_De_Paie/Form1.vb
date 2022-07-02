@@ -133,4 +133,9 @@
             Me.Opacity = 1
         End If
     End Sub
+
+    Private Sub Panel3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Panel3.Click, PictureBox2.Click
+        LoginForm.Show()
+        Me.Hide()
+    End Sub
 End Class

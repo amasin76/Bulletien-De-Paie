@@ -204,8 +204,8 @@ Public Class formConge
             ToolTip1.IsBalloon = True
             ToolTip1.UseFading = True
             ToolTip1.ToolTipIcon = ToolTipIcon.Warning
-            ToolTip1.ToolTipTitle = "MAX FROM 1 TO " & Credit
-            ToolTip1.Show("Style is not an Integer value", ZnJours, New Point(0, -80), 4000)
+            ToolTip1.ToolTipTitle = "PLAGE DE 1 À " & Credit
+            ToolTip1.Show("l'entrée n'est pas entière", ZnJours, New Point(0, -80), 4000)
             ZnJours.Text = ""
         End Try
         If Ltype.Text = "Administratif" And Not ZnJours.Text = "" Then
@@ -216,8 +216,8 @@ Public Class formConge
                 ToolTip1.IsBalloon = True
                 ToolTip1.UseFading = True
                 ToolTip1.ToolTipIcon = ToolTipIcon.Warning
-                ToolTip1.ToolTipTitle = "RANGE FROM 1 TO " & Credit
-                ToolTip1.Show("Value was out of range", ZnJours, New Point(0, -80), 4000)
+                ToolTip1.ToolTipTitle = "PLAGE DE 1 À " & Credit
+                ToolTip1.Show("L'entrée était hors plage", ZnJours, New Point(0, -80), 4000)
                 ZnJours.Text = Credit
             End If
         End If

@@ -4,7 +4,7 @@ Public Class formBulletienDetails
     Private Sub formEmployeDetails_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
         Dim N_Selected As String
         N_Selected = formBulletien.selectedrow.Cells(0).Value.ToString()
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then cnx.Open()
         Dim command As String
         Dim reader As OleDbDataReader
         command = "SELECT * FROM BulletienWithEmployeName where N_Bulletien = @N_Bulletien"
@@ -24,7 +24,5 @@ Public Class formBulletienDetails
         Zsbr.Text = String.Format("{0:#,##0.00}", reader("S_Brut"))
         Ztaxes.Text = String.Format("{0:#,##0.00}", reader("Taxes"))
         Znet.Text = String.Format("{0:#,##0.00}", reader("Net_Payer"))
-
-        cnx.Close()
     End Sub
 End Class

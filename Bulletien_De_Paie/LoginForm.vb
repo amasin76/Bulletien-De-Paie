@@ -10,7 +10,7 @@ Public Class LoginForm
     Private Sub LoginForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
         PictureBox1.Image = eyeIcon
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then cnx.Open()
     End Sub
 
     Private Sub Blogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Blogin.Click

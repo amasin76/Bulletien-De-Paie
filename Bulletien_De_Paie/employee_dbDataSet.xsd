@@ -649,7 +649,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
               <DbSource ConnectionRef="employee_dbConnectionString (MySettings)" DbObjectName="GeneralStats" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Tot_Employe, Female, Male, AvgEnfants, AvgAge FROM GeneralStats</CommandText>
+                    <CommandText>SELECT Tot_Employe, Female, Male, AvgEnfants, AvgAge, Count_Emp FROM GeneralStats</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -661,6 +661,24 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
               <Mapping SourceColumn="Male" DataSetColumn="Male" />
               <Mapping SourceColumn="AvgEnfants" DataSetColumn="AvgEnfants" />
               <Mapping SourceColumn="AvgAge" DataSetColumn="AvgAge" />
+              <Mapping SourceColumn="Count_Emp" DataSetColumn="Count_Emp" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AgeRangeTableAdapter" GeneratorDataComponentClassName="AgeRangeTableAdapter" Name="AgeRange" UserDataComponentName="AgeRangeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="employee_dbConnectionString (MySettings)" DbObjectName="AgeRange" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT AgeGroup, CountOfAgeGroup FROM AgeRange</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AgeGroup" DataSetColumn="AgeGroup" />
+              <Mapping SourceColumn="CountOfAgeGroup" DataSetColumn="CountOfAgeGroup" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -672,7 +690,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
   <xs:element name="employee_dbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="employee_dbDataSet" msprop:Generator_UserDSName="employee_dbDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Bulletien" msprop:Generator_TableClassName="BulletienDataTable" msprop:Generator_TableVarName="tableBulletien" msprop:Generator_RowChangedName="BulletienRowChanged" msprop:Generator_TablePropName="Bulletien" msprop:Generator_RowDeletingName="BulletienRowDeleting" msprop:Generator_RowChangingName="BulletienRowChanging" msprop:Generator_RowEvHandlerName="BulletienRowChangeEventHandler" msprop:Generator_RowDeletedName="BulletienRowDeleted" msprop:Generator_RowClassName="BulletienRow" msprop:Generator_UserTableName="Bulletien" msprop:Generator_RowEvArgName="BulletienRowChangeEvent">
+        <xs:element name="Bulletien" msprop:Generator_TableClassName="BulletienDataTable" msprop:Generator_TableVarName="tableBulletien" msprop:Generator_TablePropName="Bulletien" msprop:Generator_RowDeletingName="BulletienRowDeleting" msprop:Generator_RowChangingName="BulletienRowChanging" msprop:Generator_RowEvHandlerName="BulletienRowChangeEventHandler" msprop:Generator_RowDeletedName="BulletienRowDeleted" msprop:Generator_UserTableName="Bulletien" msprop:Generator_RowChangedName="BulletienRowChanged" msprop:Generator_RowEvArgName="BulletienRowChangeEvent" msprop:Generator_RowClassName="BulletienRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="N_Bulletien" msprop:Generator_ColumnVarNameInTable="columnN_Bulletien" msprop:Generator_ColumnPropNameInRow="N_Bulletien" msprop:Generator_ColumnPropNameInTable="N_BulletienColumn" msprop:Generator_UserColumnName="N_Bulletien">
@@ -716,7 +734,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Employe" msprop:Generator_TableClassName="EmployeDataTable" msprop:Generator_TableVarName="tableEmploye" msprop:Generator_RowChangedName="EmployeRowChanged" msprop:Generator_TablePropName="Employe" msprop:Generator_RowDeletingName="EmployeRowDeleting" msprop:Generator_RowChangingName="EmployeRowChanging" msprop:Generator_RowEvHandlerName="EmployeRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeRowDeleted" msprop:Generator_RowClassName="EmployeRow" msprop:Generator_UserTableName="Employe" msprop:Generator_RowEvArgName="EmployeRowChangeEvent">
+        <xs:element name="Employe" msprop:Generator_TableClassName="EmployeDataTable" msprop:Generator_TableVarName="tableEmploye" msprop:Generator_TablePropName="Employe" msprop:Generator_RowDeletingName="EmployeRowDeleting" msprop:Generator_RowChangingName="EmployeRowChanging" msprop:Generator_RowEvHandlerName="EmployeRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeRowDeleted" msprop:Generator_UserTableName="Employe" msprop:Generator_RowChangedName="EmployeRowChanged" msprop:Generator_RowEvArgName="EmployeRowChangeEvent" msprop:Generator_RowClassName="EmployeRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Mat" msprop:Generator_ColumnVarNameInTable="columnMat" msprop:Generator_ColumnPropNameInRow="Mat" msprop:Generator_ColumnPropNameInTable="MatColumn" msprop:Generator_UserColumnName="Mat">
@@ -790,7 +808,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="BulletienWithEmployeName" msprop:Generator_TableClassName="BulletienWithEmployeNameDataTable" msprop:Generator_TableVarName="tableBulletienWithEmployeName" msprop:Generator_TablePropName="BulletienWithEmployeName" msprop:Generator_RowDeletingName="BulletienWithEmployeNameRowDeleting" msprop:Generator_RowChangingName="BulletienWithEmployeNameRowChanging" msprop:Generator_RowEvHandlerName="BulletienWithEmployeNameRowChangeEventHandler" msprop:Generator_RowDeletedName="BulletienWithEmployeNameRowDeleted" msprop:Generator_UserTableName="BulletienWithEmployeName" msprop:Generator_RowChangedName="BulletienWithEmployeNameRowChanged" msprop:Generator_RowEvArgName="BulletienWithEmployeNameRowChangeEvent" msprop:Generator_RowClassName="BulletienWithEmployeNameRow">
+        <xs:element name="BulletienWithEmployeName" msprop:Generator_TableClassName="BulletienWithEmployeNameDataTable" msprop:Generator_TableVarName="tableBulletienWithEmployeName" msprop:Generator_RowChangedName="BulletienWithEmployeNameRowChanged" msprop:Generator_TablePropName="BulletienWithEmployeName" msprop:Generator_RowDeletingName="BulletienWithEmployeNameRowDeleting" msprop:Generator_RowChangingName="BulletienWithEmployeNameRowChanging" msprop:Generator_RowEvHandlerName="BulletienWithEmployeNameRowChangeEventHandler" msprop:Generator_RowDeletedName="BulletienWithEmployeNameRowDeleted" msprop:Generator_RowClassName="BulletienWithEmployeNameRow" msprop:Generator_UserTableName="BulletienWithEmployeName" msprop:Generator_RowEvArgName="BulletienWithEmployeNameRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="N_Bulletien" msprop:Generator_ColumnVarNameInTable="columnN_Bulletien" msprop:Generator_ColumnPropNameInRow="N_Bulletien" msprop:Generator_ColumnPropNameInTable="N_BulletienColumn" msprop:Generator_UserColumnName="N_Bulletien" minOccurs="0">
@@ -857,7 +875,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Conge" msprop:Generator_TableClassName="CongeDataTable" msprop:Generator_TableVarName="tableConge" msprop:Generator_TablePropName="Conge" msprop:Generator_RowDeletingName="CongeRowDeleting" msprop:Generator_RowChangingName="CongeRowChanging" msprop:Generator_RowEvHandlerName="CongeRowChangeEventHandler" msprop:Generator_RowDeletedName="CongeRowDeleted" msprop:Generator_UserTableName="Conge" msprop:Generator_RowChangedName="CongeRowChanged" msprop:Generator_RowEvArgName="CongeRowChangeEvent" msprop:Generator_RowClassName="CongeRow">
+        <xs:element name="Conge" msprop:Generator_TableClassName="CongeDataTable" msprop:Generator_TableVarName="tableConge" msprop:Generator_RowChangedName="CongeRowChanged" msprop:Generator_TablePropName="Conge" msprop:Generator_RowDeletingName="CongeRowDeleting" msprop:Generator_RowChangingName="CongeRowChanging" msprop:Generator_RowEvHandlerName="CongeRowChangeEventHandler" msprop:Generator_RowDeletedName="CongeRowDeleted" msprop:Generator_RowClassName="CongeRow" msprop:Generator_UserTableName="Conge" msprop:Generator_RowEvArgName="CongeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="N_Conge" msprop:Generator_ColumnVarNameInTable="columnN_Conge" msprop:Generator_ColumnPropNameInRow="N_Conge" msprop:Generator_ColumnPropNameInTable="N_CongeColumn" msprop:Generator_UserColumnName="N_Conge">
@@ -923,7 +941,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CongeStats" msprop:Generator_TableClassName="CongeStatsDataTable" msprop:Generator_TableVarName="tableCongeStats" msprop:Generator_RowChangedName="CongeStatsRowChanged" msprop:Generator_TablePropName="CongeStats" msprop:Generator_RowDeletingName="CongeStatsRowDeleting" msprop:Generator_RowChangingName="CongeStatsRowChanging" msprop:Generator_RowEvHandlerName="CongeStatsRowChangeEventHandler" msprop:Generator_RowDeletedName="CongeStatsRowDeleted" msprop:Generator_RowClassName="CongeStatsRow" msprop:Generator_UserTableName="CongeStats" msprop:Generator_RowEvArgName="CongeStatsRowChangeEvent">
+        <xs:element name="CongeStats" msprop:Generator_TableClassName="CongeStatsDataTable" msprop:Generator_TableVarName="tableCongeStats" msprop:Generator_TablePropName="CongeStats" msprop:Generator_RowDeletingName="CongeStatsRowDeleting" msprop:Generator_RowChangingName="CongeStatsRowChanging" msprop:Generator_RowEvHandlerName="CongeStatsRowChangeEventHandler" msprop:Generator_RowDeletedName="CongeStatsRowDeleted" msprop:Generator_UserTableName="CongeStats" msprop:Generator_RowChangedName="CongeStatsRowChanged" msprop:Generator_RowEvArgName="CongeStatsRowChangeEvent" msprop:Generator_RowClassName="CongeStatsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Tot_Conges" msprop:Generator_ColumnVarNameInTable="columnTot_Conges" msprop:Generator_ColumnPropNameInRow="Tot_Conges" msprop:Generator_ColumnPropNameInTable="Tot_CongesColumn" msprop:Generator_UserColumnName="Tot_Conges" type="xs:double" minOccurs="0" />
@@ -952,7 +970,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CongeWithEmployeDetails" msprop:Generator_TableClassName="CongeWithEmployeDetailsDataTable" msprop:Generator_TableVarName="tableCongeWithEmployeDetails" msprop:Generator_RowChangedName="CongeWithEmployeDetailsRowChanged" msprop:Generator_TablePropName="CongeWithEmployeDetails" msprop:Generator_RowDeletingName="CongeWithEmployeDetailsRowDeleting" msprop:Generator_RowChangingName="CongeWithEmployeDetailsRowChanging" msprop:Generator_RowEvHandlerName="CongeWithEmployeDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="CongeWithEmployeDetailsRowDeleted" msprop:Generator_RowClassName="CongeWithEmployeDetailsRow" msprop:Generator_UserTableName="CongeWithEmployeDetails" msprop:Generator_RowEvArgName="CongeWithEmployeDetailsRowChangeEvent">
+        <xs:element name="CongeWithEmployeDetails" msprop:Generator_TableClassName="CongeWithEmployeDetailsDataTable" msprop:Generator_TableVarName="tableCongeWithEmployeDetails" msprop:Generator_TablePropName="CongeWithEmployeDetails" msprop:Generator_RowDeletingName="CongeWithEmployeDetailsRowDeleting" msprop:Generator_RowChangingName="CongeWithEmployeDetailsRowChanging" msprop:Generator_RowEvHandlerName="CongeWithEmployeDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="CongeWithEmployeDetailsRowDeleted" msprop:Generator_UserTableName="CongeWithEmployeDetails" msprop:Generator_RowChangedName="CongeWithEmployeDetailsRowChanged" msprop:Generator_RowEvArgName="CongeWithEmployeDetailsRowChangeEvent" msprop:Generator_RowClassName="CongeWithEmployeDetailsRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="N_Conge" msprop:Generator_ColumnVarNameInTable="columnN_Conge" msprop:Generator_ColumnPropNameInRow="N_Conge" msprop:Generator_ColumnPropNameInTable="N_CongeColumn" msprop:Generator_UserColumnName="N_Conge" minOccurs="0">
@@ -1061,7 +1079,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Account" msprop:Generator_TableClassName="AccountDataTable" msprop:Generator_TableVarName="tableAccount" msprop:Generator_RowChangedName="AccountRowChanged" msprop:Generator_TablePropName="Account" msprop:Generator_RowDeletingName="AccountRowDeleting" msprop:Generator_RowChangingName="AccountRowChanging" msprop:Generator_RowEvHandlerName="AccountRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountRowDeleted" msprop:Generator_RowClassName="AccountRow" msprop:Generator_UserTableName="Account" msprop:Generator_RowEvArgName="AccountRowChangeEvent">
+        <xs:element name="Account" msprop:Generator_TableClassName="AccountDataTable" msprop:Generator_TableVarName="tableAccount" msprop:Generator_TablePropName="Account" msprop:Generator_RowDeletingName="AccountRowDeleting" msprop:Generator_RowChangingName="AccountRowChanging" msprop:Generator_RowEvHandlerName="AccountRowChangeEventHandler" msprop:Generator_RowDeletedName="AccountRowDeleted" msprop:Generator_UserTableName="Account" msprop:Generator_RowChangedName="AccountRowChanged" msprop:Generator_RowEvArgName="AccountRowChangeEvent" msprop:Generator_RowClassName="AccountRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
@@ -1090,7 +1108,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GeneralStats" msprop:Generator_TableClassName="GeneralStatsDataTable" msprop:Generator_TableVarName="tableGeneralStats" msprop:Generator_TablePropName="GeneralStats" msprop:Generator_RowDeletingName="GeneralStatsRowDeleting" msprop:Generator_RowChangingName="GeneralStatsRowChanging" msprop:Generator_RowEvHandlerName="GeneralStatsRowChangeEventHandler" msprop:Generator_RowDeletedName="GeneralStatsRowDeleted" msprop:Generator_UserTableName="GeneralStats" msprop:Generator_RowChangedName="GeneralStatsRowChanged" msprop:Generator_RowEvArgName="GeneralStatsRowChangeEvent" msprop:Generator_RowClassName="GeneralStatsRow">
+        <xs:element name="GeneralStats" msprop:Generator_TableClassName="GeneralStatsDataTable" msprop:Generator_TableVarName="tableGeneralStats" msprop:Generator_RowChangedName="GeneralStatsRowChanged" msprop:Generator_TablePropName="GeneralStats" msprop:Generator_RowDeletingName="GeneralStatsRowDeleting" msprop:Generator_RowChangingName="GeneralStatsRowChanging" msprop:Generator_RowEvHandlerName="GeneralStatsRowChangeEventHandler" msprop:Generator_RowDeletedName="GeneralStatsRowDeleted" msprop:Generator_RowClassName="GeneralStatsRow" msprop:Generator_UserTableName="GeneralStats" msprop:Generator_RowEvArgName="GeneralStatsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Tot_Employe" msprop:Generator_ColumnVarNameInTable="columnTot_Employe" msprop:Generator_ColumnPropNameInRow="Tot_Employe" msprop:Generator_ColumnPropNameInTable="Tot_EmployeColumn" msprop:Generator_UserColumnName="Tot_Employe" type="xs:int" minOccurs="0" />
@@ -1098,6 +1116,21 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
               <xs:element name="Male" msprop:Generator_ColumnVarNameInTable="columnMale" msprop:Generator_ColumnPropNameInRow="Male" msprop:Generator_ColumnPropNameInTable="MaleColumn" msprop:Generator_UserColumnName="Male" type="xs:int" minOccurs="0" />
               <xs:element name="AvgEnfants" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAvgEnfants" msprop:Generator_ColumnPropNameInRow="AvgEnfants" msprop:Generator_ColumnPropNameInTable="AvgEnfantsColumn" msprop:Generator_UserColumnName="AvgEnfants" type="xs:double" minOccurs="0" />
               <xs:element name="AvgAge" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAvgAge" msprop:Generator_ColumnPropNameInRow="AvgAge" msprop:Generator_ColumnPropNameInTable="AvgAgeColumn" msprop:Generator_UserColumnName="AvgAge" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Count_Emp" msprop:Generator_ColumnVarNameInTable="columnCount_Emp" msprop:Generator_ColumnPropNameInRow="Count_Emp" msprop:Generator_ColumnPropNameInTable="Count_EmpColumn" msprop:Generator_UserColumnName="Count_Emp" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AgeRange" msprop:Generator_TableClassName="AgeRangeDataTable" msprop:Generator_TableVarName="tableAgeRange" msprop:Generator_TablePropName="AgeRange" msprop:Generator_RowDeletingName="AgeRangeRowDeleting" msprop:Generator_RowChangingName="AgeRangeRowChanging" msprop:Generator_RowEvHandlerName="AgeRangeRowChangeEventHandler" msprop:Generator_RowDeletedName="AgeRangeRowDeleted" msprop:Generator_UserTableName="AgeRange" msprop:Generator_RowChangedName="AgeRangeRowChanged" msprop:Generator_RowEvArgName="AgeRangeRowChangeEvent" msprop:Generator_RowClassName="AgeRangeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AgeGroup" msprop:Generator_ColumnVarNameInTable="columnAgeGroup" msprop:Generator_ColumnPropNameInRow="AgeGroup" msprop:Generator_ColumnPropNameInTable="AgeGroupColumn" msprop:Generator_UserColumnName="AgeGroup" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CountOfAgeGroup" msprop:Generator_ColumnVarNameInTable="columnCountOfAgeGroup" msprop:Generator_ColumnPropNameInRow="CountOfAgeGroup" msprop:Generator_ColumnPropNameInTable="CountOfAgeGroupColumn" msprop:Generator_UserColumnName="CountOfAgeGroup" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1118,7 +1151,7 @@ WHERE        (Nom_Prenom LIKE ? &amp; '%')</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="EmployeConge" msdata:parent="Employe" msdata:child="Conge" msdata:parentkey="Mat" msdata:childkey="Mat" msprop:Generator_UserChildTable="Conge" msprop:Generator_ChildPropName="GetCongeRows" msprop:Generator_UserRelationName="EmployeConge" msprop:Generator_ParentPropName="EmployeRow" msprop:Generator_RelationVarName="relationEmployeConge" msprop:Generator_UserParentTable="Employe" />
+      <msdata:Relationship name="EmployeConge" msdata:parent="Employe" msdata:child="Conge" msdata:parentkey="Mat" msdata:childkey="Mat" msprop:Generator_UserChildTable="Conge" msprop:Generator_ChildPropName="GetCongeRows" msprop:Generator_UserRelationName="EmployeConge" msprop:Generator_RelationVarName="relationEmployeConge" msprop:Generator_UserParentTable="Employe" msprop:Generator_ParentPropName="EmployeRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

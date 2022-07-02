@@ -45,7 +45,7 @@ Public Class formBulletien
         Dim initId As Integer
 
         'cmd.CommandText = "select N_Bulletien from Bulletien order by CDate(dateRec) desc"
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then cnx.Open()
         maxId = cmd.ExecuteScalar
         If maxId Is DBNull.Value Then
             initId = 1
@@ -56,12 +56,10 @@ Public Class formBulletien
         End If
         Zcode.Text = "B" & initId.ToString()
         Znpr.Focus()
-        cnx.Close()
     End Sub
 
     Private Sub Zmat_KeyUp(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Zmat.KeyUp
-        cnx.Close()
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then cnx.Open()
         cmd = New OleDbCommand("select Nom_Prenom from Employe WHERE Mat = @Mat", cnx)
         cmd.Parameters.Add("@Mat", OleDbType.VarChar).Value = Zmat.Text
         'cmd.ExecuteNonQuery()
@@ -72,7 +70,6 @@ Public Class formBulletien
             Znpr.Clear()
             Zfn.Clear()
         End If
-        cnx.Close()
     End Sub
 
 
@@ -82,8 +79,7 @@ Public Class formBulletien
     Dim calcSba, vTaux, vTr, calcHS, calcEnf, calcAnc, calcAns, calcSbr, calcMCnss, calcMr, calcNet As Single
 
     Private Sub Znpr_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles Znpr.TextChanged
-        cnx.Close()
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then cnx.Open()
         qry = "SELECT Mat, Nom_Prenom, Fonction, DEM, Enfants FROM Employe WHERE Nom_Prenom = @npr "
         cmd = New OleDbCommand(qry, cnx)
         cmd.Parameters.Add("@npr", OleDbType.VarWChar).Value = Znpr.Text
@@ -104,7 +100,6 @@ Public Class formBulletien
         If Not String.IsNullOrWhiteSpace(Znpr.Text) Then
             Znen.Text = String.Format("{0:#,##0.00}", calcEnf)
         End If
-        cnx.Close()
     End Sub
 
     Private Sub Zht_th_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles Zht.KeyUp, Zth.KeyUp, Zhs25.KeyUp, Zhs50.KeyUp, Zhs100.KeyUp, Ztr.KeyUp, Znpr.KeyUp, Lmonth.SelectionChangeCommitted, Bsave.Click
@@ -182,13 +177,11 @@ Public Class formBulletien
     'Consulter
     Dim bs As New BindingSource()
     Private Sub TabConsulter_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabConsulter.Enter
-        cnx.Close()
-        cnx.Open()
+        If cnx.State = ConnectionState.Closed Then cnx.Open()
         Dim dataAdapter As New OleDbDataAdapter("SELECT * FROM BulletienWithEmployeName", cnx)
         Dim ds As New DataSet()
         Dim dsView As New DataView
         dataAdapter.Fill(ds, "BulletienWithEmployeName")
-        cnx.Close()
         dsView = ds.Tables(0).DefaultView
         bs.DataSource = dsView
         Me.DataGridView1.DataSource = bs

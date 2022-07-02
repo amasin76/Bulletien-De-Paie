@@ -5,9 +5,7 @@ Public Class formEmployee
 
     Private Sub formConge_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
-            If cnx.State = ConnectionState.Closed Then
-                cnx.Open()
-            End If
+            If cnx.State = ConnectionState.Closed Then cnx.Open()
             LcnxState.Text = "Connected"
             LcnxState.ForeColor = Color.Lime
         Catch ex As Exception
@@ -133,9 +131,7 @@ Public Class formEmployee
             nbrId = Convert.ToInt32((Zmat.Text).Remove(0, 1)) + 1
 
             Try
-                If cnx.State = ConnectionState.Closed Then
-                    cnx.Open()
-                End If
+                If cnx.State = ConnectionState.Closed Then cnx.Open()
                 cmd.ExecuteNonQuery()
                 MsgBox("Record saved")
                 Zmat.Text = "E" & nbrId.ToString()

@@ -22,6 +22,7 @@ Partial Class formStats
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
@@ -35,21 +36,31 @@ Partial Class formStats
         Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Lfn_count = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Lcng_count = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Lbul_tot = New System.Windows.Forms.Label()
+        Me.Lbul_count = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Lemp_f = New System.Windows.Forms.Label()
+        Me.Lemp_h = New System.Windows.Forms.Label()
+        Me.Lemp_count = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart3 = New System.Windows.Forms.DataVisualization.Charting.Chart()
-        Me.Chart4 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ChartEmpGender = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.AgeRangeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
+        Me.ChartDepr = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ChartHrs = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.ChartCng = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.AgeRangeTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.AgeRangeTableAdapter()
         Me.Panel5.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
@@ -58,21 +69,44 @@ Partial Class formStats
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Chart4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartEmpGender, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AgeRangeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartDepr, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartHrs, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ChartCng, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.Lfn_count)
         Me.Panel5.Controls.Add(Me.Label1)
         Me.Panel5.Controls.Add(Me.PictureBox5)
         Me.Panel5.Location = New System.Drawing.Point(707, 23)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(200, 120)
         Me.Panel5.TabIndex = 5
+        '
+        'Lfn_count
+        '
+        Me.Lfn_count.AutoSize = True
+        Me.Lfn_count.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Lfn_count.Location = New System.Drawing.Point(11, 49)
+        Me.Lfn_count.Name = "Lfn_count"
+        Me.Lfn_count.Size = New System.Drawing.Size(59, 20)
+        Me.Lfn_count.TabIndex = 6
+        Me.Lfn_count.Text = "Count : "
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(11, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 21)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Fonctions"
         '
         'PictureBox5
         '
@@ -86,12 +120,33 @@ Partial Class formStats
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Panel6.Controls.Add(Me.Lcng_count)
         Me.Panel6.Controls.Add(Me.Label3)
         Me.Panel6.Controls.Add(Me.PictureBox6)
         Me.Panel6.Location = New System.Drawing.Point(479, 23)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(200, 120)
         Me.Panel6.TabIndex = 6
+        '
+        'Lcng_count
+        '
+        Me.Lcng_count.AutoSize = True
+        Me.Lcng_count.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Lcng_count.Location = New System.Drawing.Point(11, 49)
+        Me.Lcng_count.Name = "Lcng_count"
+        Me.Lcng_count.Size = New System.Drawing.Size(55, 20)
+        Me.Lcng_count.TabIndex = 7
+        Me.Lcng_count.Text = "Count :"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(11, 11)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 21)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "Conges"
         '
         'PictureBox6
         '
@@ -105,12 +160,44 @@ Partial Class formStats
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Panel7.Controls.Add(Me.Lbul_tot)
+        Me.Panel7.Controls.Add(Me.Lbul_count)
         Me.Panel7.Controls.Add(Me.Label4)
         Me.Panel7.Controls.Add(Me.PictureBox7)
         Me.Panel7.Location = New System.Drawing.Point(251, 23)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(200, 120)
         Me.Panel7.TabIndex = 4
+        '
+        'Lbul_tot
+        '
+        Me.Lbul_tot.AutoSize = True
+        Me.Lbul_tot.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Lbul_tot.Location = New System.Drawing.Point(11, 79)
+        Me.Lbul_tot.Name = "Lbul_tot"
+        Me.Lbul_tot.Size = New System.Drawing.Size(53, 20)
+        Me.Lbul_tot.TabIndex = 6
+        Me.Lbul_tot.Text = "Total : "
+        '
+        'Lbul_count
+        '
+        Me.Lbul_count.AutoSize = True
+        Me.Lbul_count.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Lbul_count.Location = New System.Drawing.Point(11, 49)
+        Me.Lbul_count.Name = "Lbul_count"
+        Me.Lbul_count.Size = New System.Drawing.Size(59, 20)
+        Me.Lbul_count.TabIndex = 5
+        Me.Lbul_count.Text = "Count : "
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Location = New System.Drawing.Point(11, 11)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(74, 21)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "Bulletien"
         '
         'PictureBox7
         '
@@ -124,6 +211,9 @@ Partial Class formStats
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.Lemp_f)
+        Me.Panel8.Controls.Add(Me.Lemp_h)
+        Me.Panel8.Controls.Add(Me.Lemp_count)
         Me.Panel8.Controls.Add(Me.Label2)
         Me.Panel8.Controls.Add(Me.PictureBox8)
         Me.Panel8.Location = New System.Drawing.Point(23, 23)
@@ -131,12 +221,43 @@ Partial Class formStats
         Me.Panel8.Size = New System.Drawing.Size(200, 120)
         Me.Panel8.TabIndex = 3
         '
+        'Lemp_f
+        '
+        Me.Lemp_f.AutoSize = True
+        Me.Lemp_f.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Lemp_f.Location = New System.Drawing.Point(64, 79)
+        Me.Lemp_f.Name = "Lemp_f"
+        Me.Lemp_f.Size = New System.Drawing.Size(27, 20)
+        Me.Lemp_f.TabIndex = 4
+        Me.Lemp_f.Text = "F : "
+        '
+        'Lemp_h
+        '
+        Me.Lemp_h.AutoSize = True
+        Me.Lemp_h.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Lemp_h.Location = New System.Drawing.Point(11, 79)
+        Me.Lemp_h.Name = "Lemp_h"
+        Me.Lemp_h.Size = New System.Drawing.Size(31, 20)
+        Me.Lemp_h.TabIndex = 3
+        Me.Lemp_h.Text = "H : "
+        '
+        'Lemp_count
+        '
+        Me.Lemp_count.AutoSize = True
+        Me.Lemp_count.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Lemp_count.Location = New System.Drawing.Point(11, 49)
+        Me.Lemp_count.Name = "Lemp_count"
+        Me.Lemp_count.Size = New System.Drawing.Size(59, 20)
+        Me.Lemp_count.TabIndex = 2
+        Me.Lemp_count.Text = "Count : "
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(11, 11)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 17)
+        Me.Label2.Size = New System.Drawing.Size(80, 21)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Employes"
         '
@@ -149,100 +270,119 @@ Partial Class formStats
         Me.PictureBox8.TabIndex = 0
         Me.PictureBox8.TabStop = False
         '
-        'Label1
+        'ChartEmpGender
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 11)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(32, 17)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Test"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 11)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 17)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Conges"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(11, 11)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 17)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "Bulletien"
-        '
-        'Chart1
-        '
-        Me.Chart1.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.ChartEmpGender.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        ChartArea1.AxisX.Title = "Tranche d'âge"
+        ChartArea1.AxisX.TitleFont = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Rotated270
+        ChartArea1.AxisY.Title = "employées"
         ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
+        Me.ChartEmpGender.ChartAreas.Add(ChartArea1)
+        Me.ChartEmpGender.DataSource = Me.AgeRangeBindingSource
+        Legend1.Enabled = False
         Legend1.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(23, 166)
-        Me.Chart1.Name = "Chart1"
+        Me.ChartEmpGender.Legends.Add(Legend1)
+        Me.ChartEmpGender.Location = New System.Drawing.Point(23, 166)
+        Me.ChartEmpGender.Name = "ChartEmpGender"
         Series1.ChartArea = "ChartArea1"
+        Series1.CustomProperties = "DrawingStyle=LightToDark, LabelStyle=Bottom"
+        Series1.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series1.IsValueShownAsLabel = True
+        Series1.LabelBackColor = System.Drawing.Color.Transparent
+        Series1.LabelBorderColor = System.Drawing.Color.Transparent
+        Series1.LabelForeColor = System.Drawing.Color.White
         Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(428, 231)
-        Me.Chart1.TabIndex = 7
-        Me.Chart1.Text = "Chart1"
+        Series1.Name = "AgeRange"
+        Series1.XValueMember = "AgeGroup"
+        Series1.YValueMembers = "CountOfAgeGroup"
+        Me.ChartEmpGender.Series.Add(Series1)
+        Me.ChartEmpGender.Size = New System.Drawing.Size(428, 231)
+        Me.ChartEmpGender.TabIndex = 7
+        Me.ChartEmpGender.Text = "Chart1"
         '
-        'Chart2
+        'AgeRangeBindingSource
         '
-        Me.Chart2.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.AgeRangeBindingSource.DataMember = "AgeRange"
+        Me.AgeRangeBindingSource.DataSource = Me.Employee_dbDataSet
+        '
+        'Employee_dbDataSet
+        '
+        Me.Employee_dbDataSet.DataSetName = "employee_dbDataSet"
+        Me.Employee_dbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'ChartDepr
+        '
+        Me.ChartDepr.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        ChartArea2.AxisX.Title = "Departements"
+        ChartArea2.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea2.AxisY.Title = "employées"
         ChartArea2.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea2)
+        Me.ChartDepr.ChartAreas.Add(ChartArea2)
+        Legend2.Enabled = False
         Legend2.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend2)
-        Me.Chart2.Location = New System.Drawing.Point(479, 166)
-        Me.Chart2.Name = "Chart2"
+        Me.ChartDepr.Legends.Add(Legend2)
+        Me.ChartDepr.Location = New System.Drawing.Point(479, 166)
+        Me.ChartDepr.Name = "ChartDepr"
         Series2.ChartArea = "ChartArea1"
+        Series2.CustomProperties = "DrawingStyle=LightToDark, LabelStyle=Bottom"
+        Series2.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series2.IsValueShownAsLabel = True
+        Series2.LabelForeColor = System.Drawing.Color.White
         Series2.Legend = "Legend1"
         Series2.Name = "Series1"
-        Me.Chart2.Series.Add(Series2)
-        Me.Chart2.Size = New System.Drawing.Size(428, 231)
-        Me.Chart2.TabIndex = 7
-        Me.Chart2.Text = "Chart1"
+        Me.ChartDepr.Series.Add(Series2)
+        Me.ChartDepr.Size = New System.Drawing.Size(428, 231)
+        Me.ChartDepr.TabIndex = 7
+        Me.ChartDepr.Text = "Chart1"
         '
-        'Chart3
+        'ChartHrs
         '
-        Me.Chart3.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.ChartHrs.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
         ChartArea3.Name = "ChartArea1"
-        Me.Chart3.ChartAreas.Add(ChartArea3)
+        Me.ChartHrs.ChartAreas.Add(ChartArea3)
+        Legend3.Enabled = False
         Legend3.Name = "Legend1"
-        Me.Chart3.Legends.Add(Legend3)
-        Me.Chart3.Location = New System.Drawing.Point(23, 420)
-        Me.Chart3.Name = "Chart3"
+        Me.ChartHrs.Legends.Add(Legend3)
+        Me.ChartHrs.Location = New System.Drawing.Point(23, 420)
+        Me.ChartHrs.Name = "ChartHrs"
         Series3.ChartArea = "ChartArea1"
+        Series3.CustomProperties = "DrawingStyle=LightToDark, LabelStyle=Bottom"
+        Series3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series3.IsValueShownAsLabel = True
+        Series3.LabelForeColor = System.Drawing.Color.White
         Series3.Legend = "Legend1"
         Series3.Name = "Series1"
-        Me.Chart3.Series.Add(Series3)
-        Me.Chart3.Size = New System.Drawing.Size(428, 231)
-        Me.Chart3.TabIndex = 7
-        Me.Chart3.Text = "Chart1"
+        Me.ChartHrs.Series.Add(Series3)
+        Me.ChartHrs.Size = New System.Drawing.Size(428, 231)
+        Me.ChartHrs.TabIndex = 7
+        Me.ChartHrs.Text = "Chart1"
         '
-        'Chart4
+        'ChartCng
         '
-        Me.Chart4.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.ChartCng.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
         ChartArea4.Name = "ChartArea1"
-        Me.Chart4.ChartAreas.Add(ChartArea4)
+        Me.ChartCng.ChartAreas.Add(ChartArea4)
+        Legend4.Enabled = False
         Legend4.Name = "Legend1"
-        Me.Chart4.Legends.Add(Legend4)
-        Me.Chart4.Location = New System.Drawing.Point(479, 420)
-        Me.Chart4.Name = "Chart4"
+        Me.ChartCng.Legends.Add(Legend4)
+        Me.ChartCng.Location = New System.Drawing.Point(479, 420)
+        Me.ChartCng.Name = "ChartCng"
         Series4.ChartArea = "ChartArea1"
+        Series4.CustomProperties = "DrawingStyle=LightToDark, LabelStyle=Bottom"
+        Series4.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Series4.IsValueShownAsLabel = True
+        Series4.LabelForeColor = System.Drawing.Color.White
         Series4.Legend = "Legend1"
         Series4.Name = "Series1"
-        Me.Chart4.Series.Add(Series4)
-        Me.Chart4.Size = New System.Drawing.Size(428, 231)
-        Me.Chart4.TabIndex = 7
-        Me.Chart4.Text = "Chart1"
+        Me.ChartCng.Series.Add(Series4)
+        Me.ChartCng.Size = New System.Drawing.Size(428, 231)
+        Me.ChartCng.TabIndex = 7
+        Me.ChartCng.Text = "Chart1"
+        '
+        'AgeRangeTableAdapter
+        '
+        Me.AgeRangeTableAdapter.ClearBeforeFill = True
         '
         'formStats
         '
@@ -250,17 +390,17 @@ Partial Class formStats
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(930, 672)
-        Me.Controls.Add(Me.Chart2)
-        Me.Controls.Add(Me.Chart4)
-        Me.Controls.Add(Me.Chart3)
-        Me.Controls.Add(Me.Chart1)
+        Me.Controls.Add(Me.ChartDepr)
+        Me.Controls.Add(Me.ChartCng)
+        Me.Controls.Add(Me.ChartHrs)
+        Me.Controls.Add(Me.ChartEmpGender)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.Panel7)
         Me.Controls.Add(Me.Panel8)
         Me.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "formStats"
         Me.Text = "formStats"
         Me.Panel5.ResumeLayout(False)
@@ -275,10 +415,12 @@ Partial Class formStats
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Chart4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartEmpGender, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AgeRangeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartDepr, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartHrs, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ChartCng, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -294,9 +436,19 @@ Partial Class formStats
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Chart1 As System.Windows.Forms.DataVisualization.Charting.Chart
-    Friend WithEvents Chart2 As System.Windows.Forms.DataVisualization.Charting.Chart
-    Friend WithEvents Chart3 As System.Windows.Forms.DataVisualization.Charting.Chart
-    Friend WithEvents Chart4 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents ChartEmpGender As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents ChartDepr As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents ChartHrs As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents ChartCng As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents Employee_dbDataSet As Bulletien_De_Paie.employee_dbDataSet
+    Friend WithEvents AgeRangeBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents AgeRangeTableAdapter As Bulletien_De_Paie.employee_dbDataSetTableAdapters.AgeRangeTableAdapter
+    Friend WithEvents Lemp_count As System.Windows.Forms.Label
+    Friend WithEvents Lemp_h As System.Windows.Forms.Label
+    Friend WithEvents Lemp_f As System.Windows.Forms.Label
+    Friend WithEvents Lfn_count As System.Windows.Forms.Label
+    Friend WithEvents Lcng_count As System.Windows.Forms.Label
+    Friend WithEvents Lbul_tot As System.Windows.Forms.Label
+    Friend WithEvents Lbul_count As System.Windows.Forms.Label
 
 End Class

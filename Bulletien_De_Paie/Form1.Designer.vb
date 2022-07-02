@@ -24,6 +24,11 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.SidePanel = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelButtons = New System.Windows.Forms.Panel()
         Me.Bst = New System.Windows.Forms.Button()
         Me.Bco = New System.Windows.Forms.Button()
@@ -34,20 +39,19 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.HeaderPanel = New System.Windows.Forms.Panel()
         Me.Luser = New System.Windows.Forms.Label()
-        Me.PanelContainer = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Bmin = New System.Windows.Forms.PictureBox()
         Me.Bmax = New System.Windows.Forms.PictureBox()
         Me.Bclose = New System.Windows.Forms.PictureBox()
+        Me.PanelContainer = New System.Windows.Forms.Panel()
         Me.SidePanel.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelButtons.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
         Me.HeaderPanel.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bmin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bmax, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Bclose, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,6 +68,55 @@ Partial Class Form1
         Me.SidePanel.Name = "SidePanel"
         Me.SidePanel.Size = New System.Drawing.Size(170, 672)
         Me.SidePanel.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Controls.Add(Me.Panel2)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel1.Location = New System.Drawing.Point(0, 592)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(170, 80)
+        Me.Panel1.TabIndex = 2
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.PictureBox2)
+        Me.Panel3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Panel3.Location = New System.Drawing.Point(3, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(85, 80)
+        Me.Panel3.TabIndex = 4
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Bulletien_De_Paie.My.Resources.Resources.out
+        Me.PictureBox2.Location = New System.Drawing.Point(33, 26)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel2.Location = New System.Drawing.Point(85, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(85, 80)
+        Me.Panel2.TabIndex = 3
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Bulletien_De_Paie.My.Resources.Resources.settings
+        Me.PictureBox1.Location = New System.Drawing.Point(26, 26)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'PanelButtons
         '
@@ -189,44 +242,6 @@ Partial Class Form1
         Me.Luser.Size = New System.Drawing.Size(0, 20)
         Me.Luser.TabIndex = 1
         '
-        'PanelContainer
-        '
-        Me.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PanelContainer.Location = New System.Drawing.Point(170, 28)
-        Me.PanelContainer.Name = "PanelContainer"
-        Me.PanelContainer.Size = New System.Drawing.Size(930, 672)
-        Me.PanelContainer.TabIndex = 2
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel1.Location = New System.Drawing.Point(0, 592)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(170, 80)
-        Me.Panel1.TabIndex = 2
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Bulletien_De_Paie.My.Resources.Resources.out
-        Me.PictureBox2.Location = New System.Drawing.Point(38, 23)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Bulletien_De_Paie.My.Resources.Resources.settings
-        Me.PictureBox1.Location = New System.Drawing.Point(113, 23)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
         'Bmin
         '
         Me.Bmin.Anchor = System.Windows.Forms.AnchorStyles.Right
@@ -260,6 +275,14 @@ Partial Class Form1
         Me.Bclose.TabIndex = 0
         Me.Bclose.TabStop = False
         '
+        'PanelContainer
+        '
+        Me.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PanelContainer.Location = New System.Drawing.Point(170, 28)
+        Me.PanelContainer.Name = "PanelContainer"
+        Me.PanelContainer.Size = New System.Drawing.Size(930, 672)
+        Me.PanelContainer.TabIndex = 2
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -272,14 +295,16 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.SidePanel.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelButtons.ResumeLayout(False)
         Me.PanelLogo.ResumeLayout(False)
         Me.PanelLogo.PerformLayout()
         Me.HeaderPanel.ResumeLayout(False)
         Me.HeaderPanel.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bmin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bmax, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Bclose, System.ComponentModel.ISupportInitialize).EndInit()
@@ -305,4 +330,6 @@ Partial Class Form1
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel3 As System.Windows.Forms.Panel
+    Friend WithEvents Panel2 As System.Windows.Forms.Panel
 End Class
