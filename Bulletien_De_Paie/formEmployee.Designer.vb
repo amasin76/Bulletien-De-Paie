@@ -65,7 +65,7 @@ Partial Class formEmployee
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.PanelAction = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Bprint = New System.Windows.Forms.Button()
         Me.Bajoute = New System.Windows.Forms.Button()
         Me.PanelTitle = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -73,8 +73,8 @@ Partial Class formEmployee
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Bannuler_sr = New System.Windows.Forms.Button()
-        Me.Brechercher = New System.Windows.Forms.Button()
         Me.PanelGrid = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MatDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -298,7 +298,7 @@ Partial Class formEmployee
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(193, 13)
         Me.Label22.TabIndex = 7
-        Me.Label22.Text = "Photo (optional)  :  max taille 256kb"
+        Me.Label22.Text = "Photo (optional)  :  max taille 512kb"
         '
         'Label21
         '
@@ -325,9 +325,9 @@ Partial Class formEmployee
         Me.Label19.AutoSize = True
         Me.Label19.Location = New System.Drawing.Point(9, 48)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(137, 21)
+        Me.Label19.Size = New System.Drawing.Size(146, 21)
         Me.Label19.TabIndex = 4
-        Me.Label19.Text = "Entrez les donnes"
+        Me.Label19.Text = "Entrez les données"
         '
         'Znen
         '
@@ -524,7 +524,7 @@ Partial Class formEmployee
         'PanelAction
         '
         Me.PanelAction.Controls.Add(Me.Button3)
-        Me.PanelAction.Controls.Add(Me.Button2)
+        Me.PanelAction.Controls.Add(Me.Bprint)
         Me.PanelAction.Controls.Add(Me.Bajoute)
         Me.PanelAction.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PanelAction.Location = New System.Drawing.Point(3, 531)
@@ -541,14 +541,14 @@ Partial Class formEmployee
         Me.Button3.Text = "Actualiser"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Bprint
         '
-        Me.Button2.Location = New System.Drawing.Point(359, 22)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(205, 61)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Annuler"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Bprint.Location = New System.Drawing.Point(359, 22)
+        Me.Bprint.Name = "Bprint"
+        Me.Bprint.Size = New System.Drawing.Size(205, 61)
+        Me.Bprint.TabIndex = 0
+        Me.Bprint.Text = "Badge"
+        Me.Bprint.UseVisualStyleBackColor = True
         '
         'Bajoute
         '
@@ -577,7 +577,7 @@ Partial Class formEmployee
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(289, 30)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Saisi d'un nouveau employe"
+        Me.Label1.Text = "Saisi d'un nouveau employé"
         '
         'TabConsulter
         '
@@ -591,14 +591,13 @@ Partial Class formEmployee
         Me.TabConsulter.Padding = New System.Windows.Forms.Padding(3)
         Me.TabConsulter.Size = New System.Drawing.Size(922, 638)
         Me.TabConsulter.TabIndex = 1
-        Me.TabConsulter.Text = "Consulter"
+        Me.TabConsulter.Text = "Gérer"
         Me.TabConsulter.UseVisualStyleBackColor = True
         '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Button7)
         Me.Panel2.Controls.Add(Me.Bannuler_sr)
-        Me.Panel2.Controls.Add(Me.Brechercher)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(3, 531)
         Me.Panel2.Name = "Panel2"
@@ -607,7 +606,7 @@ Partial Class formEmployee
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(621, 22)
+        Me.Button7.Location = New System.Drawing.Point(162, 22)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(205, 61)
         Me.Button7.TabIndex = 0
@@ -616,25 +615,17 @@ Partial Class formEmployee
         '
         'Bannuler_sr
         '
-        Me.Bannuler_sr.Location = New System.Drawing.Point(359, 22)
+        Me.Bannuler_sr.Location = New System.Drawing.Point(550, 22)
         Me.Bannuler_sr.Name = "Bannuler_sr"
         Me.Bannuler_sr.Size = New System.Drawing.Size(205, 61)
         Me.Bannuler_sr.TabIndex = 0
         Me.Bannuler_sr.Text = "Annuler"
         Me.Bannuler_sr.UseVisualStyleBackColor = True
         '
-        'Brechercher
-        '
-        Me.Brechercher.Location = New System.Drawing.Point(97, 22)
-        Me.Brechercher.Name = "Brechercher"
-        Me.Brechercher.Size = New System.Drawing.Size(205, 61)
-        Me.Brechercher.TabIndex = 0
-        Me.Brechercher.Text = "Rechercher"
-        Me.Brechercher.UseVisualStyleBackColor = True
-        '
         'PanelGrid
         '
         Me.PanelGrid.AutoScroll = True
+        Me.PanelGrid.Controls.Add(Me.Label16)
         Me.PanelGrid.Controls.Add(Me.DataGridView1)
         Me.PanelGrid.Controls.Add(Me.Label13)
         Me.PanelGrid.Controls.Add(Me.LrowsCount)
@@ -648,10 +639,22 @@ Partial Class formEmployee
         Me.PanelGrid.Size = New System.Drawing.Size(916, 526)
         Me.PanelGrid.TabIndex = 11
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.Label16.Location = New System.Drawing.Point(298, 317)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(377, 13)
+        Me.Label16.TabIndex = 8
+        Me.Label16.Text = "Pour modifier ou supprimer un employé spécifique, cliquez sur sa ligne"
+        '
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AutoGenerateColumns = False
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.Control
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.MatDataGridViewTextBoxColumn, Me.NomPrenomDataGridViewTextBoxColumn, Me.FonctionDataGridViewTextBoxColumn, Me.AdresseDataGridViewTextBoxColumn, Me.VilleDataGridViewTextBoxColumn, Me.EmailDataGridViewTextBoxColumn, Me.TelephoneDataGridViewTextBoxColumn, Me.DEMDataGridViewTextBoxColumn, Me.EnfantsDataGridViewTextBoxColumn, Me.PhotoDataGridViewImageColumn, Me.CVDataGridViewTextBoxColumn, Me.DateRecDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.EmployeBindingSource
@@ -761,9 +764,9 @@ Partial Class formEmployee
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlDark
         Me.Label13.Location = New System.Drawing.Point(767, 311)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(80, 21)
+        Me.Label13.Size = New System.Drawing.Size(94, 21)
         Me.Label13.TabIndex = 2
-        Me.Label13.Text = "Result(s) :"
+        Me.Label13.Text = "Résultat(s) :"
         '
         'LrowsCount
         '
@@ -826,15 +829,15 @@ Partial Class formEmployee
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(9, 21)
+        Me.Label10.Location = New System.Drawing.Point(9, 20)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(59, 21)
+        Me.Label10.Size = New System.Drawing.Size(87, 21)
         Me.Label10.TabIndex = 1
-        Me.Label10.Text = "Search"
+        Me.Label10.Text = "Recherche"
         '
         'Zsearch
         '
-        Me.Zsearch.Location = New System.Drawing.Point(74, 13)
+        Me.Zsearch.Location = New System.Drawing.Point(101, 13)
         Me.Zsearch.Name = "Zsearch"
         Me.Zsearch.Size = New System.Drawing.Size(280, 29)
         Me.Zsearch.TabIndex = 2
@@ -857,7 +860,7 @@ Partial Class formEmployee
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(360, 30)
         Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Afficher un ou plusieurs employees"
+        Me.Label11.Text = "Afficher un ou plusieurs employées"
         '
         'EmployeTableAdapter
         '
@@ -925,14 +928,13 @@ Partial Class formEmployee
     Friend WithEvents Label9 As Label
     Friend WithEvents PanelAction As Panel
     Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Bprint As Button
     Friend WithEvents Bajoute As Button
     Friend WithEvents PanelTitle As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button7 As Button
     Friend WithEvents Bannuler_sr As Button
-    Friend WithEvents Brechercher As Button
     Friend WithEvents PanelGrid As Panel
     Friend WithEvents Label13 As Label
     Friend WithEvents LrowsCount As Label
@@ -973,4 +975,5 @@ Partial Class formEmployee
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Lplus As System.Windows.Forms.Label
     Friend WithEvents Ddem As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label16 As System.Windows.Forms.Label
 End Class

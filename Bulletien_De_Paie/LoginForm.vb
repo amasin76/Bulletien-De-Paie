@@ -100,7 +100,7 @@ Public Class LoginForm
     Private Sub ZpwdNew_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ZpwdNew.Enter
         If ZpwdNew.Text = "Mot De Passe" Then
             ZpwdNew.Text = ""
-            ZpwdNew.PasswordChar = "*"
+            'ZpwdNew.PasswordChar = "*"
             ZpwdNew.ForeColor = Color.Black
         End If
     End Sub
@@ -108,7 +108,7 @@ Public Class LoginForm
     Private Sub ZpwdNew_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ZpwdNew.Leave
         If ZpwdNew.Text = "" Then
             ZpwdNew.Text = "Mot De Passe"
-            ZpwdNew.PasswordChar = ""
+            'ZpwdNew.PasswordChar = ""
             ZpwdNew.ForeColor = Color.DarkGray
         End If
     End Sub
@@ -116,7 +116,7 @@ Public Class LoginForm
     Private Sub Zpwd2New_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Zpwd2New.Enter
         If Zpwd2New.Text = "Répéter Mot De Passe" Then
             Zpwd2New.Text = ""
-            Zpwd2New.PasswordChar = "*"
+            'Zpwd2New.PasswordChar = "*"
             Zpwd2New.ForeColor = Color.Black
         End If
     End Sub
@@ -124,7 +124,7 @@ Public Class LoginForm
     Private Sub Zpwd2New_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Zpwd2New.Leave
         If Zpwd2New.Text = "" Then
             Zpwd2New.Text = "Répéter Mot De Passe"
-            Zpwd2New.PasswordChar = ""
+            'Zpwd2New.PasswordChar = ""
             Zpwd2New.ForeColor = Color.DarkGray
         End If
     End Sub

@@ -119,4 +119,24 @@ Module Helpers
             Return String.Empty
         End Try
     End Function
+    Function BackgroundGradient(ByRef Control As Object, _
+                                ByVal Color1 As Drawing.Color, _
+                                ByVal Color2 As Drawing.Color)
+
+        Dim vLinearGradient As Drawing.Drawing2D.LinearGradientBrush = _
+            New Drawing.Drawing2D.LinearGradientBrush(New Drawing.Point(Control.Width, Control.Height), _
+                                                        New Drawing.Point(Control.Width, 0), _
+                                                        Color1, _
+                                                        Color2)
+
+        Dim vGraphic As Drawing.Graphics = Control.CreateGraphics
+        ' To tile the image background - Using the same image background of the image
+        Dim vTexture As New Drawing.TextureBrush(Control.BackgroundImage)
+
+        vGraphic.FillRectangle(vLinearGradient, Control.DisplayRectangle)
+        vGraphic.FillRectangle(vTexture, Control.DisplayRectangle)
+
+        vGraphic.Dispose() : vGraphic = Nothing : vTexture.Dispose() : vTexture = Nothing
+        Return 0
+    End Function
 End Module

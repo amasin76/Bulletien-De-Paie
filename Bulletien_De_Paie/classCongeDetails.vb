@@ -1,4 +1,11 @@
-﻿Public Class classCongeDetails
+﻿Public Class classEmployeDetails
+    Public Shared picture As Image
+    Public Shared npr As String
+    Public Shared fn As String
+    Public Shared mat As String
+End Class
+
+Public Class classCongeDetails
     Public Shared nJours As Integer
     Public Shared Dsortie As String
     Public Shared Dretour As String

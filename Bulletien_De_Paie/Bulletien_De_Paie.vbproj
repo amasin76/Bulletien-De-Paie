@@ -83,6 +83,12 @@
   <ItemGroup>
     <Compile Include="classCongeDetails.vb" />
     <Compile Include="Cnxdb.vb" />
+    <Compile Include="Reports\formBadge.Designer.vb">
+      <DependentUpon>formBadge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\formBadge.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reports\formCongeDemande.Designer.vb">
       <DependentUpon>formCongeDemande.vb</DependentUpon>
     </Compile>
@@ -183,7 +189,14 @@
     <Compile Include="RgbColors.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="formAccueil.resx">
+      <DependentUpon>formAccueil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BadgeAsImage.rdlc" />
     <EmbeddedResource Include="Reports\CongeAsGrid.rdlc" />
+    <EmbeddedResource Include="Reports\formBadge.resx">
+      <DependentUpon>formBadge.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\formCongeDemande.resx">
       <DependentUpon>formCongeDemande.vb</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +299,15 @@
     <None Include="assets\purpleWavesA90.png" />
     <None Include="assets\add.png" />
     <None Include="assets\add_green.png" />
+    <None Include="assets\ID_BADGE.png" />
+    <None Include="assets\print.png" />
+    <None Include="assets\eye2.png" />
+    <None Include="assets\window_black.png" />
+    <None Include="assets\tie.png" />
+    <None Include="assets\invoice.png" />
+    <None Include="assets\holiday.jpg" />
+    <None Include="assets\hierarchy.png" />
+    <None Include="assets\home.png" />
     <Content Include="employee_db.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

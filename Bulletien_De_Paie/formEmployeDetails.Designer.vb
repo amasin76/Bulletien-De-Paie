@@ -239,6 +239,7 @@ Partial Class formEmployeDetails
         '
         'Bdelete
         '
+        Me.Bdelete.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bdelete.Location = New System.Drawing.Point(573, 22)
         Me.Bdelete.Name = "Bdelete"
         Me.Bdelete.Size = New System.Drawing.Size(205, 61)
@@ -248,6 +249,7 @@ Partial Class formEmployeDetails
         '
         'Bsave
         '
+        Me.Bsave.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bsave.Location = New System.Drawing.Point(311, 22)
         Me.Bsave.Name = "Bsave"
         Me.Bsave.Size = New System.Drawing.Size(205, 61)
@@ -257,6 +259,7 @@ Partial Class formEmployeDetails
         '
         'Bedit
         '
+        Me.Bedit.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Bedit.Location = New System.Drawing.Point(49, 22)
         Me.Bedit.Name = "Bedit"
         Me.Bedit.Size = New System.Drawing.Size(205, 61)

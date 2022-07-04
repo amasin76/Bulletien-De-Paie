@@ -38,22 +38,18 @@ Partial Class formStats
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Lfn_count = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Lcng_count = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Lbul_tot = New System.Windows.Forms.Label()
         Me.Lbul_count = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Lemp_f = New System.Windows.Forms.Label()
         Me.Lemp_h = New System.Windows.Forms.Label()
         Me.Lemp_count = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.ChartEmpGender = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.AgeRangeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Employee_dbDataSet = New Bulletien_De_Paie.employee_dbDataSet()
@@ -61,20 +57,24 @@ Partial Class formStats
         Me.ChartHrs = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.ChartCng = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.AgeRangeTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.AgeRangeTableAdapter()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
         Me.Panel5.SuspendLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel6.SuspendLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartEmpGender, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AgeRangeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartDepr, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartHrs, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ChartCng, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel5
@@ -108,15 +108,6 @@ Partial Class formStats
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Fonctions"
         '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.PictureBox5.Location = New System.Drawing.Point(159, 79)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox5.TabIndex = 3
-        Me.PictureBox5.TabStop = False
-        '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
@@ -147,15 +138,6 @@ Partial Class formStats
         Me.Label3.Size = New System.Drawing.Size(65, 21)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Conges"
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.PictureBox6.Location = New System.Drawing.Point(159, 79)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox6.TabIndex = 2
-        Me.PictureBox6.TabStop = False
         '
         'Panel7
         '
@@ -198,15 +180,6 @@ Partial Class formStats
         Me.Label4.Size = New System.Drawing.Size(74, 21)
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Bulletien"
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.PictureBox7.Location = New System.Drawing.Point(159, 79)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox7.TabIndex = 1
-        Me.PictureBox7.TabStop = False
         '
         'Panel8
         '
@@ -261,15 +234,6 @@ Partial Class formStats
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Employes"
         '
-        'PictureBox8
-        '
-        Me.PictureBox8.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.PictureBox8.Location = New System.Drawing.Point(159, 79)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox8.TabIndex = 0
-        Me.PictureBox8.TabStop = False
-        '
         'ChartEmpGender
         '
         Me.ChartEmpGender.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
@@ -314,7 +278,7 @@ Partial Class formStats
         'ChartDepr
         '
         Me.ChartDepr.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
-        ChartArea2.AxisX.Title = "Departements"
+        ChartArea2.AxisX.Title = "Fonctions"
         ChartArea2.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         ChartArea2.AxisY.Title = "employées"
         ChartArea2.Name = "ChartArea1"
@@ -339,6 +303,9 @@ Partial Class formStats
         'ChartHrs
         '
         Me.ChartHrs.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        ChartArea3.AxisX.Title = "Heures Travailler (Top 5)"
+        ChartArea3.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        ChartArea3.AxisY.Title = "heures"
         ChartArea3.Name = "ChartArea1"
         Me.ChartHrs.ChartAreas.Add(ChartArea3)
         Legend3.Enabled = False
@@ -361,6 +328,9 @@ Partial Class formStats
         'ChartCng
         '
         Me.ChartCng.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        ChartArea4.AxisX.Title = "Total des vacances"
+        ChartArea4.AxisX.TitleFont = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold)
+        ChartArea4.AxisY.Title = "jours"
         ChartArea4.Name = "ChartArea1"
         Me.ChartCng.ChartAreas.Add(ChartArea4)
         Legend4.Enabled = False
@@ -384,6 +354,54 @@ Partial Class formStats
         '
         Me.AgeRangeTableAdapter.ClearBeforeFill = True
         '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.PictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox5.Image = Global.Bulletien_De_Paie.My.Resources.Resources.hierarchy
+        Me.PictureBox5.Location = New System.Drawing.Point(129, 49)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(60, 60)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 3
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.PictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox6.Image = Global.Bulletien_De_Paie.My.Resources.Resources.holiday
+        Me.PictureBox6.Location = New System.Drawing.Point(129, 49)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(60, 60)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 2
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.PictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox7.Image = Global.Bulletien_De_Paie.My.Resources.Resources.invoice
+        Me.PictureBox7.Location = New System.Drawing.Point(129, 49)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(60, 60)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 1
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(230, Byte), Integer))
+        Me.PictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox8.Image = Global.Bulletien_De_Paie.My.Resources.Resources.tie
+        Me.PictureBox8.Location = New System.Drawing.Point(129, 49)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(60, 60)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox8.TabIndex = 0
+        Me.PictureBox8.TabStop = False
+        '
         'formStats
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
@@ -405,22 +423,22 @@ Partial Class formStats
         Me.Text = "formStats"
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel6.ResumeLayout(False)
         Me.Panel6.PerformLayout()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.Panel7.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartEmpGender, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AgeRangeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Employee_dbDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartDepr, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartHrs, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ChartCng, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

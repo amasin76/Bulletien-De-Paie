@@ -88,7 +88,6 @@ Partial Class formConge
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Bprint = New System.Windows.Forms.Button()
         Me.Bannuler_sr = New System.Windows.Forms.Button()
-        Me.Brechercher = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.N_Conge = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.NomPrenomDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -767,26 +766,28 @@ Partial Class formConge
         'Label29
         '
         Me.Label29.AutoSize = True
-        Me.Label29.Location = New System.Drawing.Point(704, 41)
+        Me.Label29.Location = New System.Drawing.Point(704, 67)
         Me.Label29.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(92, 21)
         Me.Label29.TabIndex = 0
         Me.Label29.Text = "Min Jours :"
+        Me.Label29.Visible = False
         '
         'LminJrs
         '
         Me.LminJrs.AutoSize = True
-        Me.LminJrs.Location = New System.Drawing.Point(800, 41)
+        Me.LminJrs.Location = New System.Drawing.Point(800, 67)
         Me.LminJrs.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LminJrs.Name = "LminJrs"
         Me.LminJrs.Size = New System.Drawing.Size(0, 21)
         Me.LminJrs.TabIndex = 0
+        Me.LminJrs.Visible = False
         '
         'LmaxJrs
         '
         Me.LmaxJrs.AutoSize = True
-        Me.LmaxJrs.Location = New System.Drawing.Point(577, 41)
+        Me.LmaxJrs.Location = New System.Drawing.Point(804, 41)
         Me.LmaxJrs.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LmaxJrs.Name = "LmaxJrs"
         Me.LmaxJrs.Size = New System.Drawing.Size(0, 21)
@@ -795,7 +796,7 @@ Partial Class formConge
         'LtotalJrs
         '
         Me.LtotalJrs.AutoSize = True
-        Me.LtotalJrs.Location = New System.Drawing.Point(372, 41)
+        Me.LtotalJrs.Location = New System.Drawing.Point(493, 41)
         Me.LtotalJrs.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LtotalJrs.Name = "LtotalJrs"
         Me.LtotalJrs.Size = New System.Drawing.Size(0, 21)
@@ -823,7 +824,7 @@ Partial Class formConge
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(477, 41)
+        Me.Label26.Location = New System.Drawing.Point(704, 41)
         Me.Label26.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(95, 21)
@@ -833,7 +834,7 @@ Partial Class formConge
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(268, 41)
+        Me.Label27.Location = New System.Drawing.Point(389, 41)
         Me.Label27.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(100, 21)
@@ -844,7 +845,6 @@ Partial Class formConge
         '
         Me.Panel2.Controls.Add(Me.Bprint)
         Me.Panel2.Controls.Add(Me.Bannuler_sr)
-        Me.Panel2.Controls.Add(Me.Brechercher)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 440)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
@@ -854,7 +854,7 @@ Partial Class formConge
         '
         'Bprint
         '
-        Me.Bprint.Location = New System.Drawing.Point(620, 13)
+        Me.Bprint.Location = New System.Drawing.Point(162, 13)
         Me.Bprint.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Bprint.Name = "Bprint"
         Me.Bprint.Size = New System.Drawing.Size(205, 61)
@@ -864,23 +864,13 @@ Partial Class formConge
         '
         'Bannuler_sr
         '
-        Me.Bannuler_sr.Location = New System.Drawing.Point(359, 13)
+        Me.Bannuler_sr.Location = New System.Drawing.Point(550, 13)
         Me.Bannuler_sr.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
         Me.Bannuler_sr.Name = "Bannuler_sr"
         Me.Bannuler_sr.Size = New System.Drawing.Size(205, 61)
         Me.Bannuler_sr.TabIndex = 0
         Me.Bannuler_sr.Text = "Annuler"
         Me.Bannuler_sr.UseVisualStyleBackColor = True
-        '
-        'Brechercher
-        '
-        Me.Brechercher.Location = New System.Drawing.Point(97, 13)
-        Me.Brechercher.Margin = New System.Windows.Forms.Padding(2, 3, 2, 3)
-        Me.Brechercher.Name = "Brechercher"
-        Me.Brechercher.Size = New System.Drawing.Size(205, 61)
-        Me.Brechercher.TabIndex = 0
-        Me.Brechercher.Text = "Rechercher"
-        Me.Brechercher.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -1323,7 +1313,6 @@ Partial Class formConge
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Bprint As System.Windows.Forms.Button
     Friend WithEvents Bannuler_sr As System.Windows.Forms.Button
-    Friend WithEvents Brechercher As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label22 As System.Windows.Forms.Label
     Friend WithEvents LrowsCount As System.Windows.Forms.Label

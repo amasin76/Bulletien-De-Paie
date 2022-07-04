@@ -166,7 +166,12 @@ Public Class formBulletien
         Try
             cnx.Open()
             cmd.ExecuteNonQuery()
-            MsgBox("Record saved")
+            Dim ToolTip1 As New ToolTip
+            ToolTip1.IsBalloon = True
+            ToolTip1.UseFading = True
+            ToolTip1.ToolTipIcon = ToolTipIcon.Info
+            ToolTip1.ToolTipTitle = "SUCCESS"
+            ToolTip1.Show("Bulletien de " & Znpr.Text & " est enregistré", Bsave, New Point(0, -80), 4000)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -177,6 +182,10 @@ Public Class formBulletien
     'Consulter
     Dim bs As New BindingSource()
     Private Sub TabConsulter_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabConsulter.Enter
+        LoadDataGridBulletien()
+    End Sub
+
+    Public Sub LoadDataGridBulletien()
         If cnx.State = ConnectionState.Closed Then cnx.Open()
         Dim dataAdapter As New OleDbDataAdapter("SELECT * FROM BulletienWithEmployeName", cnx)
         Dim ds As New DataSet()
@@ -246,10 +255,28 @@ Public Class formBulletien
         Zmat.Enabled = True
     End Sub
 
-    Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs)
-        Dim imageBmp As New Bitmap(Me.DataGridView1.Width, Me.DataGridView1.Height)
-        DataGridView1.DrawToBitmap(imageBmp, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView1.Height))
-        e.Graphics.DrawImage(imageBmp, -40, 100)
+    Private Sub BtableNext_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtableNext.Click
+        bs.MoveNext()
+    End Sub
+
+    Private Sub BtableLast_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtableLast.Click
+        bs.MoveLast()
+    End Sub
+
+    Private Sub BtablePrev_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtablePrev.Click
+        bs.MovePrevious()
+    End Sub
+
+    Private Sub BtableFirst_Click(ByVal sender As Object, ByVal e As EventArgs) Handles BtableFirst.Click
+        bs.MoveFirst()
+    End Sub
+
+    Private Sub Bprint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bprint.Click
+        search = Zsearch.Text
+        date1 = DateTimePicker1.Value
+        date2 = DateTimePicker2.Value
+        selectedIndex = Lby.SelectedIndex
+        formBulletienReport.ShowDialog()
     End Sub
 
     'Show employe details
@@ -262,13 +289,6 @@ Public Class formBulletien
             objItemCategories.ShowDialog(Me)
         End If
     End Sub
-    Public Shared Property selectedrow As DataGridViewRow
 
-    Private Sub Bprint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bprint.Click
-        search = Zsearch.Text
-        date1 = DateTimePicker1.Value
-        date2 = DateTimePicker2.Value
-        selectedIndex = Lby.SelectedIndex
-        formBulletienReport.ShowDialog()
-    End Sub
+    Public Shared Property selectedrow As DataGridViewRow
 End Class

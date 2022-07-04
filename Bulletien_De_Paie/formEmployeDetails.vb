@@ -7,9 +7,7 @@ Public Class formEmployeDetails
         Dim matSelected As String, imgName As String = "", cvName As String = "", pathImgString As String, pathCvString As String
         matSelected = formEmployee.selectedrow.Cells(0).Value.ToString()
 
-        If cnx.State = ConnectionState.Closed Then
-            cnx.Open()
-        End If
+        If cnx.State = ConnectionState.Closed Then cnx.Open()
         Dim command As String
         Dim reader As OleDbDataReader
         command = "SELECT * FROM Employe where Mat = @Mat"
@@ -51,7 +49,6 @@ Public Class formEmployeDetails
         Else
             Label15.Text = "Fichier introuvable"
         End If
-        cnx.Close()
     End Sub
 
     'Browse Image
@@ -145,19 +142,20 @@ Public Class formEmployeDetails
         cmd.Parameters.Add("@nen", OleDbType.VarChar).Value = Znen_dt.Text
 
         Try
-            If cnx.State = ConnectionState.Closed Then
-                cnx.Open()
-            End If
+            If cnx.State = ConnectionState.Closed Then cnx.Open()
             cmd.ExecuteNonQuery()
             Dim a As Image = Pemploye.Image
             If (System.IO.File.Exists(pathImgString)) Then
-                MsgBox(1)
                 System.IO.File.Delete(pathImgString)
-                MsgBox(2)
                 a.Save(pathImgString)
             End If
-            File.Copy(pathSourceCvString, pathCvString, True)
-            cnx.Close()
+            If Not pathSourceCvString = "" Then File.Copy(pathSourceCvString, pathCvString, True)
+            Dim ToolTip1 As New ToolTip
+            ToolTip1.IsBalloon = True
+            ToolTip1.UseFading = True
+            ToolTip1.ToolTipIcon = ToolTipIcon.Info
+            ToolTip1.ToolTipTitle = "SUCCESS"
+            ToolTip1.Show("Les Données de l'employée " & Zmat_dt.Text & " sont Modifiées", Bsave, New Point(0, -80), 4000)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -172,14 +170,13 @@ Public Class formEmployeDetails
         cmd.Parameters.AddWithValue("@Mat", Zmat_dt.Text)
 
         Dim response As Integer
-        response = MessageBox.Show("Are you sure want to delete this record?", "Delete Employe", MessageBoxButtons.YesNo, MessageBoxIcon.None)
+        response = MessageBox.Show("Voulez-vous vraiment supprimer cet enregistrement ?", "Supprimer Employée", MessageBoxButtons.YesNo, MessageBoxIcon.None)
         If response = vbYes Then
             Try
                 If cnx.State = ConnectionState.Closed Then
                     cnx.Open()
                 End If
                 cmd.ExecuteNonQuery()
-                cnx.Close()
             Catch ex As Exception
                 MsgBox(ex.Message)
             Finally
@@ -193,7 +190,11 @@ Public Class formEmployeDetails
         If Not Label15.Text = "Fichier introuvable" Then
             LinkLabel1.Enabled = True
             Dim pathCvString As String = System.IO.Path.Combine(MyDocuments, "Bio Tech", "Employés", "CV", Label15.Text)
-            Process.Start(pathCvString)
+            If (System.IO.File.Exists(pathCvString)) Then
+                Process.Start(pathCvString)
+            Else
+                Process.Start(pathSourceCvString)
+            End If
         End If
     End Sub
 

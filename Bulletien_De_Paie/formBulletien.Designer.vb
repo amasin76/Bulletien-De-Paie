@@ -23,8 +23,8 @@ Partial Class formBulletien
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabSaisi = New System.Windows.Forms.TabPage()
         Me.PanelFooter = New System.Windows.Forms.Panel()
@@ -88,9 +88,8 @@ Partial Class formBulletien
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Bprint = New System.Windows.Forms.Button()
         Me.Bannuler_sr = New System.Windows.Forms.Button()
-        Me.Brechercher = New System.Windows.Forms.Button()
+        Me.Bprint = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.NBulletienDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateMYDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -137,6 +136,7 @@ Partial Class formBulletien
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.BulletienWithEmployeNameTableAdapter = New Bulletien_De_Paie.employee_dbDataSetTableAdapters.BulletienWithEmployeNameTableAdapter()
+        Me.Label30 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabSaisi.SuspendLayout()
         Me.PanelFooter.SuspendLayout()
@@ -692,12 +692,13 @@ Partial Class formBulletien
         Me.TabConsulter.Padding = New System.Windows.Forms.Padding(3)
         Me.TabConsulter.Size = New System.Drawing.Size(922, 638)
         Me.TabConsulter.TabIndex = 1
-        Me.TabConsulter.Text = "Consulter"
+        Me.TabConsulter.Text = "Gérer"
         Me.TabConsulter.UseVisualStyleBackColor = True
         '
         'PanelGrid
         '
         Me.PanelGrid.AutoScroll = True
+        Me.PanelGrid.Controls.Add(Me.Label30)
         Me.PanelGrid.Controls.Add(Me.Gtotal)
         Me.PanelGrid.Controls.Add(Me.Panel2)
         Me.PanelGrid.Controls.Add(Me.DataGridView1)
@@ -801,41 +802,31 @@ Partial Class formBulletien
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.Bprint)
         Me.Panel2.Controls.Add(Me.Bannuler_sr)
-        Me.Panel2.Controls.Add(Me.Brechercher)
+        Me.Panel2.Controls.Add(Me.Bprint)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(0, 422)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(916, 104)
         Me.Panel2.TabIndex = 13
         '
-        'Bprint
-        '
-        Me.Bprint.Location = New System.Drawing.Point(621, 22)
-        Me.Bprint.Name = "Bprint"
-        Me.Bprint.Size = New System.Drawing.Size(205, 61)
-        Me.Bprint.TabIndex = 0
-        Me.Bprint.Text = "Print"
-        Me.Bprint.UseVisualStyleBackColor = True
-        '
         'Bannuler_sr
         '
-        Me.Bannuler_sr.Location = New System.Drawing.Point(359, 22)
+        Me.Bannuler_sr.Location = New System.Drawing.Point(550, 22)
         Me.Bannuler_sr.Name = "Bannuler_sr"
         Me.Bannuler_sr.Size = New System.Drawing.Size(205, 61)
         Me.Bannuler_sr.TabIndex = 0
         Me.Bannuler_sr.Text = "Annuler"
         Me.Bannuler_sr.UseVisualStyleBackColor = True
         '
-        'Brechercher
+        'Bprint
         '
-        Me.Brechercher.Location = New System.Drawing.Point(97, 22)
-        Me.Brechercher.Name = "Brechercher"
-        Me.Brechercher.Size = New System.Drawing.Size(205, 61)
-        Me.Brechercher.TabIndex = 0
-        Me.Brechercher.Text = "Rechercher"
-        Me.Brechercher.UseVisualStyleBackColor = True
+        Me.Bprint.Location = New System.Drawing.Point(162, 22)
+        Me.Bprint.Name = "Bprint"
+        Me.Bprint.Size = New System.Drawing.Size(205, 61)
+        Me.Bprint.TabIndex = 0
+        Me.Bprint.Text = "Imprimer"
+        Me.Bprint.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -861,8 +852,8 @@ Partial Class formBulletien
         'DateMYDataGridViewTextBoxColumn
         '
         Me.DateMYDataGridViewTextBoxColumn.DataPropertyName = "DateMY"
-        DataGridViewCellStyle3.Format = "MM/yyyy"
-        Me.DateMYDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle5.Format = "MM/yyyy"
+        Me.DateMYDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle5
         Me.DateMYDataGridViewTextBoxColumn.HeaderText = "Date"
         Me.DateMYDataGridViewTextBoxColumn.Name = "DateMYDataGridViewTextBoxColumn"
         Me.DateMYDataGridViewTextBoxColumn.ReadOnly = True
@@ -904,9 +895,9 @@ Partial Class formBulletien
         'NetPayerDataGridViewTextBoxColumn
         '
         Me.NetPayerDataGridViewTextBoxColumn.DataPropertyName = "Net_Payer"
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.Format = "#,##0.00"
-        Me.NetPayerDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.Format = "#,##0.00"
+        Me.NetPayerDataGridViewTextBoxColumn.DefaultCellStyle = DataGridViewCellStyle6
         Me.NetPayerDataGridViewTextBoxColumn.HeaderText = "Net"
         Me.NetPayerDataGridViewTextBoxColumn.Name = "NetPayerDataGridViewTextBoxColumn"
         '
@@ -1217,6 +1208,17 @@ Partial Class formBulletien
         '
         Me.BulletienWithEmployeNameTableAdapter.ClearBeforeFill = True
         '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.Label30.Location = New System.Drawing.Point(293, 317)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(212, 13)
+        Me.Label30.TabIndex = 15
+        Me.Label30.Text = "Pour bulletin détaillée, cliquez sur ligne"
+        '
         'formBulletien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
@@ -1321,9 +1323,8 @@ Partial Class formBulletien
     Friend WithEvents BtableFirst As System.Windows.Forms.Button
     Friend WithEvents BtablePrev As System.Windows.Forms.Button
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Bprint As System.Windows.Forms.Button
     Friend WithEvents Bannuler_sr As System.Windows.Forms.Button
-    Friend WithEvents Brechercher As System.Windows.Forms.Button
+    Friend WithEvents Bprint As System.Windows.Forms.Button
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Employee_dbDataSet As Bulletien_De_Paie.employee_dbDataSet
@@ -1367,4 +1368,5 @@ Partial Class formBulletien
     Friend WithEvents MCNSSDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents MatDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DateRecDataGridViewTextBoxColumn As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Label30 As System.Windows.Forms.Label
 End Class

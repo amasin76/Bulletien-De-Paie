@@ -1,6 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports System.IO
 Imports System.Environment.SpecialFolder
+Imports Bulletien_De_Paie.classEmployeDetails
 Public Class formEmployee
 
     Private Sub formConge_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -54,8 +55,8 @@ Public Class formEmployee
                 .Multiselect = False
                 .ValidateNames = True
                 If (.ShowDialog = DialogResult.OK) Then
-                    If CInt(OpenFileDialog1.OpenFile.Length) > 256000 Then
-                        MsgBox("La taille de l'image sélectionnée " & FormatToHumanReadableFileSize(OpenFileDialog1.OpenFile.Length) & " dépasse le maximum: 256KB")
+                    If CInt(OpenFileDialog1.OpenFile.Length) > 512000 Then
+                        MsgBox("La taille de l'image sélectionnée " & FormatToHumanReadableFileSize(OpenFileDialog1.OpenFile.Length) & " dépasse le maximum: 512KB")
                         Exit Sub
                     End If
                     Lplus.Dispose()
@@ -133,7 +134,12 @@ Public Class formEmployee
             Try
                 If cnx.State = ConnectionState.Closed Then cnx.Open()
                 cmd.ExecuteNonQuery()
-                MsgBox("Record saved")
+                Dim ToolTip1 As New ToolTip
+                ToolTip1.IsBalloon = True
+                ToolTip1.UseFading = True
+                ToolTip1.ToolTipIcon = ToolTipIcon.Info
+                ToolTip1.ToolTipTitle = "SUCCESS"
+                ToolTip1.Show("Employée " & Zmat.Text & " est enregistré", Bajoute, New Point(0, -80), 4000)
                 Zmat.Text = "E" & nbrId.ToString()
                 cmd.Dispose()
                 Dim a As Image = Pemploye.Image
@@ -153,6 +159,10 @@ Public Class formEmployee
     'Consulter Tab
     Dim bs As New BindingSource()
     Private Sub TabConsulter_Enter(ByVal sender As Object, ByVal e As EventArgs) Handles TabConsulter.Enter
+        loadDataGrid()
+    End Sub
+
+    Public Sub loadDataGrid()
         Dim dataAdapter As New OleDbDataAdapter("SELECT * from Employe", cnx)
         Dim ds As New DataSet()
         Dim dsView As New DataView
@@ -204,7 +214,24 @@ Public Class formEmployee
     End Sub
     Public Shared Property selectedrow As DataGridViewRow
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Helpers.clearTextBox(Me)
+    End Sub
+
+    Private Sub Bprint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bprint.Click
+        picture = Pemploye.Image
+        npr = Znpr.Text
+        fn = Zfn.Text
+        mat = Zmat.Text
+
+        formBadge.ShowDialog()
+    End Sub
+
+    Private Sub Bannuler_sr_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Bannuler_sr.Click
+        Zsearch.Text = ""
+    End Sub
+
+    Private Sub Button7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button7.Click
+        loadDataGrid()
     End Sub
 End Class

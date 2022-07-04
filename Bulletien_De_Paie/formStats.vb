@@ -72,7 +72,7 @@ Public Class formStats
         dr.Close()
 
         cmd = New OleDbCommand("select COUNT(N_Bulletien) AS Count_Bul, SUM(Net_Payer) AS Tot_Net from Bulletien WHERE Mois = @currentMonth", cnx)
-        cmd.Parameters.Add("@currentMonth", OleDbType.VarChar).Value = String.Format("{0:MM}", New Date().Month)
+        cmd.Parameters.Add("@currentMonth", OleDbType.VarChar).Value = "07" 'String.Format("{0:MM}", New Date().Month)
         dr = cmd.ExecuteReader
         If dr.Read Then
             Lbul_count.Text &= dr("Count_Bul")
@@ -82,7 +82,7 @@ Public Class formStats
         dr.Close()
 
         cmd = New OleDbCommand("select COUNT(N_Conge) AS Count_Cng from Conge WHERE Month(D_Sortie) = @currentMonth OR Month(D_Retour) = @currentMonth", cnx)
-        cmd.Parameters.Add("@currentMonth", OleDbType.Integer).Value = 8 'New Date().Month
+        cmd.Parameters.Add("@currentMonth", OleDbType.Integer).Value = 7 'New Date().Month
         dr = cmd.ExecuteReader
         If dr.Read Then
             Lcng_count.Text &= dr("Count_Cng")
