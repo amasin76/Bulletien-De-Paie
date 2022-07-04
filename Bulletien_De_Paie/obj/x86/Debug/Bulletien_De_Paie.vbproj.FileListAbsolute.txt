@@ -35,3 +35,6 @@ C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\D
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formCongeDemande.resources
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formBulletienReport.resources
 C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formCongeReport.resources
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.vbprojResolveAssemblyReference.cache
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formBadge.resources
+C:\Users\amasi\Desktop\PFE\VS 2010\Bulletien_De_Paie\Bulletien_De_Paie\obj\x86\Debug\Bulletien_De_Paie.formAccueil.resources
