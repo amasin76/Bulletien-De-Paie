@@ -31,7 +31,9 @@
   <img src="https://i.imgur.com/iujgYrk.png" width="200" />
 </p>
 
-## Key Features
+... in progress ...
+
+<!-- ## Key Features
 
 * LivePreview - Make changes, See changes
   - Instantly see what your Markdown documents look like in HTML as you create them.
@@ -122,3 +124,4 @@ MIT
 > GitHub [@amitmerchant1990](https://github.com/amitmerchant1990) &nbsp;&middot;&nbsp;
 > Twitter [@amit_merchant](https://twitter.com/amit_merchant)
 
+ -->
